@@ -1,0 +1,8 @@
+SpeechRecognition
+PocketSphinx
+numpy
+soundfile
+pyaudioc
+
+--Possible--
+Porcupine - Github
