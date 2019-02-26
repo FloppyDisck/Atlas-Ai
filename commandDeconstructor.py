@@ -63,7 +63,7 @@ def commandIdentifier(sentence, commandDic, commandDicScore):
                 for word in wordnet.synsets(item[0].lower(), pos=item[1][0].lower()): #Parse the word
                     #print(word) #Print the wordnet word related to the item list
 
-                    for commandSynsets in commandSynset:
+                    for commandSynset in commandSynsets:
 
                         simScore = commandSynset.wup_similarity(word)
                         #print(simScore) #Print the similarity score achieved (max 1.0)
