@@ -79,12 +79,6 @@ def commandIdentifier(sentence, commandDic, commandDicScore):
                 #print("Did not find {} in the wordnet!".format(item)) #Error code when word is not found
                 pass
 
-        if (commandDicScore[command] >= 0.8):
-            print("This sentence is related to {}".format(command))
-        else:
-            print("This sentence is not related to {}".format(command))
-
-
 if __name__ == "__main__":
     sentence_list = [
         "is it going to rain?",
@@ -120,21 +114,3 @@ if __name__ == "__main__":
     #nltk.download('punkt')
     #nltk.download('averaged_perceptron_tagger')
     #For Testing efficiency
-
-    #The program will initialize with these set of variables, they take long so keeping them in ram is good
-    commandDic = {
-        'Weather':wordnet.synsets("weather", pos='n')[0], #anythin related to weather requests
-        'Time':wordnet.synsets("time", pos='n')[4], #try to catch anythin related to time
-        'Prognosis':wordnet.synsets("prognosis", pos='n')[0], #weather prediction (forecast)
-        'Atmosphere':wordnet.synsets("atmosphere", pos='n')[3]}
-    
-    commandDicScore = {'Weather':0, 'Time':0, 'Prognosis':0, 'Atmosphere':0} #Dictionary containing all the values
-    
-
-    import time
-    start = time.time()
-    for sentence in sentence_list:
-        commandIdentifier(sentence, commandDic, commandDicScore)
-        print("-----------------------------------------------------------------------------------------------------------------------------------")
-    print(time.time()-start)
-    start = time.time()
