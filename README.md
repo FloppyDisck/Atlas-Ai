@@ -28,8 +28,6 @@ This should print out the sentence string and then decide in what category it fi
 
 Instructions to testing certain functions are currently WIP
 
-### Future Tests explaining primary function uses.
-
 ## Deployment
 
 Better instructios are currently WIP
