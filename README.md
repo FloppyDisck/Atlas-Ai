@@ -12,7 +12,6 @@ Before starting you'll need to have a few libraries installed. First open consol
 
 ```
 pip install -r requirements.txt
-
 ```
 
 ### Installing
