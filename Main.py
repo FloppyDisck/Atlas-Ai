@@ -2,7 +2,7 @@ from commandDeconstructor import commandIdentifier
 from nltk.corpus import wordnet
 import sqlite3
 
-#Setup Dictionary
+#Dictionary Setup - Use the db to create the dictionary every bootup
 conn = sqlite3.connect('commandDB')
 db = conn.cursor()
 db.execute("""
@@ -57,7 +57,5 @@ for row in db.fetchall():
 commandDicSecondary[previousCommand] = synsetList
 
 sentence = "How is the weather like today?"
-
 commandIdentifier(sentence, commandDicPrimary, commandDicScore)
-
 print(commandDicScore)
