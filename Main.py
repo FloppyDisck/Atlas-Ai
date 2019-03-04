@@ -59,3 +59,6 @@ commandDicSecondary[previousCommand] = synsetList
 sentence = "How is the weather like today?"
 commandIdentifier(sentence, commandDicPrimary, commandDicScore)
 print(commandDicScore)
+
+#if weather key is true
+#       run 
