@@ -2,7 +2,7 @@ from commandDeconstructor import commandIdentifier
 from nltk.corpus import wordnet
 import sqlite3
 
-#Setup Dictionary
+#Dictionary Setup - Use the db to create the dictionary every bootup
 conn = sqlite3.connect('commandDB')
 db = conn.cursor()
 db.execute("""
