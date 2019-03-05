@@ -1,4 +1,4 @@
-from commandDeconstructor import commandIdentifier
+from commandDeconstructor import CommandProcessing
 from nltk.corpus import wordnet
 import sqlite3
 
@@ -15,24 +15,13 @@ WHERE
         p.Function_Id = f.Id and
         f.Id = c.FunctionId""")
 
-commandDicPrimary = {}
-commandDicScore = {}
-previousCommand = ""
-for row in db.fetchall():
-        if previousCommand == "":
-                previousCommand = row[0]
-                synsetList = []
-        elif previousCommand != row[0]:
-                #Add the list of the dictionary
-                commandDicPrimary[previousCommand] = synsetList
-                commandDicScore[previousCommand] = 0
-                previousCommand = row[0]
-                synsetList = []
-        
-        synsetList.append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
+commandDic = {}
 
-commandDicPrimary[previousCommand] = synsetList
-commandDicScore[previousCommand] = 0
+for row in db.fetchall():
+        if (row[0] not in commandDic):
+                commandDic[row[0]] = [[wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])]], {}]
+        else:
+                commandDic[row[0]][0].append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
 
 db.execute("""
 SELECT cs.StrName, c.StrName, c.StrType, c.IntIndex, f.StrFunction FROM commandsetuptbl cs
@@ -44,29 +33,25 @@ WHERE
         p.Function_Id = f.Id and
         f.Id = c.FunctionId""")
 
-commandDicSecondary = {}
-previousCommand = ""
 for row in db.fetchall():
-        functionName = row[4]
-        if previousCommand == "":
-                previousCommand = row[0]
-                synsetList = []
-        elif previousCommand != row[0]:
-                #Add the list of the dictionary
-                commandDicSecondary[previousCommand] = [functionName, synsetList]
-                previousCommand = row[0]
-                synsetList = []
-        
-        synsetList.append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
+        if (row[4] not in commandDic[row[0]][1]):
+                commandDic[row[0]][1][row[4]] = [wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])]]
+        else:
+                commandDic[row[0]][1][row[4]].append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
 
-commandDicSecondary[previousCommand] = [functionName, synsetList]
-
-print(commandDicPrimary)
-print(commandDicScore)
-print(commandDicSecondary)
+#Voice to text happens here
+print(commandDic)
 
 sentence = "How is the weather like today?"
+command = CommandProcessing(sentence, commandDic)
+#Voice to text ends here
 
-commandIdentifier(sentence, commandDicPrimary, commandDicScore)
+command.primary_command_identifier() #First passthrough of the command
 
-print(commandDicScore)
+if (command.secondary_command_identifier() == True):
+        #Continue
+        pass
+else:
+        #Display error that command was not understood
+        pass
+

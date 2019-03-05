@@ -6,78 +6,98 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.corpus import wordnet
 
-def test_tokenizer(sentence):
-    return nltk.pos_tag(nltk.word_tokenize(sentence))
+class CommandProcessing:
 
-def extract_NN(sentence): #TODO: Study how to properly make a regexParser string
-    grammar = r"""
+    def __init__(self, sentence, commands):
+        self.sentence = sentence
+        self.commands = commands
+        self.commandScore = {}
 
-    NBAR:
-        # Nouns and Adjectives, terminated with Nouns
-        {<NN.*>*<NN.*>}
+    def test_tokenizer(self):
+        return nltk.pos_tag(nltk.word_tokenize(self.sentence))
 
-    NP:
-        # Above, connected with in/of/etc...
-        {<NBAR><IN><NBAR>}
+    def extract_NN(self): #TODO: Study how to properly make a regexParser string
+        grammar = r"""
 
-        {<NBAR>}
-    """
+        NBAR:
+            # Nouns and Adjectives, terminated with Nouns
+            {<NN.*>*<NN.*>}
 
-    backup_grammar = r"""
+        NP:
+            # Above, connected with in/of/etc...
+            {<NBAR><IN><NBAR>}
 
-    JJBAR:
-        {<VB.*>}
+            {<NBAR>}
+        """
 
-    NP:
-        {<JJBAR>}
-    """
-    grammar_list = [grammar, backup_grammar] #List composed of the params
+        backup_grammar = r"""
 
-    for grammar in grammar_list:
+        JJBAR:
+            {<VB.*>}
 
-        chunker = nltk.RegexpParser(grammar, trace=0)
-        ne = set()
-        chunk = chunker.parse(nltk.pos_tag(nltk.word_tokenize(sentence)))
-        for tree in chunk.subtrees(filter=lambda t: t.label() == 'NP'):
+        NP:
+            {<JJBAR>}
+        """
+        grammar_list = [grammar, backup_grammar] #List composed of the params
 
-            for child in tree.leaves(): #this way allows for implementing the whole list
-                ne.add(child)
-            #ne.add(' '.join([child[0] for child in tree.leaves()]))
+        for grammar in grammar_list:
 
-        if (len(ne) > 0): #If condition is not met Run the program again with the next value
-            break
-                
-    return ne
+            chunker = nltk.RegexpParser(grammar, trace=0)
+            ne = set()
+            chunk = chunker.parse(nltk.pos_tag(nltk.word_tokenize(self.sentence)))
+            for tree in chunk.subtrees(filter=lambda t: t.label() == 'NP'):
 
-def commandIdentifier(sentence, commandDic, commandDicScore):
+                for child in tree.leaves(): #this way allows for implementing the whole list
+                    ne.add(child)
+                #ne.add(' '.join([child[0] for child in tree.leaves()]))
 
-    print(sentence) #Print sentence
-    #print(test_tokenizer(sentence)) #Print tokenized sentence
-    extractedSentence = extract_NN(sentence)
+            if (len(ne) > 0): #If condition is not met Run the program again with the next value
+                break
+                    
+        return ne
 
-    for command, commandSynsets in commandDic.items():
+    def primary_command_identifier(self):
 
-        for item in extractedSentence:
-            #print(item) #Print the list with both the word and type
-            try:
-                for word in wordnet.synsets(item[0].lower(), pos=item[1][0].lower()): #Parse the word
-                    #print(word) #Print the wordnet word related to the item list
+        #print(test_tokenizer()) #Print tokenized sentence
+        extractedSentence = self.extract_NN()
+        for command, commandSynsets in self.commands.items():
 
-                    for commandSynset in commandSynsets:
+            for item in extractedSentence:
+                #print(item) #Print the list with both the word and type
+                try:
+                    for word in wordnet.synsets(item[0].lower(), pos=item[1][0].lower()): #Parse the word
+                        #print(word) #Print the wordnet word related to the item list
 
-                        simScore = commandSynset.wup_similarity(word)
-                        #print(simScore) #Print the similarity score achieved (max 1.0)
+                        for commandSynset in commandSynsets[0]:
 
-                        if (not simScore):
-                            #print("Not related")
-                            pass
+                            simScore = commandSynset.wup_similarity(word)
+                            #print(simScore) #Print the similarity score achieved (max 1.0)
 
-                        elif (commandDicScore[command] < simScore):
-                            commandDicScore[command] = simScore
+                            if (not simScore):
+                                #print("Not related")
+                                pass
 
-            except KeyError as errorCode:
-                #print("Did not find {} in the wordnet!".format(item)) #Error code when word is not found
-                pass
+                            elif (simScore > 0.8):
+                                if (command not in self.commandScore.keys()):
+                                    self.commandScore[command] = simScore
+                                
+                                elif (self.commandScore[command] < simScore):
+                                    self.commandScore[command] = simScore
+
+                except KeyError:
+                    #print("Did not find {} in the wordnet!".format(item)) #Error code when word is not found
+                    pass
+
+    def secondary_command_identifier(self):
+        if (len(self.commandScore) == 1):
+            #TODO: normally process the command identifier
+            #return {"Weather":{"Time":"today", "Location":"Puerto Rico"}}
+            return True
+        elif (len(self.commandScore) == 0):
+            return False
+        else:
+            #TODO: find the most optimal command goal
+            return True
 
 if __name__ == "__main__":
     sentence_list = [
