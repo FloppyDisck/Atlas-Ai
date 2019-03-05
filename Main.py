@@ -48,10 +48,9 @@ command = CommandProcessing(sentence, commandDic)
 
 command.primary_command_identifier() #First passthrough of the command
 
-if (command.secondary_command_identifier() == True):
+if (len(command.secondary_command_identifier()) > 0):
         #Continue
         pass
 else:
         #Display error that command was not understood
         pass
-

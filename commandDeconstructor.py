@@ -12,6 +12,15 @@ class CommandProcessing:
         self.sentence = sentence
         self.commands = commands
         self.commandScore = {}
+        self.extractedSentence = self.extract_NN()
+        self.extractedSentenceDic = {}
+        for item in self.extractedSentence:
+            try:
+                betterItem = item[0].replace(item[0][0], item[0][0].upper())
+                self.extractedSentenceDic[betterItem] = wordnet.synsets(item[0].lower(), pos=item[1][0].lower())
+            except KeyError:
+                #print("Did not find {} in the wordnet!".format(item)) #Error code when word is not found
+                pass
 
     def test_tokenizer(self):
         return nltk.pos_tag(nltk.word_tokenize(self.sentence))
@@ -59,45 +68,48 @@ class CommandProcessing:
     def primary_command_identifier(self):
 
         #print(test_tokenizer()) #Print tokenized sentence
-        extractedSentence = self.extract_NN()
         for command, commandSynsets in self.commands.items():
 
-            for item in extractedSentence:
+            for wordKey, wordList in self.extractedSentenceDic.items():
                 #print(item) #Print the list with both the word and type
-                try:
-                    for word in wordnet.synsets(item[0].lower(), pos=item[1][0].lower()): #Parse the word
-                        #print(word) #Print the wordnet word related to the item list
+                for word in wordList: #Parse the word
+                    #print(word) #Print the wordnet word related to the item list
 
-                        for commandSynset in commandSynsets[0]:
+                    for commandSynset in commandSynsets[0]:
 
-                            simScore = commandSynset.wup_similarity(word)
-                            #print(simScore) #Print the similarity score achieved (max 1.0)
+                        simScore = commandSynset.wup_similarity(word)
+                        #print(simScore) #Print the similarity score achieved (max 1.0)
 
-                            if (not simScore):
-                                #print("Not related")
-                                pass
+                        if (not simScore):
+                            #print("Not related")
+                            pass
 
-                            elif (simScore > 0.8):
-                                if (command not in self.commandScore.keys()):
-                                    self.commandScore[command] = simScore
-                                
-                                elif (self.commandScore[command] < simScore):
-                                    self.commandScore[command] = simScore
-
-                except KeyError:
-                    #print("Did not find {} in the wordnet!".format(item)) #Error code when word is not found
-                    pass
+                        elif (simScore > 0.8):
+                            if (command not in self.commandScore.keys()):
+                                self.commandScore[command] = simScore
+                            
+                            elif (self.commandScore[command] < simScore):
+                                self.commandScore[command] = simScore
 
     def secondary_command_identifier(self):
+        returnArgs = {}
+        subArgs = {}
         if (len(self.commandScore) == 1):
+            mainCommand = list(self.commandScore.keys())[0]
             #TODO: normally process the command identifier
             #return {"Weather":{"Time":"today", "Location":"Puerto Rico"}}
-            return True
+            arguments = self.commands[mainCommand]
+
+            #for argument, argumentWords in arguments:
+                #for argumentWord in argumentWords:
+                    #for item in self.extractedSentence
+            #returnArgs[mainCommand] = {subArgs}            
+            return returnArgs
         elif (len(self.commandScore) == 0):
-            return False
+            return returnArgs
         else:
             #TODO: find the most optimal command goal
-            return True
+            return returnArgs
 
 if __name__ == "__main__":
     sentence_list = [
