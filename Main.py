@@ -48,6 +48,8 @@ command = CommandProcessing(sentence, commandDic)
 
 command.primary_command_identifier() #First passthrough of the command
 
+print(command.secondary_command_identifier())
+
 if (len(command.secondary_command_identifier()) > 0):
         #Continue
         pass
