@@ -74,7 +74,7 @@ class CommandProcessing:
         for command, commandSynsets in self.commands.items():
 
             # Go through all the values in the sentence dictionary
-            for word, wordSynsets in self.extractedSentenceDic.items():
+            for wordSynsets in self.extractedSentenceDic.values():
 
                 # Go through each synset in the list
                 for wordSynset in wordSynsets:
