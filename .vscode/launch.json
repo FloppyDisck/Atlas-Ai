@@ -9,7 +9,7 @@
             "name": "Python: Launch commandDeconstructor",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/commandDeconstructor.py",
+            "program": "${workspaceRoot}/Functions/command_deconstructor.py",
             "console": "integratedTerminal"
         },
         {
