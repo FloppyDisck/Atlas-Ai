@@ -9,7 +9,7 @@ from nltk.corpus import wordnet
 class CommandProcessing:
 
     def __init__(self, sentence, commands):
-        self.sentence = sentence # Input sentence
+  vs      self.sentence = sentence # Input sentence
         self.commands = commands # The dictionary input
         self.commandScore = {} # Initialize the score of the words
         self.extractedSentence = self.extract_NN() # Cleanup the sentence
