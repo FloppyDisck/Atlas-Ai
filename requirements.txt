@@ -3,3 +3,4 @@ PocketSphinx
 numpy
 soundfile
 pyaudioc
+requests
