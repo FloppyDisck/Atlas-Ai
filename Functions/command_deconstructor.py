@@ -12,10 +12,13 @@ class CommandProcessing:
         self.sentence = sentence # Input sentence
         self.commands = commands # The dictionary input
         self.commandScore = {} # Initialize the score of the words
+
+        #Parse the file to remove unneeded words
         self.extractedSentence = self.extract_NN() # Cleanup the sentence
         self.extractedSentenceDic = {}
         for item in self.extractedSentence:
             try:
+                #Turn the word into a synset readable by NLTK
                 # Replace the first letter with a capitalized version
                 betterItem = item[0].replace(item[0][0], item[0][0].upper())
 
@@ -24,6 +27,10 @@ class CommandProcessing:
             except KeyError:
                 # print("Did not find {} in the wordnet!".format(item)) #Error code when word is not found
                 pass
+
+        #Demonstration Purposes
+        print("Sentence: {}\n".format(self.extractedSentenceDic))
+        print("Commands: {}\n".format(self.commands))
 
     def test_tokenizer(self):
         # Will tokenize the sentence with the NLTK library
@@ -91,7 +98,7 @@ class CommandProcessing:
                             pass
 
                         #If the simScore is over 0.8 then continue
-                        elif (simScore > 0.8):
+                        elif (simScore >= 0.8):
                             #If the current command is not in the score dic then add it
                             if (command not in self.commandScore.keys()):
                                 #Add the value
@@ -223,9 +230,11 @@ if __name__ == "__main__":
                         commandDic[row[0]][1][row[4]] = [wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])]]
                 else:
                         commandDic[row[0]][1][row[4]].append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
-
+        
+        #Start running the sentences
         for sentence in sentence_list:
 
+            #Make synset of sentence
             command = CommandProcessing(sentence, commandDic)
 
             command.primary_command_identifier() #First passthrough of the command
