@@ -3,5 +3,5 @@ SpeechRecognition
 PocketSphinx
 numpy
 soundfile
-pyaudioc
+pyaudio
 requests

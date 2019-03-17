@@ -11,9 +11,16 @@ def request_Weather(location, requestType): #if a date is requested ask forecast
     #Make the string varie between dates and so forth
     if (weatherData.status_code == requests.codes.ok):
         #The request was completed without errors
-        weatherData = json.loads(weatherData.text)
-        returnString = '''Today you will be experiencing {}, the temperature is {} Celcius with a humidity of {} percent with a potential rain volume of {} milimiters.
-        '''.format(weatherData["weather"][0]["main"], weatherData["main"]["temp"], weatherData["main"]["humidity"], weatherData ["rain"]["3h"])
+        weatherData = json.loads(weatherData.text)   
+        try:
+            rainString =  " with a potential rain volume of {} milimiters".format(weatherData ["rain"]["3h"])
+        except KeyError:
+            rainString = ""
+        returnString = "Today you will be experiencing {}, the temperature is {} Celcius with a humidity of {} percent".format(
+            weatherData["weather"][0]["main"].lower(), weatherData["main"]["temp"], weatherData["main"]["humidity"])
+
+        returnString += rainString + "."
+
         for key, keyData in weatherData.items():
             print("{} : {}".format(key, keyData))
         return returnString
