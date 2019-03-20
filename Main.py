@@ -1,9 +1,6 @@
 import sqlite3
 from nltk.corpus import wordnet
-
-import sys
-sys.path.insert(0, 'Functions')
-import command_deconstructor
+from Functions import command_deconstructor
 
 #Dictionary Setup - Use the db to create the dictionary every bootup
 conn = sqlite3.connect('commandDB')
