@@ -21,8 +21,8 @@ def request_Weather(location, requestType): #if a date is requested ask forecast
 
         returnString += rainString + "."
 
-        for key, keyData in weatherData.items():
-            print("{} : {}".format(key, keyData))
+        #for key, keyData in weatherData.items():
+            #print("{} : {}".format(key, keyData))
         return returnString
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 # The program will take an input string an process it to identify what its trying to express
 
+import sqlite3
 import nltk.classify.util
 from nltk.classify import NaiveBayesClassifier
 from nltk.corpus import stopwords
@@ -8,29 +9,43 @@ from nltk.corpus import wordnet
 
 class CommandProcessing:
 
-    def __init__(self, sentence, commands):
-        self.sentence = sentence # Input sentence
-        self.commands = commands # The dictionary input
-        self.commandScore = {} # Initialize the score of the words
+    def __init__(self, dbPath = 'commandDB'):
+        #Dictionary Setup - Use the db to create the dictionary every bootup
+        conn = sqlite3.connect('commandDB')
+        db = conn.cursor()
+        db.execute("""
+        SELECT cs.StrName, c.StrName, c.StrType, c.IntIndex FROM commandsetuptbl cs
+                JOIN primarylisttbl p
+                JOIN functiontbl f
+                JOIN commandtbl c 
+        WHERE 
+                cs.IntPrimaryList_Id = p.ListId and
+                p.Function_Id = f.Id and
+                f.Id = c.FunctionId""")
 
-        #Parse the file to remove unneeded words
-        self.extractedSentence = self.extract_NN() # Cleanup the sentence
-        self.extractedSentenceDic = {}
-        for item in self.extractedSentence:
-            try:
-                #Turn the word into a synset readable by NLTK
-                # Replace the first letter with a capitalized version
-                betterItem = item[0].replace(item[0][0], item[0][0].upper())
+        self.commands = {}
 
-                # Populate the dictionary with a list of synsets for that word
-                self.extractedSentenceDic[betterItem] = wordnet.synsets(item[0].lower(), pos=item[1][0].lower())
-            except KeyError:
-                # print("Did not find {} in the wordnet!".format(item)) #Error code when word is not found
-                pass
+        for row in db.fetchall():
+            if (row[0] not in self.commands):
+                self.commands[row[0]] = [[wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])]], {}]
+            else:
+                self.commands[row[0]][0].append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
 
-        #Demonstration Purposes
-        print("Sentence: {}\n".format(self.extractedSentenceDic))
-        print("Commands: {}\n".format(self.commands))
+        db.execute("""
+        SELECT cs.StrName, c.StrName, c.StrType, c.IntIndex, f.StrFunction FROM commandsetuptbl cs
+                JOIN secondarylisttbl p
+                JOIN functiontbl f
+                JOIN commandtbl c 
+        WHERE 
+                cs.IntSecondaryList_Id = p.ListId and
+                p.Function_Id = f.Id and
+                f.Id = c.FunctionId""")
+
+        for row in db.fetchall():
+            if (row[4] not in self.commands[row[0]][1]):
+                self.commands[row[0]][1][row[4]] = [wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])]]
+            else:
+                self.commands[row[0]][1][row[4]].append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
 
     def test_tokenizer(self):
         # Will tokenize the sentence with the NLTK library
@@ -75,6 +90,25 @@ class CommandProcessing:
                 break
                     
         return ne
+
+    def analize_sentence(self, sentence):
+        self.sentence = sentence # Input sentence
+        self.commandScore = {} # Initialize the score of the words
+
+        #Parse the file to remove unneeded words
+        self.extractedSentence = self.extract_NN() # Cleanup the sentence
+        self.extractedSentenceDic = {}
+        for item in self.extractedSentence:
+            try:
+                #Turn the word into a synset readable by NLTK
+                # Replace the first letter with a capitalized version
+                betterItem = item[0].replace(item[0][0], item[0][0].upper())
+
+                # Populate the dictionary with a list of synsets for that word
+                self.extractedSentenceDic[betterItem] = wordnet.synsets(item[0].lower(), pos=item[1][0].lower())
+            except KeyError:
+                # print("Did not find {} in the wordnet!".format(item)) #Error code when word is not found
+                pass
 
     def primary_command_identifier(self):
         # Iterate through all the values of the dictionary "commands"
@@ -190,53 +224,13 @@ if __name__ == "__main__":
             "Do you wanna go out and eat?",
             "Are you bored or just tired?"
         ]
-
-
-        import sqlite3
-
-        #Dictionary Setup - Use the db to create the dictionary every bootup
-        conn = sqlite3.connect('commandDB')
-        db = conn.cursor()
-        db.execute("""
-        SELECT cs.StrName, c.StrName, c.StrType, c.IntIndex FROM commandsetuptbl cs
-                JOIN primarylisttbl p
-                JOIN functiontbl f
-                JOIN commandtbl c 
-        WHERE 
-                cs.IntPrimaryList_Id = p.ListId and
-                p.Function_Id = f.Id and
-                f.Id = c.FunctionId""")
-
-        commandDic = {}
-
-        for row in db.fetchall():
-                if (row[0] not in commandDic):
-                        commandDic[row[0]] = [[wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])]], {}]
-                else:
-                        commandDic[row[0]][0].append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
-
-        db.execute("""
-        SELECT cs.StrName, c.StrName, c.StrType, c.IntIndex, f.StrFunction FROM commandsetuptbl cs
-                JOIN secondarylisttbl p
-                JOIN functiontbl f
-                JOIN commandtbl c 
-        WHERE 
-                cs.IntSecondaryList_Id = p.ListId and
-                p.Function_Id = f.Id and
-                f.Id = c.FunctionId""")
-
-        for row in db.fetchall():
-                if (row[4] not in commandDic[row[0]][1]):
-                        commandDic[row[0]][1][row[4]] = [wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])]]
-                else:
-                        commandDic[row[0]][1][row[4]].append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
         
         #Start running the sentences
         for sentence in sentence_list:
 
             #Make synset of sentence
-            command = CommandProcessing(sentence, commandDic)
-
+            command = CommandProcessing()
+            command.analize_sentence(sentence)
             command.primary_command_identifier() #First passthrough of the command
 
             print(command.secondary_command_identifier())
