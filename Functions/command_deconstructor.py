@@ -1,5 +1,5 @@
 # The program will take an input string an process it to identify what its trying to express
-
+import os
 import sqlite3
 import nltk.classify.util
 from nltk.classify import NaiveBayesClassifier
@@ -9,9 +9,9 @@ from nltk.corpus import wordnet
 
 class CommandProcessing:
 
-    def __init__(self, dbPath = 'commandDB'):
+    def __init__(self, dbPath = os.path.dirname(os.getcwd()) + '/commandDB'):
         #Dictionary Setup - Use the db to create the dictionary every bootup
-        conn = sqlite3.connect('commandDB')
+        conn = sqlite3.connect(dbPath)
         db = conn.cursor()
         db.execute("""
         SELECT cs.StrName, c.StrName, c.StrType, c.IntIndex FROM commandsetuptbl cs
@@ -102,7 +102,7 @@ class CommandProcessing:
             try:
                 #Turn the word into a synset readable by NLTK
                 # Replace the first letter with a capitalized version
-                betterItem = item[0].replace(item[0][0], item[0][0].upper())
+                betterItem = item[0].replace(item[0][0], item[0][0].upper(), 1)
 
                 # Populate the dictionary with a list of synsets for that word
                 self.extractedSentenceDic[betterItem] = wordnet.synsets(item[0].lower(), pos=item[1][0].lower())
@@ -207,10 +207,10 @@ if __name__ == "__main__":
             "Is it raining outside?",
             "Should I take my umbrella?",
             "What's the weather forecast?",
-            "What’s the weather expected to be tomorrow?",
-            "What’s the temperature?",
-            "How’s the weather?",
-            "What’s it like outside?",
+            "What's the weather expected to be tomorrow?",
+            "What's the temperature?",
+            "How's the weather?",
+            "What's it like outside?",
             "How's the weather?",
             "Do you have rain?",
             "What's the temperature in Manchester?",
