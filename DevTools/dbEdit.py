@@ -1,6 +1,8 @@
 import os
 import sqlite3
 
+from nltk.corpus import wordnet
+
 # dbEdit is a command line app that allows editing of the AI database
 
 #How it works
@@ -39,30 +41,40 @@ def display_title_bar():
     print("*** Atlas-Ai SQLite3 Editor ***")
     print("*******************************")
 
+def functionStandard(oldString):
+    newString = oldString.lower()
+    newString = newString.replace(newString[0], newString[0].upper(), 1)
+    return newString
+    
+#Setup DB path
 dbName = 'commandDB'
 dbPath = os.getcwd() + '/' + dbName
 
+#Initialize path
 conn = sqlite3.connect(dbPath)
 
 display_title_bar()
 
 while True:
-    command = str(input()).split(" ")
+    #Take a command and split it by space bars
+    command = input()
+    print(command)
+    command = str(command).split(" ")
 
-    if command[0] == 'show':
-        if command[1] == 'data':
+    if command[0] in ['show', 's']:
+        db = conn.cursor() 
+        if command[1] in ['data', 'd']: #show data in a raw form
             print('\nShowing all data in tables of {}'.format(dbName))
-            db = conn.cursor() 
             db.execute("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;")
             
-            for row in db.fetchall():
+            for row in db.fetchall():#iterate through everything and print the values
                 print('\t{}'.format(row))
                 queryData = db.execute("SELECT * FROM {}".format(row[0]))
                 for row in queryData:
                     print('\t\t{}'.format(row))
-        if command[1] == 'functions':
+
+        if command[1] in ['functions', 'func', 'f']:#show the function table and its values
             print('\nShowing all functions in {}'.format(dbName))
-            db = conn.cursor() 
             db.execute('SELECT * FROM functiontbl')
             functiontbl = []
             for row in db.fetchall():
@@ -80,9 +92,8 @@ while True:
                         print("\t|-> {}.{}.{}".format(commandValue[1], commandValue[2], commandValue[3]))
                 print("")
 
-        if command[1] == 'commands':
-            print('\nShowing all commands in {}'.format(dbName))
-            db = conn.cursor() 
+        if command[1] in ['data+', 'd+']:#show all the data in a pretty edited form (same as 'show data')
+            print('\nShowing all pretty data in {}'.format(dbName))
             db.execute('SELECT * FROM commandsetuptbl')
             commandsetuptbl = []
             for row in db.fetchall():
@@ -128,8 +139,53 @@ while True:
                                     if functionVal[0] == int(commandValue[4]):
                                         print("\t|   |   |-> {}.{}.{}".format(commandValue[1], commandValue[2], commandValue[3]))
 
-    if command[0] == 'create':
-        newString = command[2].lower()
-        newString = newString.replace(newString[0], newString[0].upper(), 1)
-        if command[1] == 'function':
-            pass
+    if command[0] in ['create', 'c']:#This stems to everything related to data creation in the database
+        db = conn.cursor() 
+        if command[1] in ['function', 'func', 'f']:#it creates a function and its values if added with them
+            strFunction = functionStandard(command[2])
+            db.execute('SELECT * FROM functiontbl f WHERE f.StrFunction = ?', strFunction)
+            if not db.fetchall():
+                db.execute('INSERT INTO functiontbl (StrFunction) VALUES (?)', strFunction)
+                print('Successfully added {}'.format(strFunction))
+            else:
+                print('{} already in db'.format(strFunction))
+            
+            if len(command) == 4:
+                #name.type.index
+                #TODO: somehow add support for adding list
+                #c f name.type.index name.type.index name.type.index
+                #or c f 
+                for index in range(3, len(command)):
+                    rawCommand = command[index]
+                    while True:
+                        synCommand = str(rawCommand).split(".")
+                        synCommand[1] = synCommand[1].lower()
+                        if len(synCommand == 3):
+                            try:
+                                wordnet.synsets(str(synCommand[0]), pos=str(synCommand[1]))[int(synCommand[2])]
+
+                                db.execute('SELECT * FROM functiontbl f WHERE f.StrFunction = ?', strFunction)
+                                functionIndex = db.fetchone()[0]
+                                db.execute('INSERT INTO commandtbl (StrName, StrType, IntIndex, FunctionId) VALUES (?, ?, ?, ?)',
+                                            (synCommand[0], synCommand[1], synCommand[2], functionIndex))
+                                break #no errors found skipping
+
+                            except:
+                                #TODO:NLTK did not find this value
+                                pass
+                        print('{} is not valid, expected "name.type.index"'.format(rawCommand))
+                        rawCommand = input('Please enter the correct value or skip to ignore this value: ')
+
+    
+    if command[0] == 'commit':
+        try:
+            db.commit()
+            print('Changes saved.')
+
+        except:
+            print('An unexpected error was found, settings were not commited.')
+
+    if command[0] == 'reset':
+        conn.close()
+        db = conn.open()
+        print('Program was reset!')
