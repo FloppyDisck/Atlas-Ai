@@ -92,7 +92,7 @@ while True:
                         print("\t|-> {}.{}.{}".format(commandValue[1], commandValue[2], commandValue[3]))
                 print("")
 
-        if command[1] in ['data+', 'd+']:#show all the data in a pretty edited form (same as 'show data')
+        if command[1] in ['data+', 'd+', 'dp']:#show all the data in a pretty edited form (same as 'show data')
             print('\nShowing all pretty data in {}'.format(dbName))
             db.execute('SELECT * FROM commandsetuptbl')
             commandsetuptbl = []
@@ -143,14 +143,15 @@ while True:
         db = conn.cursor() 
         if command[1] in ['function', 'func', 'f']:#it creates a function and its values if added with them
             strFunction = functionStandard(command[2])
-            db.execute('SELECT * FROM functiontbl f WHERE f.StrFunction = ?', strFunction)
+
+            db.execute('SELECT * FROM functiontbl f WHERE f.StrFunction = ?', [strFunction])
             if not db.fetchall():
-                db.execute('INSERT INTO functiontbl (StrFunction) VALUES (?)', strFunction)
+                db.execute('INSERT INTO functiontbl (StrFunction) VALUES (?)', [strFunction])
                 print('Successfully added {}'.format(strFunction))
             else:
                 print('{} already in db'.format(strFunction))
             
-            if len(command) == 4:
+            if len(command) >= 4:
                 #name.type.index
                 #TODO: somehow add support for adding list
                 #c f name.type.index name.type.index name.type.index
@@ -160,32 +161,79 @@ while True:
                     while True:
                         synCommand = str(rawCommand).split(".")
                         synCommand[1] = synCommand[1].lower()
-                        if len(synCommand == 3):
+                        if len(synCommand)  == 3 :
                             try:
                                 wordnet.synsets(str(synCommand[0]), pos=str(synCommand[1]))[int(synCommand[2])]
 
-                                db.execute('SELECT * FROM functiontbl f WHERE f.StrFunction = ?', strFunction)
+                                db.execute('SELECT * FROM functiontbl f WHERE f.StrFunction = ?', [strFunction])
                                 functionIndex = db.fetchone()[0]
-                                db.execute('INSERT INTO commandtbl (StrName, StrType, IntIndex, FunctionId) VALUES (?, ?, ?, ?)',
-                                            (synCommand[0], synCommand[1], synCommand[2], functionIndex))
+
+                                commandSet = [synCommand[0], synCommand[1], synCommand[2], functionIndex]
+
+                                db.execute('INSERT INTO commandtbl (StrName, StrType, IntIndex, FunctionId) VALUES (?, ?, ?, ?)', commandSet)
                                 break #no errors found skipping
 
                             except:
                                 #TODO:NLTK did not find this value
                                 pass
-                        print('{} is not valid, expected "name.type.index"'.format(rawCommand))
-                        rawCommand = input('Please enter the correct value or skip to ignore this value: ')
+                            print('{} is not valid, expected "name.type.index"'.format(rawCommand))
+                            rawCommand = input('Please enter the correct value or type skip to ignore this value: ')
+
+                            if rawCommand == 'skip': #Forget the current option and keep going
+                                break
+
+        if command[1] in ['command', 'c']:
+            if len(command) == 5:
+                strCommand = functionStandard(command[2])
+
+                forContinue = True
+                listlist = ['primarylisttbl', 'secondarylisttbl']
+                for index in range(3, 5):
+                    db.execute('SELECT * FROM ? l WHERE l.ListId = ?', ([listlist[index - 3]],[strCommand[index]]))
+                    if not db.fetchall():
+                        forContinue = False
+                        print('{} index {} does not exist.'.format(listlist[index - 3],strCommand[index]))
+
+                if forContinue == True:
+                    db.execute('SELECT * FROM commandsetuptbl c WHERE c.StrName = ?', strCommand)
+                    if not db.fetchall():
+                        db.execute('INSERT INTO commandsetuptbl (StrName, IntPrimaryList_Id, IntSecondaryList_Id) VALUES (?, ?, ?)', [strCommand, command[3], command[4]])
+                        print('Successfully added {}.'.format(strCommand))
+                    else:
+                        print('Successfully updated {}.'.format(strCommand))
+                        db.execute('UPDATE commandsetuptbl SET IntPrimaryList_Id = ?, IntSecondaryList_Id = ? WHERE StrName = ?', ([command[3]], [command[4]], [strCommand]))
+            else:
+                print('Command criteria not met! expected: "create command name primary secondary"')
+
+        if command[1] in ['list', 'l']: #c l listType index functionIndex
+            if command[2] in ['primary', 'p']:
+                listlist = ['primarylisttbl']
+            elif command[2] in ['secondary', 's']:
+                listlist = ['secondarylisttbl']
+            
+            if isinstance(command[3], int):
+                for index in range(4, len(command)):
+                    db.execute('SELECT * FROM ? l WHERE l.Function_Id = ? AND l.ListId = ?', (listlist, [command[3]], [command[index]]))
+                        if not db.fetchall():
+                            db.execute('INSERT INTO ? (StrName, IntPrimaryList_Id, IntSecondaryList_Id) VALUES (?, ?, ?)', [strCommand, command[3], command[4]])
+                            print('Successfully added {}.'.format(strCommand))
+            else:
+                print('{} is not valid, expected integer'.format(command[3]))
 
     
     if command[0] == 'commit':
         try:
-            db.commit()
+            conn.commit()
             print('Changes saved.')
 
         except:
             print('An unexpected error was found, settings were not commited.')
 
-    if command[0] == 'reset':
+    if command[0] in ['reset', 'r']:
+        db.close()
         conn.close()
-        db = conn.open()
+        conn = sqlite3.connect(dbPath)
         print('Program was reset!')
+
+    if command[0] == 'quit':
+        break
