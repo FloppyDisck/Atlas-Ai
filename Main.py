@@ -4,16 +4,14 @@ from Functions import open_weather_map_API as weather
 sentence = "How is the weather like in 5 days in Puerto Rico??"
 print(sentence)
 command = command_deconstructor.CommandProcessing()
-command.analize_sentence(sentence)
+analizedSentence = command.analize_sentence(sentence)
 #Voice to text ends here
 
-command.primary_command_identifier() #First passthrough of the command
+print(analizedSentence)
 
-print(command.secondary_command_identifier())
-
-if (len(command.secondary_command_identifier()) > 0):
+if (len(analizedSentence) > 0):
         #Continue
-        if (list(command.secondary_command_identifier().keys())[0] == "Weather"):
+        if (list(analizedSentence.keys())[0] == "Weather"):
                 import geograpy3
                 places = geograpy3.get_place_context(text=sentence).names
                 if len(places) == 0:
