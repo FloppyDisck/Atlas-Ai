@@ -45,7 +45,10 @@ def functionStandard(oldString):
     newString = oldString.lower()
     newString = newString.replace(newString[0], newString[0].upper(), 1)
     return newString
-    
+
+def check_List():
+    pass
+
 #Setup DB path
 dbName = 'commandDB'
 dbPath = os.getcwd() + '/' + dbName
@@ -55,10 +58,11 @@ conn = sqlite3.connect(dbPath)
 
 display_title_bar()
 
-while True:
+notExit = True
+
+while notExit:
     #Take a command and split it by space bars
     command = input()
-    print(command)
     command = str(command).split(" ")
 
     if command[0] in ['show', 's']:
@@ -142,6 +146,8 @@ while True:
     if command[0] in ['create', 'c']:#This stems to everything related to data creation in the database
         db = conn.cursor() 
         if command[1] in ['function', 'func', 'f']:#it creates a function and its values if added with them
+
+            #Check if function exists, if not create it
             strFunction = functionStandard(command[2])
 
             db.execute('SELECT * FROM functiontbl f WHERE f.StrFunction = ?', [strFunction])
@@ -151,9 +157,9 @@ while True:
             else:
                 print('{} already in db'.format(strFunction))
             
+            #Check if aditional arguments are added, then check if those synsets exist, if not add them
             if len(command) >= 4:
                 #name.type.index
-                #TODO: somehow add support for adding list
                 #c f name.type.index name.type.index name.type.index
                 #or c f 
                 for index in range(3, len(command)):
@@ -183,19 +189,24 @@ while True:
                                 break
 
         if command[1] in ['command', 'c']:
+
+            #Check if the required ammout of arguments are provided
             if len(command) == 5:
                 strCommand = functionStandard(command[2])
 
+                #Check if the provided lists exist, command[3] and command[4]
                 forContinue = True
                 listlist = ['primarylisttbl', 'secondarylisttbl']
                 for index in range(3, 5):
-                    db.execute('SELECT * FROM ? l WHERE l.ListId = ?', ([listlist[index - 3]],[strCommand[index]]))
+                    print([listlist[index - 3]],[command[index]])
+                    db.execute('SELECT * FROM {} l WHERE l.ListId = ?'.format(listlist[index - 3]), [command[index]])
                     if not db.fetchall():
                         forContinue = False
-                        print('{} index {} does not exist.'.format(listlist[index - 3],strCommand[index]))
+                        print('{} index {} does not exist.'.format(listlist[index - 3],command[index]))
 
+                #When the lists are proven to exist check if the commandsetup exists, if so update it, if not create it
                 if forContinue == True:
-                    db.execute('SELECT * FROM commandsetuptbl c WHERE c.StrName = ?', strCommand)
+                    db.execute('SELECT * FROM commandsetuptbl c WHERE c.StrName = ?', [strCommand])
                     if not db.fetchall():
                         db.execute('INSERT INTO commandsetuptbl (StrName, IntPrimaryList_Id, IntSecondaryList_Id) VALUES (?, ?, ?)', [strCommand, command[3], command[4]])
                         print('Successfully added {}.'.format(strCommand))
@@ -207,20 +218,42 @@ while True:
 
         if command[1] in ['list', 'l']: #c l listType index functionIndex
             if command[2] in ['primary', 'p']:
-                listlist = ['primarylisttbl']
+                listlist = 'primarylisttbl'
             elif command[2] in ['secondary', 's']:
-                listlist = ['secondarylisttbl']
-            
-            if isinstance(command[3], int):
-                for index in range(4, len(command)):
-                    db.execute('SELECT * FROM ? l WHERE l.Function_Id = ? AND l.ListId = ?', (listlist, [command[3]], [command[index]]))
-                        if not db.fetchall():
-                            db.execute('INSERT INTO ? (StrName, IntPrimaryList_Id, IntSecondaryList_Id) VALUES (?, ?, ?)', [strCommand, command[3], command[4]])
-                            print('Successfully added {}.'.format(strCommand))
+                listlist = 'secondarylisttbl'
             else:
+                print('Received {} expected: c l [p, s] i n'.format(command))
+            
+            try:
+                command[3] = int(command[3])
+            except:
                 print('{} is not valid, expected integer'.format(command[3]))
+                continue
 
-    
+            for index in range(4, len(command)):
+                db.execute('SELECT * FROM functiontbl f WHERE f.Id = ?', [command[index]])
+                if not db.fetchall():
+                    print('Index {} not found in functiontbl, skipping.'.format(command[index]))
+                    continue
+                db.execute('SELECT * FROM {} l WHERE l.Function_Id = ? AND l.ListId = ?'.format(listlist), (command[3], command[index]))
+                if not db.fetchall():
+                    db.execute('INSERT INTO {} (Function_Id, ListId) VALUES (?, ?)'.format(listlist), (command[3], command[index]))
+                    print('Successfully added {}.'.format([command[3], command[index]]))
+
+    if command[0] in ['delete', 'd']:
+        db = conn.cursor() 
+        if command[1] in ['function', 'func', 'f']:
+            #TODO: if just delete function then also delete all synsets related to the function
+            #TODO: If more arguments the delete the given synsets
+            pass
+        if command[1] in ['command', 'c']:
+            #TODO: Delete the command
+            pass
+        if command[1] in ['list', 'l']:
+            #TODO: if just the first number delete the whole list and ask if you want to delete command
+            #TODO: else delete each in the list 
+            pass
+
     if command[0] == 'commit':
         try:
             conn.commit()
@@ -236,4 +269,4 @@ while True:
         print('Program was reset!')
 
     if command[0] == 'quit':
-        break
+        notExit = False
