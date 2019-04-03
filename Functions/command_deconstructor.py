@@ -75,19 +75,17 @@ class CommandProcessing:
         """
         grammar_list = [grammar, backup_grammar] # List composed of the params
 
-        for grammar in grammar_list:
+        ne = set()
+       while len(ne) == 0:
 
             chunker = nltk.RegexpParser(grammar, trace=0)
-            ne = set()
+            ne.clear()
             chunk = chunker.parse(nltk.pos_tag(nltk.word_tokenize(self.sentence)))
             for tree in chunk.subtrees(filter=lambda t: t.label() == 'NP'):
 
                 for child in tree.leaves(): # This way allows for implementing the whole list
                     ne.add(child)
                 # ne.add(' '.join([child[0] for child in tree.leaves()]))
-
-            if (len(ne) > 0): #If condition is not met Run the program again with the next value
-                break
                     
         return ne
 
