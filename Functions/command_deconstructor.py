@@ -9,7 +9,7 @@ from nltk.corpus import wordnet
 
 class CommandProcessing:
 
-    def __init__(self, dbPath = os.path.dirname(os.getcwd()) + '/commandDB'):
+    def __init__(self, dbPath = 'commandDB'):
         #Dictionary Setup - Use the db to create the dictionary every bootup
         conn = sqlite3.connect(dbPath)
         db = conn.cursor()
@@ -108,7 +108,7 @@ class CommandProcessing:
                 # print("Did not find {} in the wordnet!".format(item)) #Error code when word is not found
                 pass
 
-    def primary_command_identifier(self):
+        #Primary Command Pass
         # Iterate through all the values of the dictionary "commands"
         for command, commandSynsets in self.commands.items():
 
@@ -140,7 +140,7 @@ class CommandProcessing:
                                 #Replace the value
                                 self.commandScore[command] = simScore
 
-    def secondary_command_identifier(self):
+        #Secondary Command Pass
         returnArgs = {}
         subArgs = {}
         if (len(self.commandScore) == 1):
@@ -228,10 +228,9 @@ if __name__ == "__main__":
 
             #Make synset of sentence
             command = CommandProcessing()
-            command.analize_sentence(sentence)
-            command.primary_command_identifier() #First passthrough of the command
+            analizedSentence = command.analize_sentence(sentence)
 
-            print(command.secondary_command_identifier())
+            print(analizedSentence)
 
     except LookupError:
 
