@@ -47,7 +47,7 @@ class CommandProcessing:
             else:
                 self.commands[row[0]][1][row[4]].append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
 
-    def test_tokenizer(self):
+    def __test_tokenizer(self):
         # Will tokenize the sentence with the NLTK library
         return nltk.pos_tag(nltk.word_tokenize(self.sentence))
 
@@ -76,7 +76,7 @@ class CommandProcessing:
         grammar_list = [grammar, backup_grammar] # List composed of the params
 
         ne = set()
-       while len(ne) == 0:
+        while len(ne) == 0:
 
             chunker = nltk.RegexpParser(grammar, trace=0)
             ne.clear()
