@@ -14,6 +14,9 @@ if (len(analizedSentence) > 0):
         if (list(analizedSentence.keys())[0] == "Weather"):
                 from geotext import GeoText
 
+                #import geograpy3
+                #places = geograpy3.get_place_context(text=sentence).names
+
                 places = GeoText(sentence).cities
                 try:
                         print(weather.request_Weather(location, "weather"))
