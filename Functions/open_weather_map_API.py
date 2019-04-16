@@ -3,9 +3,9 @@ import os, json, requests
 
 #requestType = ["weather", "forecast"]
 
-def request_Weather(location, requestType): #if a date is requested ask forecast, if not weather
+def request_Weather(location, requestType): 
+    #if a date is requested ask forecast, if not weather
     apiKey = os.environ["OPEN_WEATHER_MAP_API_KEY"]
-    #location = "Puerto Rico"
     requestSting = "https://api.openweathermap.org/data/2.5/" + requestType + "?" + "q=" + location + "&units=metric" + "&appid=" + apiKey 
     weatherData = requests.get(requestSting)
     #Make the string varie between dates and so forth
