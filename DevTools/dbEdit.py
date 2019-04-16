@@ -65,6 +65,11 @@ while notExit:
     command = input()
     command = str(command).split(" ")
 
+    if command[0] in ['fix', 'f']:
+        if command[1] in ['path', 'p']:
+            #dbPath = os.getcwd() + '/' + dbName
+            pass
+
     if command[0] in ['show', 's']:
         db = conn.cursor() 
         if command[1] in ['path', 'p']:
@@ -244,9 +249,9 @@ while notExit:
                 try:
                     db.execute('DELETE FROM functiontbl f WHERE f.StrFunction = ?', [strFunction])
                 except Exception as e:
-                    print('{} could not be deleted, either it doesnt exist or an unexpected error happened!'.format(strCommand))
+                    print('{} could not be deleted, either it doesnt exist or an unexpected error happened!'.format(strFunction))
                 else:
-                    print('{} has been deleted!'.format(strCommand))
+                    print('{} has been deleted!'.format(strFunction))
             else:
                 for index in range(3, len(command)):
                     synCommand = str(command[index]).split(".")
