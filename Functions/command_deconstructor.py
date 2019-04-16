@@ -147,7 +147,7 @@ class CommandProcessing:
         returnArgs = {}
         subArgs = {}
         sentenceOUT = [[word] for word in self.sentence.split(" ")] #prepare output sentence
-        print(sentenceOUT)
+        
         if (len(self.commandScore) == 1):
             mainCommand = list(self.commandScore.keys())[0] # Get the dic key
             #TODO: normally process the command identifier
