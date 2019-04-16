@@ -5,3 +5,4 @@ numpy
 soundfile
 pyaudio
 requests
+geograpy3
