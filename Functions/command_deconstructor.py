@@ -1,4 +1,5 @@
-# The program will take an input string an process it to identify what its trying to express
+# The program will take an input string an process it to identify what 
+# its trying to express
 import os
 import sqlite3
 import nltk.classify.util
@@ -83,9 +84,9 @@ class CommandProcessing:
             chunk = chunker.parse(nltk.pos_tag(nltk.word_tokenize(self.sentence)))
             for tree in chunk.subtrees(filter=lambda t: t.label() == 'NP'):
 
+                #ne.add(' '.join([child[0] for child in tree.leaves()]))
                 for child in tree.leaves(): # This way allows for implementing the whole list
                     ne.add(child)
-                # ne.add(' '.join([child[0] for child in tree.leaves()]))
                     
         return ne
 
@@ -105,7 +106,6 @@ class CommandProcessing:
                 # Populate the dictionary with a list of synsets for that word
                 self.extractedSentenceDic[betterItem] = wordnet.synsets(item[0].lower(), pos=item[1][0].lower())
             except KeyError:
-                # print("Did not find {} in the wordnet!".format(item)) #Error code when word is not found
                 pass
 
         #Primary Command Pass
@@ -121,7 +121,8 @@ class CommandProcessing:
                     # Go through each test synset to identify the sentence goal
                     for commandSynset in commandSynsets[0]:
 
-                        #The wup_similarity function returns either none or a value from 0 to 1.0
+                        #The wup_similarity function returns either none or a 
+                        # value from 0 to 1.0
                         simScore = commandSynset.wup_similarity(wordSynset)
 
                         #If the simscore is none then ignore
@@ -131,20 +132,24 @@ class CommandProcessing:
 
                         #If the simScore is over 0.8 then continue
                         elif (simScore >= 0.8):
-                            #If the current command is not in the score dic then add it
+                            #If the current command is not in the score dic then 
+                            # add it
                             if (command not in self.commandScore.keys()):
                                 #Add the value
                                 self.commandScore[command] = simScore
-                            #If the current command's score (simScore) is greater than the dic
+                            #If the current command's score (simScore) is greater 
+                            # than the dic
                             elif (self.commandScore[command] < simScore):
                                 #Replace the value
                                 self.commandScore[command] = simScore
 
-        #Secondary Command Pass
+        #Secondary Command Pass TODO: Return the sentence with the keywords
         returnArgs = {}
         subArgs = {}
+        sentenceOUT = [[word] for word in self.sentence.split(" ")] #prepare output sentence
+        print(sentenceOUT)
         if (len(self.commandScore) == 1):
-            mainCommand = list(self.commandScore.keys())[0] # Get the key of the dictionary
+            mainCommand = list(self.commandScore.keys())[0] # Get the dic key
             #TODO: normally process the command identifier
             #return {"Weather":{"Time":"today", "Location":"Puerto Rico"}}
             arguments = self.commands[mainCommand][1] #Get the secondary commands
@@ -161,7 +166,8 @@ class CommandProcessing:
                         # Iterate through the list of said words
                         for wordSynset in wordSynsets:
 
-                            #The wup_similarity function returns either none or a value from 0 to 1.0
+                            #The wup_similarity function returns either none or a 
+                            # value from 0 to 1.0
                             simScore = argumentSynset.wup_similarity(wordSynset)
                             #If the simscore is none then ignore
                             if (not simScore):
@@ -175,12 +181,26 @@ class CommandProcessing:
                                     #Add the value
                                     subArgs[argument] = set()
                                     subArgs[argument].add(word)
-                                #If the current command's score (simScore) is greater than the dic
+
+                                #Create sentence with the secondary list identifications
+                                for index in range(0, len(sentenceOUT)): #loop word by word
+                                    #When the current word is found in the sentence continue
+                                    if word.lower() == sentenceOUT[index][0].lower():
+                                        #If the word has no argument then add one
+                                        if len(sentenceOUT[index]) == 1:
+                                            sentenceOUT[index].append(argument)
+                                        #If not then just check if it exists to add it
+                                        else:    
+                                            if argument not in sentenceOUT[index][1:]:
+                                                sentenceOUT[index].append(argument)
+
+                                #If the current command's score (simScore) is 
+                                # greater than the dic
                                 else:
                                     subArgs[argument].add(word)
                             
                     #for item in self.extractedSentence
-            returnArgs[mainCommand] = subArgs          
+            returnArgs[mainCommand] = [subArgs, sentenceOUT]          
             return returnArgs
         elif (len(self.commandScore) == 0):
             return returnArgs
