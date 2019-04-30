@@ -5,9 +5,20 @@ import os, json, requests
 
 def request_Weather(location, requestType): 
     #if a date is requested ask forecast, if not weather
-    apiKey = os.environ["OPEN_WEATHER_MAP_API_KEY"]
-    requestSting = "https://api.openweathermap.org/data/2.5/" + requestType + "?" + "q=" + location + "&units=metric" + "&appid=" + apiKey 
-    weatherData = requests.get(requestSting)
+
+    #Check if the enviroment variable exists
+    try:
+        apiKey = os.environ["OPEN_WEATHER_MAP_API_KEY"]
+    except:
+        return 'The enviroment variable was not found!'
+    
+    #Check if a connection to the API is present
+    try:
+        requestSting = "https://api.openweathermap.org/data/2.5/" + requestType + "?" + "q=" + location + "&units=metric" + "&appid=" + apiKey 
+        weatherData = requests.get(requestSting)
+    except:
+        return 'Could not connect to Open Weather Map services!'
+
     #Make the string varie between dates and so forth
     if (weatherData.status_code == requests.codes.ok):
         #The request was completed without errors
