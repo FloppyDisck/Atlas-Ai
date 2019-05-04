@@ -2,7 +2,7 @@ from Functions import command_deconstructor
 from Functions import open_weather_map_API as weather
 from Functions import reminders
 
-sentence = "How is the weather like in 5 days tomorrow in Madrid??"
+sentence = "Weather ??"
 print(sentence)
 command = command_deconstructor.CommandProcessing()
 analizedSentence = command.analize_sentence(sentence)
@@ -16,17 +16,23 @@ if (len(analizedSentence) > 0):
         if (mainCommand == "Weather"):
                 import geograpy
                 places = geograpy.get_place_context(text=sentence)
- 
-                if not places.regions:
-                        if not places.cities:
-                                location = places.countries[0]
-                        else:
-                                location = places.cities[0]
-                else:
-                        location = places.regions[0]
+
                 try:
-                        print(weather.request_Weather(location, "weather"))
-                except:
+
+                        if not places.regions:
+                                if not places.cities:
+                                        location = places.countries[0]
+                                else:
+                                        location = places.cities[0]
+                        else:
+                                location = places.regions[0]
+                        try:
+                                print(weather.request_Weather(location, "weather"))
+                        except:
+                                print("Location not found! Reverting to default.")
+                                defaultLocation = "Puerto Rico"
+                                print(weather.request_Weather(defaultLocation, "weather"))
+                except: 
                         print("Location not found! Reverting to default.")
                         defaultLocation = "Puerto Rico"
                         print(weather.request_Weather(defaultLocation, "weather"))

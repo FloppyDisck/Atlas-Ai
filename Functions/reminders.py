@@ -28,6 +28,33 @@ class CurrentReminders:
         for reminder in db.fetchall():
             self.reminders.append(reminder)
 
+#Set reminder at 5pm
+#Set teminder in this 5Hrs
+import pytz
+from datetime import datetime, timezone, timedelta
+def set_reminder_in(reminder, alarm):
+    timeUTC = datetime.now(timezone.utc) # UTC time
+    print(timeUTC)
+    print(utc_dt.replace(minute=utc_dt.minute + 60))
+
+    #sum number of time to UTC epoch
+    pass
+def set_reminder_at(reminder, alarm):
+    #get local time and turn to epoch
+    #replace alarm value with the current time value
+    timeUTC = datetime.now(timezone.utc) #UTC time
+    timeLocal = timeUTC.astimezone() #local time
+    timeLocal_tuple = timeLocal.timetuple()
+
+    for index in range(0, 6):
+        if alarm[index] == None:
+            alarm[index] = timeLocal_tuple[index]
+        else:
+            alarm[index] = alarm[index]
+        
+    timeAlarm = datetime(*alarm)
+    print(timeAlarm.timestamp())
+
 def set_reminder(reminder, alarm):
     #YYYY-MM-DD HH:MM:SS
 
@@ -80,4 +107,5 @@ def set_reminder(reminder, alarm):
     #TODO: this update adds a new reminder, create steps for repeating and start/end
     pass
 
-set_reminder("reminder", "whatever")
+#input is [years, months, days, hours, minutes, seconds]
+set_reminder_at("reminder", [None, None, None, 2, 30, None])
