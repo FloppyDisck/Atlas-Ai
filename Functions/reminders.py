@@ -108,4 +108,4 @@ def set_reminder(reminder, alarm):
     pass
 
 #input is [years, months, days, hours, minutes, seconds]
-set_reminder_at("reminder", [None, None, None, 2, 30, None])
+set_reminder_at("reminder", [None, None, None, 2, 30, None]) 
