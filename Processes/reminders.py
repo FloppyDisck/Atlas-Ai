@@ -3,12 +3,11 @@ import sqlite3
 from datetime import datetime, timezone, timedelta
 
 class CurrentReminders:
-    #keep reminders in ram
     def __init__(self, dbPath = 'Processes/DataBases/remindersDB'):
         self.conn = sqlite3.connect(dbPath)
         self.update_list()
 
-    def get_time_in(alarm):
+    def get_time_in(self, alarm):
         timeUTC = datetime.now(timezone.utc) # UTC time
         timeUTC_tuple = timeUTC.timetuple()
 
@@ -36,13 +35,12 @@ class CurrentReminders:
             else:
                 alarm[index-1] += int(alarm[index] / correctionList[index-1])
                 alarm[index] = int(alarm[index] % correctionList[index-1])
-            print(alarm)
 
         timeAlarm = datetime(*alarm)
 
         return int(timeAlarm.timestamp())
 
-    def get_time_at(alarm):
+    def get_time_at(self, alarm):
         timeUTC = datetime.now(timezone.utc) #UTC time
         timeLocal = timeUTC.astimezone() #local time
         timeLocal_tuple = timeLocal.timetuple()
@@ -59,29 +57,51 @@ class CurrentReminders:
         '''Reminder is the string being saved
            Alarm is the date either in adition or replacement
            exactTime is a boolean that decides one of the two above.'''
-        #TODO: this update adds a new reminder
-        #TODO: when the time input is placed it uses the get_time function
 
         if exactTime == True:
-            alarm_epoch = get_time_at(alarm)
+            alarm_epoch = self.get_time_at(alarm)
         else:
-            alarm_epoch = get_time_in(alarm) 
+            alarm_epoch = self.get_time_in(alarm)
+
+        reminderStatus = 1
+        commandSet = [reminder, alarm_epoch, reminderStatus]
+        self.reminders.append(commandSet)
+        self.reminders.sort(key = lambda x: x[2]) #sort by the epoch
+
+        db = self.conn.cursor()
+        db.execute('INSERT INTO reminderstbl (reminderStr, alarm, status) VALUES (?, ?, ?)', commandSet)
+        self.conn.commit()
+
+        #return string confirmation of "set blah blah at TIMEHERE"
 
     def edit_reminder(self):
         #TODO: This function updates the list values if anything happens
         pass
 
     def check_alarm(self):
-        #TODO: if the time is less than the current time then set off alarm
-        pass
+        threshold = 60 #add second threshold for current time
+        currentTime_epoch = datetime.now(timezone.utc).timestamp() + threshold
+        
+        dueAlarm = []
+        for reminder in self.reminders:
+            if currentTime_epoch < reminder[2]:
+                break
+            #If the alarm time is less than current time
+            #then add to dueAlarm and remove from reminders
+            dueAlarm.append(reminder)
+            if reminder[3] == 1: #Standard
+                self.reminders.remove(reminder)
+
+        #TODO: create a string for each value that the ai can read
+        return dueAlarm
 
     def update_list(self):
-        #TODO: This function is going to update the list
+        #TODO: Add a new column where i can create a routine
+        #Example: Remind me in 2 hours for the next 5 days every monday
         timeUTC_epoch = datetime.now(timezone.utc).timestamp()
-
         db = self.conn.cursor()
         db.execute("""
-        SELECT * FROM remindersTbl r
+        SELECT reminderStr, alarm, status FROM remindersTbl r
         WHERE
                 r.alarm >= {} AND
                 r.status > 0""".format(timeUTC_epoch))
@@ -91,8 +111,8 @@ class CurrentReminders:
         for reminder in db.fetchall():
             self.reminders.append(reminder)
 
-#input is [years, months, days, hours, minutes, seconds]
-#get_time_in([None, 20, 40, 30, 70, None]) 
+        self.reminders.sort(key = lambda x: x[2]) #sort by the epoch
 
 if __name__ == "__main__":
     reminder = CurrentReminders()
+    reminder.set_reminder("Testing Reminder", [None, 20, 40, 30, 70, None], False)
