@@ -1,10 +1,10 @@
-from Functions import command_deconstructor
-from Functions import open_weather_map_API as weather
-from Functions import reminders
+from Processes import command_deconstructor
+from Processes import open_weather_map_API as weather
+from Processes import reminders
 
 sentence = "Weather ??"
 print(sentence)
-command = command_deconstructor.CommandProcessing()
+command = command_deconstructor.CommandProcessing("Processes/DataBases/commandDB")
 analizedSentence = command.analize_sentence(sentence)
 #Voice to text ends here
 
@@ -38,11 +38,7 @@ if (len(analizedSentence) > 0):
                         print(weather.request_Weather(defaultLocation, "weather"))
 
         if (mainCommand == "Reminder"):
-                from datetime import datetime, timezone
-                utc_dt = datetime.now(timezone.utc) # UTC time
-                dt = utc_dt.astimezone() # local time
-                print(utc_dt, dt)
-                print(utc_dt.strftime('%s'), dt.strftime('%s'))
+                pass
 else:
         #Display error that command was not understood
         pass

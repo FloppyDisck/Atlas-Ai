@@ -10,7 +10,7 @@ from nltk.corpus import wordnet
 
 class CommandProcessing:
 
-    def __init__(self, dbPath = 'commandDB'):
+    def __init__(self, dbPath = 'Processes/DataBases/commandDB'):
         #Dictionary Setup - Use the db to create the dictionary every bootup
         conn = sqlite3.connect(dbPath)
         db = conn.cursor()
