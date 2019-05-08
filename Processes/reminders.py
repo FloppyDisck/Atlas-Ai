@@ -53,35 +53,68 @@ class CurrentReminders:
         #return timeAlarm.timestamp()
         return int(timeAlarm.timestamp())
 
-    def set_reminder(self, reminder, alarm, exactTime):
+    def set_reminder(self, reminder, alarm, exactTime, repeatFrequency = None):
         '''Reminder is the string being saved
            Alarm is the date either in adition or replacement
            exactTime is a boolean that decides one of the two above.'''
+
+        if repeatFrequency == None:
+            reminderStatus = 1
+        else:
+            reminderStatus = 2
 
         if exactTime == True:
             alarm_epoch = self.get_time_at(alarm)
         else:
             alarm_epoch = self.get_time_in(alarm)
 
-        reminderStatus = 1
-        commandSet = [reminder, alarm_epoch, reminderStatus]
+        commandSet = [reminder, alarm_epoch, reminderStatus, repeatFrequency]
         self.reminders.append(commandSet)
         self.reminders.sort(key = lambda x: x[2]) #sort by the epoch
 
         db = self.conn.cursor()
-        db.execute('INSERT INTO reminderstbl (reminderStr, alarm, status) VALUES (?, ?, ?)', commandSet)
+        db.execute('INSERT INTO reminderstbl (reminderStr, alarm, status, concurrency) VALUES (?, ?, ?, ?)', commandSet)
         self.conn.commit()
 
         #return string confirmation of "set blah blah at TIMEHERE"
+        return commandSet
 
-    def edit_reminder(self):
-        #TODO: This function updates the list values if anything happens
-        pass
+    def reminder_concurrency(self, reminder_old):
+        #second, minute, hour, Day, Month, Year, Times, Week, week (week day 1-7)
+        repetition = reminder_old[3].split('/')
+        newAlarm = [None, None, None, None, None, None]
+        alarmHeaders = ['s', 'm', 'h', 'D', 'M', 'Y'] #used to find newAlarm index
+        repetition_str = ""
+        for value in repetition:
+            valueHeader = value[:1]
+            if valueHeader in alarmHeaders:
+                newAlarm[alarmHeaders.index(valueHeader)] = value[1:]
+            if valueHeader == 'T':
+                times = int(value[1:]) - 1
+                if times == 0:
+                    return None
+                value = 'T' + times
+            if valueHeader == 'W':
+                #TODO: turn week into epoch time and sum to the output
+                pass
+            if valueHeader == 'w':
+                #TODO: calulate the days and sum to epoch
+                pass
+            repetition_str += '/' + value
+
+
+        newEpoch = self.get_time_in(newAlarm)
+        #TODO: sum the other two values
+        
+        reminder_new = [reminder_old[0], newEpoch, 2, repetition_str]
+
+        #TODO: Add new reminder to DB
+        return reminder_new
 
     def check_alarm(self):
         threshold = 60 #add second threshold for current time
         currentTime_epoch = datetime.now(timezone.utc).timestamp() + threshold
-        
+
         dueAlarm = []
         for reminder in self.reminders:
             if currentTime_epoch < reminder[2]:
@@ -89,8 +122,13 @@ class CurrentReminders:
             #If the alarm time is less than current time
             #then add to dueAlarm and remove from reminders
             dueAlarm.append(reminder)
-            if reminder[3] == 1: #Standard
-                self.reminders.remove(reminder)
+            if reminder[3] == 2: #Standard
+                reminder_new = reminder_concurrency(reminder)
+                if reminder_new != None:
+                    self.reminders.append()
+
+            db.execute('UPDATE remindersTbl r SET reminderStr = ?, alarm = ? WHERE status = ?', ([reminder[0]], [reminder[1]], [0]))
+            self.reminders.remove(reminder)
 
         #TODO: create a string for each value that the ai can read
         return dueAlarm
@@ -102,9 +140,7 @@ class CurrentReminders:
         db = self.conn.cursor()
         db.execute("""
         SELECT reminderStr, alarm, status FROM remindersTbl r
-        WHERE
-                r.alarm >= {} AND
-                r.status > 0""".format(timeUTC_epoch))
+        WHERE r.status > 0""")
         #If status is greater than 0 then it is still available
         self.reminders = []
         
@@ -114,5 +150,5 @@ class CurrentReminders:
         self.reminders.sort(key = lambda x: x[2]) #sort by the epoch
 
 if __name__ == "__main__":
-    reminder = CurrentReminders()
-    reminder.set_reminder("Testing Reminder", [None, 20, 40, 30, 70, None], False)
+    #reminder = CurrentReminders()
+    #reminder.set_reminder("Testing Reminder", [None, 20, 40, 30, 70, None], False)
