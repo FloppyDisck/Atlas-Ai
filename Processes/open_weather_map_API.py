@@ -1,9 +1,16 @@
-#Open Weather Map API
 import os, json, requests
 
-#requestType = ["weather", "forecast"]
-
 def request_Weather(location, requestType): 
+    """
+    Request weather string to read out loud.
+
+    Args:
+        location: From where to ask for forecast.
+        requestType: Ask for either 'weather' or 'forecast'.
+
+    Returns:
+        Forecast string, api key error or connection error.
+    """
     #if a date is requested ask forecast, if not weather
 
     #Check if the enviroment variable exists
@@ -27,6 +34,7 @@ def request_Weather(location, requestType):
             rainString =  " with a potential rain volume of {} milimiters".format(weatherData ["rain"]["3h"])
         except KeyError:
             rainString = ""
+
         returnString = "Today you will be experiencing {}, the temperature is {} Celcius with a humidity of {} percent".format(
             weatherData["weather"][0]["main"].lower(), weatherData["main"]["temp"], weatherData["main"]["humidity"])
 
