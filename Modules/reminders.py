@@ -3,7 +3,7 @@ import sqlite3
 from datetime import datetime, timezone, timedelta
 
 class CurrentReminders:
-    def __init__(self, dbPath = 'Processes/DataBases/remindersDB'):
+    def __init__(self, dbPath = 'Modules/DataBases/remindersDB'):
         """
         Create a reminder monitor object.
 
@@ -180,7 +180,7 @@ class CurrentReminders:
 
                 #If day passed minimum
                 if weekDay_now > weekDays[-1]:
-
+                    pass
                 else:
                     for weekDay in weekDays:
                         pass

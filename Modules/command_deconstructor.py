@@ -8,7 +8,7 @@ from nltk.corpus import wordnet
 
 class CommandProcessing:
 
-    def __init__(self, dbPath = 'Processes/DataBases/commandDB'):
+    def __init__(self, dbPath = 'Modules/DataBases/commandDB'):
         """
         Initializes an instance of the command processor
 
@@ -91,7 +91,7 @@ class CommandProcessing:
             The parsed sentence.
         """
 
-        #Regex Parsers
+        #Parsers
         grammar = r"""
 
         NBAR:
