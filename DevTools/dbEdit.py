@@ -50,7 +50,7 @@ def check_List():
     pass
 
 #Setup DB path
-dbName = 'commandDB'
+dbName = 'Modules/DataBases/commandDB'
 dbPath = os.getcwd() + '/' + dbName
 
 #Initialize path
