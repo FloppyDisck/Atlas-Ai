@@ -16,6 +16,7 @@ print(sentence)
 #TODO: every call returns [status, sentence] status can mean call completed or call incomplete
 
 analizedSentence = command.analize_sentence(sentence)
+analizedSentence_secondary = command.analize_sentence(sentence, True, 'Weather')
 #Voice to text ends here
 
 #Returns a dictionary where the key is the command and the value is a list with 
@@ -24,11 +25,12 @@ analizedSentence = command.analize_sentence(sentence)
 #Example:
 #       In: What is the weather in Spain tomorrow
 #       Out: {'Weather': [{'Time': {'Tomorrow'}}, [['What'], ['is'], ['the'], ['weather'], ['in'], ['Spain'], ['tomorrow', 'Time']]]}
-print(analizedSentence)
+print(analizedSentence, analizedSentence_secondary)
 
 if (len(analizedSentence) > 0):
         #Continue
-        moduleManager.runtime_manager(analizedSentence, sentence)
+        pass
+        #moduleManager.runtime_manager(analizedSentence, sentence)
         
 else:
         #Display error that command was not understood
