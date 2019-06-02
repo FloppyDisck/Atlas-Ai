@@ -132,7 +132,7 @@ class CommandProcessing:
                     
         return ne
 
-    def analize_sentence(self, sentence):
+    def analize_sentence(self, sentence, onlySecondary=False, mainCommand=None):
         """
         Clean up and analize the sentence to find its objective,
 
@@ -143,6 +143,8 @@ class CommandProcessing:
 
         Args:
             sentence: This is the input sentence.
+            onlySecondary: Asks to skip the first part to run the secondary command identifier
+            mainCommand: The replacement key when we put onlySecondary = True
 
         Returns:
             Returnds a map where the key is the main command found
@@ -167,53 +169,56 @@ class CommandProcessing:
             except KeyError:
                 pass
 
-        #Primary Command Pass
+        #Primary Command Pass NOTE:onlySecondary has to be False
         # Iterate through all the values of the dictionary "commands"
         #TODO: graph both maps and look for better iteration methods
-        for command, commandSynsets in self.commands.items():
+        if (onlySecondary == False): 
 
-            # Go through all the values in the sentence dictionary
-            #TODO: Can we shorten this loop?
-            for wordSynsets in self.extractedSentenceDic.values():
-                # Go through each synset in the list
-                for wordSynset in wordSynsets:
+            for command, commandSynsets in self.commands.items():
+                # Go through all the values in the sentence dictionary
+                #TODO: Can we shorten this loop?
+                for wordSynsets in self.extractedSentenceDic.values():
+                    # Go through each synset in the list
+                    for wordSynset in wordSynsets:
 
-                    # Go through each test synset to identify the sentence goal
-                    #TODO: why loop two times in map?
-                    for commandSynset in commandSynsets[0]:
+                        # Go through each test synset to identify the sentence goal
+                        #TODO: why loop two times in map?
+                        for commandSynset in commandSynsets[0]:
 
-                        #The wup_similarity function returns either none or a 
-                        # value from 0 to 1.0
-                        simScore = commandSynset.wup_similarity(wordSynset)
+                            #The wup_similarity function returns either none or a 
+                            # value from 0 to 1.0
+                            simScore = commandSynset.wup_similarity(wordSynset)
 
-                        #If the simscore is none then ignore
-                        if (not simScore):
-                            # print("Not related")
-                            pass
+                            #If the simscore is none then ignore
+                            if (not simScore):
+                                # print("Not related")
+                                pass
 
-                        #If the simScore is over 0.8 then continue
-                        elif (simScore >= 0.8):
-                            #If the current command is not in the score dic then 
-                            # add it
-                            if (command not in self.commandScore.keys()):
-                                #Add the value
-                                self.commandScore[command] = simScore
-                            #If the current command's score (simScore) is greater 
-                            # than the dic
-                            elif (self.commandScore[command] < simScore):
-                                #Replace the value
-                                self.commandScore[command] = simScore
+                            #If the simScore is over 0.8 then continue
+                            elif (simScore >= 0.8):
+                                #If the current command is not in the score dic then 
+                                # add it
+                                if (command not in self.commandScore.keys()):
+                                    #Add the value
+                                    self.commandScore[command] = simScore
+                                #If the current command's score (simScore) is greater 
+                                # than the dic
+                                elif (self.commandScore[command] < simScore):
+                                    #Replace the value
+                                    self.commandScore[command] = simScore
+
+            # Note: mainCommand or primaryKey? which sounds better?
+            mainCommand = list(self.commandScore.keys())[0] # Get the dic key
 
         returnArgs = {}
         subArgs = {}
         sentenceOUT = [[word] for word in self.sentence.split(" ")] #prepare output sentence
         
-        if (len(self.commandScore) == 1):
-            mainCommand = list(self.commandScore.keys())[0] # Get the dic key
+        if (len(self.commandScore) == 1) or (onlySecondary == True):
+            
             #TODO: normally process the command identifier
             #return {"Weather":{"Time":"today", "Location":"Puerto Rico"}}
             arguments = self.commands[mainCommand][1] #Get the secondary commands
-
             # Get the arg word and arg synsets list
             for argument, argumentSynsets in arguments.items(): 
                     
@@ -265,6 +270,7 @@ class CommandProcessing:
         elif (len(self.commandScore) == 0):
             return returnArgs
         else:
+            #Fallback when multiple items are returned
             #TODO: find the most optimal command goal
             return returnArgs
 
