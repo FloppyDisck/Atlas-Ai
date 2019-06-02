@@ -1,6 +1,7 @@
 import pytz
 import sqlite3
 from datetime import datetime, timezone, timedelta
+from operator import itemgetter
 
 class CurrentReminders:
     def __init__(self, dbPath = 'Modules/DataBases/remindersDB'):
@@ -16,6 +17,7 @@ class CurrentReminders:
         self.conn = sqlite3.connect(dbPath)
         self.update_list()
 
+    # TODO: get_time_in and get_time_at should both be private functions
     def get_time_in(self, alarm, timeUTC=datetime.now(timezone.utc)):
         """
         Add the requested time on top of the UTC.
@@ -33,13 +35,12 @@ class CurrentReminders:
             The epoch time with the alarm added.
         """
         timeUTC_tuple = timeUTC.timetuple()
-
         for index in range(0, 6):
             if alarm[index] == None:
                 alarm[index] = timeUTC_tuple[index] #copy original value
             else:
                 alarm[index] += timeUTC_tuple[index] #sum the new val to the original
-        
+
         correctionList = [12, None, 24, 59, 59] #number thresholds for each value
 
         import calendar
@@ -71,10 +72,8 @@ class CurrentReminders:
                 alarm[index-1] += int(alarm[index] / correctionList[index-1])
                 #current value is equal to current value MOD its limit
                 alarm[index] = int(alarm[index] % correctionList[index-1])
-
         timeAlarm = datetime(*alarm)
-
-        return int(timeAlarm.timestamp())
+        return int(timeAlarm.replace(tzinfo=timezone.utc).timestamp())
 
     def get_time_at(self, alarm, timeUTC=datetime.now(timezone.utc)):
         """
@@ -100,7 +99,7 @@ class CurrentReminders:
             
         timeAlarm = datetime(*alarm)
         #return timeAlarm.timestamp()
-        return int(timeAlarm.timestamp())
+        return int(timeAlarm.replace(tzinfo=timezone.utc).timestamp())
 
     def set_reminder(self, reminder, alarm, exactTime, repeatFrequency = None):
         """
@@ -135,7 +134,7 @@ class CurrentReminders:
         self.reminders.append(commandSet)
 
         #Sort by the smallest epoch
-        self.reminders.sort(key = lambda x: x[2])
+        self.reminders.sort(key = itemgetter(1))
 
         db = self.conn.cursor()
         db.execute('INSERT INTO reminderstbl (reminderStr, alarm, status, concurrency) VALUES (?, ?, ?, ?)', commandSet)
@@ -207,20 +206,20 @@ class CurrentReminders:
         """
         threshold = 60 #add second threshold for current time
         currentTime_epoch = datetime.now(timezone.utc).timestamp() + threshold
-
         dueAlarm = []
         for reminder in self.reminders:
             #Since list is sorted break when number is greater
-            if currentTime_epoch < reminder[2]:
+            if currentTime_epoch < reminder[1]:
                 break
             #Add reminder to dueAlarm and remove from reminders
             dueAlarm.append(reminder)
-            if reminder[3] == 2: #Standard
-                reminder_new = reminder_concurrency(reminder)
+            if reminder[2] == 2: #Standard
+                reminder_new = self.reminder_concurrency(reminder)
                 if reminder_new != None:
                     self.reminders.append()
-
-            db.execute('UPDATE remindersTbl r SET reminderStr = ?, alarm = ? WHERE status = ?', ([reminder[0]], [reminder[1]], [0]))
+            
+            db = self.conn.cursor()
+            db.execute('UPDATE remindersTbl SET status = ? WHERE reminderStr = ? AND alarm = ?', (0, reminder[0], reminder[1]))
             self.reminders.remove(reminder)
 
         #TODO: create a string for each value that the ai can read
@@ -246,10 +245,18 @@ class CurrentReminders:
             self.reminders.append(reminder)
 
         #sort by epoch
-        self.reminders.sort(key = lambda x: x[2])
+        self.reminders.sort(key = itemgetter(1))
 
 if __name__ == "__main__":
     reminder = CurrentReminders()
-    reminder.set_reminder("Testing Reminder", [None, 20, 40, 30, 70, None], False)
+    print(reminder.set_reminder("2 minute reminder", [0, 0, 0, 0, 2, 0], False))
+    print(reminder.reminders)
     UTCSec = datetime.now(timezone.utc).timestamp()
-    print(UTCSec, )
+    print(UTCSec)
+    while True:
+        reminders = reminder.check_alarm()
+        if reminders != []:
+            print(reminders)
+            break
+
+    
