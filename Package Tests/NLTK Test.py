@@ -11,62 +11,62 @@ lineBreak = "-" * 100
 sentence = "Could you tell me how the weather is looking?"
 words = word_tokenize(sentence)
 
-print("""
-{}
-Breaking down this sentence: \"{}\"
+print(f"""
+{lineBreak}
+Breaking down this sentence: \"{sentence}\"
 
-{}
-{}
-""".format(lineBreak, sentence, nltk.pos_tag(words), lineBreak))
+{nltk.pos_tag(words)}
+{lineBreak}
+""")
 
 #Clean the sentence
 #print(stopwords.words('english'))
 words_filtered = [word for word in words if word not in stopwords.words('english')]
 
-print("""
-{}
+print(f"""
+{lineBreak}
 Filtered broken down sentence:
-{}
+{nltk.pos_tag(words_filtered)}
 
-{}
-""".format(lineBreak, nltk.pos_tag(words_filtered), lineBreak))
+{lineBreak}
+""")
 
 #Find word definition and other functions
 for word_filtered in words_filtered:
     syn = wordnet.synsets(word_filtered)
 
-    print("""{}
-    Wordnet function on \"{}\"
+    print(f"""{lineBreak}
+    Wordnet function on \"{word_filtered}\"
 
     Word related: 
-    {}
-    """.format(lineBreak,word_filtered, syn))
+    {syn}
+    """)
 
     for word in syn:
         print("~"*100)
-        print("""
-        Word: {}
-        Definition: {}
-        """.format(word.name(), word.definition()))
+        print(f"""
+        Word: {word.name()}
+        Definition: {word.definition()}
+        """)
         for hypernym in word.hypernyms():
-            print("""    Hypernym: {}""".format(hypernym))
+            print(f"""    Hypernym: {hypernym}""")
         if (len(word.hypernyms()) > 0):
             print(" ")
 
         for hyponym in word.hyponyms():
-            print("""    Hyponym: {}""".format(hyponym))
+            print(f"""    Hyponym: {hyponym}""")
         if (len(word.hyponyms()) > 0):
             print(" ")
 
         for similar in word.lemmas():
-            print("""    Similar Word: {}""".format(similar))
+            print(f"""    Similar Word: {similar}""")
             if (similar.antonyms()):
-                print("""    Antonym: {}""".format(similar.antonyms()))
+                print(f"""    Antonym: {similar.antonyms()}""")
         if (len(word.lemmas()) > 0):
             print(" ")
 
         for example in word.examples():
-            print("""    Example: {}""".format(example))
+            print(f"""    Example: {example}""")
 
     print(lineBreak)
 

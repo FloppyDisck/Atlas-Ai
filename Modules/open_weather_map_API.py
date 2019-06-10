@@ -31,17 +31,16 @@ def request_Weather(location, requestType):
         #The request was completed without errors
         weatherData = json.loads(weatherData.text)   
         try:
-            rainString =  " with a potential rain volume of {} milimiters".format(weatherData ["rain"]["3h"])
+            rainString =  f" with a potential rain volume of {weatherData ["rain"]["3h"]} milimiters"
         except KeyError:
             rainString = ""
 
-        returnString = "Today you will be experiencing {}, the temperature is {} Celcius with a humidity of {} percent".format(
-            weatherData["weather"][0]["main"].lower(), weatherData["main"]["temp"], weatherData["main"]["humidity"])
+        returnString = f"Today you will be experiencing {weatherData["weather"][0]["main"].lower()}, the temperature is {weatherData["main"]["temp"]} Celcius with a humidity of {weatherData["main"]["humidity"]} percent"
 
         returnString += rainString + "."
 
         #for key, keyData in weatherData.items():
-            #print("{} : {}".format(key, keyData))
+            #print("{key} : {keyData}")
         return returnString
 
 if __name__ == "__main__":

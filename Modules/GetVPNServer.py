@@ -41,7 +41,7 @@ class GetVPNServer:
         loginFile.write(passwd)
         loginFile.close()
 
-        command = 'openvpn --config /etc/openvpn/ovpn_udp/{}.udp.ovpn --auth-user-pass {}'.format(self.server, authPass)
+        command = f'openvpn --config /etc/openvpn/ovpn_udp/{self.server}.udp.ovpn --auth-user-pass {authPass}'
         os.system(command)
         os.remove(authPass)
 
@@ -50,5 +50,5 @@ if __name__ == "__main__":
     server = nordServer.getServer('us')
     print(server)
     nordServer.startVPN('generiEmail@gmail.com', 'passwordBlah')
-    #print(os.system('cd /etc/openvpn/ovpn_udp/ && openvpn {}.udp.ovpn'.format(nordServer[0])))
+    #print(os.system(f'cd /etc/openvpn/ovpn_udp/ && openvpn {nordServer[0]}.udp.ovpn'))
     

@@ -14,13 +14,12 @@ for synword1 in word1:
         if not similarity:
                 pass
         elif similarity >= threshold:
-                print('''
-                First word: {}
-                Definition: {}
+                print(f'''
+                First word: {synword1}
+                Definition: {synword1.definition()}
                 
-                Second word: {}
-                Definition: {}
+                Second word: {synword2}
+                Definition: {synword2.definition()}
                 
-                Similarity: {}
-                '''.format(synword1, synword1.definition(), 
-                synword2, synword2.definition(), similarity))
+                Similarity: {similarity}
+                ''')

@@ -75,17 +75,17 @@ while notExit:
         if command[1] in ['path', 'p']:
             print(dbPath)
         if command[1] in ['data', 'd']: #show data in a raw form
-            print('\nShowing all data in tables of {}'.format(dbName))
+            print(f'\nShowing all data in tables of {dbName}')
             db.execute("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;")
             
             for row in db.fetchall():#iterate through everything and print the values
-                print('\t{}'.format(row))
-                queryData = db.execute("SELECT * FROM {}".format(row[0]))
+                print(f'\t{row}')
+                queryData = db.execute(f"SELECT * FROM {row[0]}")
                 for row in queryData:
-                    print('\t\t{}'.format(row))
+                    print(f'\t\t{row}')
 
         if command[1] in ['functions', 'func', 'f']:#show the function table and its values
-            print('\nShowing all functions in {}'.format(dbName))
+            print(f'\nShowing all functions in {dbName}')
             db.execute('SELECT * FROM functiontbl')
             functiontbl = []
             for row in db.fetchall():
@@ -97,14 +97,14 @@ while notExit:
                 commandtbl.append(row)
 
             for functionValue in functiontbl:
-                print("\t{}:".format(functionValue[1]))
+                print(f"\t{functionValue[1]}:")
                 for commandValue in commandtbl:
                     if functionValue[0] == int(commandValue[4]):
-                        print("\t|-> {}.{}.{}".format(commandValue[1], commandValue[2], commandValue[3]))
+                        print(f"\t|-> {commandValue[1]}.{commandValue[2]}.{commandValue[3]}")
                 print("")
 
         if command[1] in ['data+', 'd+', 'dp']:#show all the data in a pretty edited form (same as 'show data')
-            print('\nShowing all pretty data in {}'.format(dbName))
+            print(f'\nShowing all pretty data in {dbName}')
             db.execute('SELECT * FROM commandsetuptbl')
             commandsetuptbl = []
             for row in db.fetchall():
@@ -131,24 +131,24 @@ while notExit:
                 secondarylisttbl.append(row)
 
             for commandsetupVal in commandsetuptbl:
-                print('\t{}:\n\t|-> Primary List:'.format(commandsetupVal[1]))
+                print(f'\t{commandsetupVal[1]}:\n\t|-> Primary List:')
                 for primarylistVal in primarylisttbl:
                     if primarylistVal[0] == commandsetupVal[2]:
                         for functionVal in functiontbl:
                             if functionVal[0] == primarylistVal[1]:
-                                print('\t|   |-> {}:'.format(functionVal[1]))
+                                print(f'\t|   |-> {functionVal[1]}:')
                                 for commandValue in commandtbl:
                                     if functionVal[0] == int(commandValue[4]):
-                                        print("\t|   |   |-> {}.{}.{}".format(commandValue[1], commandValue[2], commandValue[3]))
+                                        print(f"\t|   |   |-> {commandValue[1]}.{commandValue[2]}.{commandValue[3]}")
                 print('\t|-> Secondary List:')
                 for secondarylistVal in secondarylisttbl:
                     if secondarylistVal[0] == commandsetupVal[3]:
                         for functionVal in functiontbl:
                             if functionVal[0] == secondarylistVal[1]:
-                                print('\t|   |-> {}:'.format(functionVal[1]))
+                                print(f'\t|   |-> {functionVal[1]}:')
                                 for commandValue in commandtbl:
                                     if functionVal[0] == int(commandValue[4]):
-                                        print("\t|   |   |-> {}.{}.{}".format(commandValue[1], commandValue[2], commandValue[3]))
+                                        print(f"\t|   |   |-> {commandValue[1]}.{commandValue[2]}.{commandValue[3]}")
 
     if command[0] in ['create', 'c']:#This stems to everything related to data creation in the database
         db = conn.cursor() 
@@ -160,9 +160,9 @@ while notExit:
             db.execute('SELECT * FROM functiontbl f WHERE f.StrFunction = ?', [strFunction])
             if not db.fetchall():
                 db.execute('INSERT INTO functiontbl (StrFunction) VALUES (?)', [strFunction])
-                print('Successfully added {}'.format(strFunction))
+                print(f'Successfully added {strFunction}')
             else:
-                print('{} already in db'.format(strFunction))
+                print(f'{strFunction} already in db')
             
             #Check if aditional arguments are added, then check if those synsets exist, if not add them
             if len(command) >= 4:
@@ -187,7 +187,7 @@ while notExit:
                                 rawCommand = 'skip' #no errors found skipping
 
                             except IndexError:
-                                print('{} is not a valid word found in the synset or expected "name.type.index" and received {}'.format(synCommand[0], rawCommand))
+                                print(f'{synCommand[0]} is not a valid word found in the synset or expected "name.type.index" and received {rawCommand}')
                                 rawCommand = input('Please enter the correct value or type skip to ignore this value: ')
                                 
         if command[1] in ['command', 'c']:
@@ -200,19 +200,19 @@ while notExit:
                 forContinue = True
                 listlist = ['primarylisttbl', 'secondarylisttbl']
                 for index in range(3, 5):
-                    db.execute('SELECT * FROM {} l WHERE l.ListId = ?'.format(listlist[index - 3]), [command[index]])
+                    db.execute(f'SELECT * FROM {listlist[index - 3]} l WHERE l.ListId = ?', [command[index]])
                     if not db.fetchall():
                         forContinue = False
-                        print('{} index {} does not exist.'.format(listlist[index - 3],command[index]))
+                        print(f'{listlist[index - 3]} index {command[index]} does not exist.')
 
                 #When the lists are proven to exist check if the commandsetup exists, if so update it, if not create it
                 if forContinue == True:
                     db.execute('SELECT * FROM commandsetuptbl c WHERE c.StrName = ?', [strCommand])
                     if not db.fetchall():
                         db.execute('INSERT INTO commandsetuptbl (StrName, IntPrimaryList_Id, IntSecondaryList_Id) VALUES (?, ?, ?)', [strCommand, command[3], command[4]])
-                        print('Successfully added {}.'.format(strCommand))
+                        print(f'Successfully added {strCommand}.')
                     else:
-                        print('Successfully updated {}.'.format(strCommand))
+                        print(f'Successfully updated {strCommand}.')
                         db.execute('UPDATE commandsetuptbl SET IntPrimaryList_Id = ?, IntSecondaryList_Id = ? WHERE StrName = ?', ([command[3]], [command[4]], [strCommand]))
             else:
                 print('Command criteria not met! expected: "create command name primary secondary"')
@@ -223,23 +223,23 @@ while notExit:
             elif command[2] in ['secondary', 's']:
                 listlist = 'secondarylisttbl'
             else:
-                print('Received {} expected: c l [p, s] i n'.format(command))
+                print(f'Received {command} expected: c l [p, s] i n')
                 continue
             
             try:
                 command[3] = int(command[3])
             except Exception as e:
-                print('{} is not valid, expected integer'.format(command[3]))
+                print(f'{command[3]} is not valid, expected integer')
             else:
                 for index in range(4, len(command)):
                     db.execute('SELECT * FROM functiontbl f WHERE f.Id = ?', [command[index]])
                     if not db.fetchall():
-                        print('Index {} not found in functiontbl, skipping.'.format(command[index]))
+                        print(f'Index {command[index]} not found in functiontbl, skipping.')
                         continue
-                    db.execute('SELECT * FROM {} l WHERE l.ListId = ? AND l.Function_Id = ?'.format(listlist), (command[3], command[index]))
+                    db.execute(f'SELECT * FROM {listlist} l WHERE l.ListId = ? AND l.Function_Id = ?', (command[3], command[index]))
                     if not db.fetchall():
-                        db.execute('INSERT INTO {} (ListId, Function_Id) VALUES (?, ?)'.format(listlist), (command[3], command[index]))
-                        print('Successfully added {}.'.format([command[3], command[index]]))
+                        db.execute(f'INSERT INTO {listlist} (ListId, Function_Id) VALUES (?, ?)', (command[3], command[index]))
+                        print(f'Successfully added {[command[3], command[index]]}.')
 
     if command[0] in ['delete', 'd']:
         db = conn.cursor() 
@@ -249,9 +249,9 @@ while notExit:
                 try:
                     db.execute('DELETE FROM functiontbl f WHERE f.StrFunction = ?', [strFunction])
                 except Exception as e:
-                    print('{} could not be deleted, either it doesnt exist or an unexpected error happened!'.format(strFunction))
+                    print(f'{strFunction} could not be deleted, either it doesnt exist or an unexpected error happened!')
                 else:
-                    print('{} has been deleted!'.format(strFunction))
+                    print(f'{strFunction} has been deleted!')
             else:
                 for index in range(3, len(command)):
                     synCommand = str(command[index]).split(".")
@@ -264,18 +264,18 @@ while notExit:
                         
                         db.execute('DELETE FROM commandtbl c WHERE StrName = ? AND StrType = ? AND IntIndex = ? AND FunctionId = ?)', commandSet)
 
-                        print('{} found in {} was deleted successfully.'.format(command[index], strFunction))
+                        print(f'{command[index]} found in {strFunction} was deleted successfully.')
                     except Exception as e:
-                        print('{} found in {} was not deleted successfully.'.format(command[index], strFunction))
+                        print(f'{command[index]} found in {strFunction} was not deleted successfully.')
 
         if command[1] in ['command', 'c']:
             strCommand = functionStandard(command[2])
             try:
                 db.execute('DELETE FROM commandsetuptbl c WHERE c.StrName = ?', [strCommand])
             except Exception as e:
-                print('{} could not be deleted, either it doesnt exist or an unexpected error happened!'.format(strCommand))
+                print(f'{strCommand} could not be deleted, either it doesnt exist or an unexpected error happened!')
             else:
-                print('{} has been deleted!'.format(strCommand))
+                print(f'{strCommand} has been deleted!')
                 
         if command[1] in ['list', 'l']: 
             if command[2] in ['primary', 'p']:
@@ -283,26 +283,26 @@ while notExit:
             elif command[2] in ['secondary', 's']:
                 listlist = 'secondarylisttbl'
             else:
-                print('Received {} expected: c l [p, s] i n'.format(command))
+                print(f'Received {command} expected: c l [p, s] i n')
                 continue
             
             if len(command) == 4:
                 try:
-                    db.execute('DELETE FROM {} l WHERE l.ListId = ?'.format(listlist), (command[3]))
+                    db.execute(f'DELETE FROM {listlist} l WHERE l.ListId = ?', (command[3]))
                 except Exception as e:
-                    print('Could not delete {} list {}'.format(command[2], command[3]))
+                    print(f'Could not delete {command[2]} list {command[3]}')
                     print(e)
                 else:
-                    print('Deleted {} list {}'.format(command[2], command[3]))
+                    print(f'Deleted {command[2]} list {command[3]}')
             else:
                 for index in range(4, len(command)):
                     try:
-                        db.execute('DELETE FROM {} l WHERE l.ListId = ? AND l.Function_Id = ?'.format(listlist), (command[3], command[index]))
+                        db.execute(f'DELETE FROM {listlist} l WHERE l.ListId = ? AND l.Function_Id = ?', (command[3], command[index]))
                     except Exception as e:
-                        print('Could not delete {} list [{}, {}]'.format(command[2], command[3], command[index]))
+                        print(f'Could not delete {command[2]} list [{command[3]}, {command[index]}]')
                         print(e)
                     else:
-                        print('Deleted {} list [{}, {}]'.format(command[2], command[3], command[index]))
+                        print(f'Deleted {command[2]} list [{command[3]}, {command[index]}]')
 
     if command[0] == 'commit':
         try:

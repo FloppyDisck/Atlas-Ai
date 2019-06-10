@@ -19,7 +19,7 @@ except sr.UnknownValueError:
     print("Could no understand audio")
 
 except sr.RequestError as e:
-    print("Sphinx error: {0}".format(e))
+    print(f"Sphinx error: {e}")
 
 #RequestError may be thrown if quota limits are met, 
 # the server is unavailable, or there is no internet connection.
