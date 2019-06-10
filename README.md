@@ -30,7 +30,7 @@ Instructions to testing certain functions are currently WIP
 
 ## Deployment
 
-Better instructios are currently WIP
+Better instructinos are currently WIP
 
 ## Contributing
 
