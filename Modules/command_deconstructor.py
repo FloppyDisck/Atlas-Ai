@@ -6,6 +6,8 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.corpus import wordnet
 
+#TODO: replace variables with primaryKey and secondaryKey
+
 class CommandProcessing:
 
     def __init__(self, dbPath = 'Modules/DataBases/commandDB'):
@@ -205,10 +207,7 @@ class CommandProcessing:
                                 # than the dic
                                 elif (self.commandScore[command] < simScore):
                                     #Replace the value
-                                    self.commandScore[command] = simScore
-
-            # Note: mainCommand or primaryKey? which sounds better?
-            mainCommand = list(self.commandScore.keys())[0] # Get the dic key
+                                    self.commandScore[command] = simScore     
 
         returnArgs = {}
         subArgs = {}
@@ -216,6 +215,9 @@ class CommandProcessing:
         
         if (len(self.commandScore) == 1) or (onlySecondary == True):
             
+            # Note: mainCommand or primaryKey? which sounds better?
+            mainCommand = list(self.commandScore.keys())[0] # Get the dic key
+
             #TODO: normally process the command identifier
             #return {"Weather":{"Time":"today", "Location":"Puerto Rico"}}
             arguments = self.commands[mainCommand][1] #Get the secondary commands
@@ -265,14 +267,17 @@ class CommandProcessing:
                                     subArgs[argument].add(word)
                             
                     #for item in self.extractedSentence
-            returnArgs[mainCommand] = [subArgs, sentenceOUT]          
-            return returnArgs
+            returnArgs[mainCommand] = subArgs  
+
         elif (len(self.commandScore) == 0):
-            return returnArgs
+            pass
         else:
             #Fallback when multiple items are returned
             #TODO: find the most optimal command goal
-            return returnArgs
+            pass
+
+        returnData = [returnArgs, sentenceOUT]        
+        return returnData
 
 if __name__ == "__main__":
 
