@@ -17,8 +17,7 @@ class CurrentReminders:
         self.conn = sqlite3.connect(dbPath)
         self.update_list()
 
-    # TODO: get_time_in and get_time_at should both be private functions
-    def get_time_in(self, alarm, timeUTC=datetime.now(timezone.utc)):
+    def get_time_in(self, alarm, timeUTC=None):
         """
         Add the requested time on top of the UTC.
 
@@ -34,6 +33,8 @@ class CurrentReminders:
         Returns:
             The epoch time with the alarm added.
         """
+        if timeUTC == None:
+            timeUTC=datetime.now(timezone.utc)
         timeUTC_tuple = timeUTC.timetuple()
         for index in range(0, 6):
             if alarm[index] == None:
@@ -75,7 +76,7 @@ class CurrentReminders:
         timeAlarm = datetime(*alarm)
         return int(timeAlarm.replace(tzinfo=timezone.utc).timestamp())
 
-    def get_time_at(self, alarm, timeUTC=datetime.now(timezone.utc)):
+    def get_time_at(self, alarm, timeUTC=None):
         """
         Replace current time with requested values.
 
@@ -89,6 +90,8 @@ class CurrentReminders:
         Returns:
             The epoch time with the alarm added.
         """
+        if timeUTC == None:
+            timeUTC=datetime.now(timezone.utc)
         timeLocal = timeUTC.astimezone() #local time
         timeLocal_tuple = timeLocal.timetuple()
 
@@ -98,8 +101,7 @@ class CurrentReminders:
                 alarm[index] = timeLocal_tuple[index]
             
         timeAlarm = datetime(*alarm)
-        #return timeAlarm.timestamp()
-        return int(timeAlarm.replace(tzinfo=timezone.utc).timestamp())
+        return int(timeAlarm.timestamp())
 
     def set_reminder(self, reminder, alarm, exactTime, repeatFrequency = None):
         """
@@ -127,9 +129,7 @@ class CurrentReminders:
             alarm_epoch = self.get_time_at(alarm)
         else:
             alarm_epoch = self.get_time_in(alarm)
-
         #Add the reminder to the ram
-        #TODO:If the alarm_epoch < x hour limit then add
         commandSet = [reminder, alarm_epoch, reminderStatus, repeatFrequency]
         self.reminders.append(commandSet)
 
@@ -153,46 +153,49 @@ class CurrentReminders:
         Returns:
             The updated value is returned or None when there is no next reminder.
         """
-        #second, minute, hour, Day, Month, Year, Times, Week, week (week day 1-7) (days divided by -)
+        #second, minute, hour, Day, Month, Year, Times, Weeks, week (week day 1-7) (days divided by -)
         repetition = reminder_old[3].split('/')
         newAlarm = [0, 0, 0, 0, 0, 0]
-        alarmHeaders = ['s', 'm', 'h', 'D', 'M', 'Y'] #used to find newAlarm index
+        alarmHeaders = ['Y', 'M', 'D', 'h', 'm', 's'] #used to find newAlarm index
         repetition_str = ""
         for value in repetition:
-            #Set the header Char
-            valueHeader = value[:1]
-            if valueHeader in alarmHeaders:
-                newAlarm[alarmHeaders.index(valueHeader)] += int(value[1:])
-            #Remove a repetition since this is finite
-            if valueHeader == 'T':
-                times = int(value[1:]) - 1
-                if times == 0:
-                    return None
-                value = 'T' + times
-            if valueHeader == 'W':
-                newAlarm[alarmHeaders.index(valueHeader)] += (int(value[1:]) * 7)
-            if valueHeader == 'w':
-                #TODO: calulate the days and sum to epoch
-                #Assuming in this string weeks start with 1
-                weekDay_now = datetime.utcfromtimestamp(UTCSec).weekday() + 1
-                weekDays = value[1:].split('-')
+            if value != "":
+                #Set the header Char
+                valueHeader = value[:1]
 
-                #If day passed minimum
-                if weekDay_now > weekDays[-1]:
-                    pass
-                else:
-                    for weekDay in weekDays:
-                        pass
-            repetition_str += '/' + value
+                if valueHeader in alarmHeaders:
+                    newAlarm[alarmHeaders.index(valueHeader)] += int(value[1:])
 
+                #Remove a repetition since this is finite
+                if valueHeader == 'T':
+                    times = int(value[1:])
+                    if times == 0:
+                        return None
+                    value = 'T' + str(times-1)
 
-        newEpoch = self.get_time_in(newAlarm, reminder_old[1])
-        #TODO: sum the other two values
-        
-        reminder_new = [reminder_old[0], newEpoch, 2, repetition_str]
+                if valueHeader == 'W':
+                    #Add that many days
+                    newAlarm[alarmHeaders.index('D')] += (int(value[1:]) * 7)
 
-        #TODO: Add new reminder to DB
-        return reminder_new
+                if valueHeader == 'w':
+                    #Assuming in this string weeks start with 1
+                    weekDay_now = datetime.now(timezone.utc).weekday() + 1
+                    weekDays = value[1:].split('-')
+
+                    #Calculate nearest weekday
+                    for index in range(0, len(weekDays)):
+                        if weekDay_now > weekDays[index]:
+                            weekDay_near = index - 1
+                        weekDay_near = weekDays[index]
+                    if weekDay_near < 0:
+                        weekDay_near = 0
+
+                    newAlarm[alarmHeaders.index('D')] += abs(weekDay_now - weekDays[weekDay_near])
+ 
+                repetition_str += '/' + value
+
+        newReminder = self.set_reminder(reminder_old[0], newAlarm, False, repeatFrequency=repetition_str)
+        return newReminder
 
     def check_alarm(self):
         """
@@ -204,7 +207,7 @@ class CurrentReminders:
         Returns:
             Return list of alarms that are due.
         """
-        threshold = 60 #add second threshold for current time
+        threshold = 0 #add second threshold for current time
         currentTime_epoch = datetime.now(timezone.utc).timestamp() + threshold
         dueAlarm = []
         for reminder in self.reminders:
@@ -214,13 +217,12 @@ class CurrentReminders:
             #Add reminder to dueAlarm and remove from reminders
             dueAlarm.append(reminder)
             if reminder[2] == 2: #Standard
-                reminder_new = self.reminder_concurrency(reminder)
-                if reminder_new != None:
-                    self.reminders.append()
-            
+                self.reminder_concurrency(reminder)
+ 
             db = self.conn.cursor()
             db.execute('UPDATE remindersTbl SET status = ? WHERE reminderStr = ? AND alarm = ?', (0, reminder[0], reminder[1]))
             self.reminders.remove(reminder)
+            self.conn.commit()
 
         #TODO: create a string for each value that the ai can read
         return dueAlarm
@@ -232,12 +234,12 @@ class CurrentReminders:
         Returns:
             self.reminders witt the populated reminders.
         """
-        #TODO: update every x hours and get reminders under those x hours
         timeUTC_epoch = datetime.now(timezone.utc).timestamp()
         db = self.conn.cursor()
         db.execute("""
-        SELECT reminderStr, alarm, status FROM remindersTbl r
+        SELECT reminderStr, alarm, status, concurrency FROM remindersTbl r
         WHERE r.status > 0""")
+        self.conn.commit()
         #If status is greater than 0 then it is still available
         self.reminders = []
         
@@ -250,13 +252,19 @@ class CurrentReminders:
 if __name__ == "__main__":
     reminder = CurrentReminders()
     print(reminder.set_reminder("2 minute reminder", [0, 0, 0, 0, 2, 0], False))
+    print(reminder.set_reminder("4 minute reminder", [0, 0, 0, 0, 4, 0], False))
+    print(reminder.set_reminder("8 minute reminder", [0, 0, 0, 0, 8, 0], False))
+    print(reminder.set_reminder("At 2:35PM", [None, None, None, 14, 35, 0], True))
+    print(reminder.set_reminder("Repeat reminder", [0, 0, 0, 0, 2, 0], False, "m2/T2"))
     print(reminder.reminders)
-    UTCSec = datetime.now(timezone.utc).timestamp()
-    print(UTCSec)
+
+    UTCSec = datetime.now(timezone.utc).replace(tzinfo=timezone.utc).timestamp()
+    curTime = datetime.now()
+    print(curTime, UTCSec, "Start Time") #This has proven to be the accurate time
+
     while True:
         reminders = reminder.check_alarm()
         if reminders != []:
-            print(reminders)
-            break
-
-    
+            UTCSec = datetime.now(timezone.utc).replace(tzinfo=timezone.utc).timestamp()
+            curTime = datetime.now()
+            print(curTime, UTCSec, reminders)
