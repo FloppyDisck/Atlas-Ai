@@ -5,6 +5,8 @@ class Module_Manager:
     def __init__(self):
         pass
     def boot_manager(self):
+        #TODO: add api key checks for all modules that contain one, this function only runs at bootup
+                #enable or disable modules according to the wifi availability
         pass
     def runtime_manager(self, command, sentence):
         #TODO: possibly automate this section so it only loads moduleName.runtime() or something
