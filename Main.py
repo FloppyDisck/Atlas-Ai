@@ -1,72 +1,47 @@
-from commandDeconstructor import commandIdentifier
-from nltk.corpus import wordnet
-import sqlite3
+from Modules import module_manager
+from Modules import command_deconstructor
 
-#Dictionary Setup - Use the db to create the dictionary every bootup
-conn = sqlite3.connect('commandDB')
-db = conn.cursor()
-db.execute("""
-SELECT cs.StrName, c.StrName, c.StrType, c.IntIndex FROM commandsetuptbl cs
-        JOIN primarylisttbl p
-        JOIN functiontbl f
-        JOIN commandtbl c 
-WHERE 
-        cs.IntPrimaryList_Id = p.ListId and
-        p.Function_Id = f.Id and
-        f.Id = c.FunctionId""")
+command = command_deconstructor.CommandProcessing("Modules/DataBases/commandDB")
+moduleManager = module_manager.Module_Manager()
+moduleManager.boot_manager()
 
-commandDicPrimary = {}
-commandDicScore = {}
-previousCommand = ""
-for row in db.fetchall():
-        if previousCommand == "":
-                previousCommand = row[0]
-                synsetList = []
-        elif previousCommand != row[0]:
-                #Add the list of the dictionary
-                commandDicPrimary[previousCommand] = synsetList
-                commandDicScore[previousCommand] = 0
-                previousCommand = row[0]
-                synsetList = []
+#Remind me to clean up room at 7 30 pm tomorrow - reminder example
+#What is the weather in Spain tomorrow - weather example
+sentence = "Remind me to clean up room at 7 30 pm tomorrow"
+#Recognize its a reminder
+#regex to separate and get the reminder string "clean up room"
+#regex to get time
+#regex to get date
+#the concurrency starts at "every"
+print(sentence)
+
+#TODO:
+#If wifi enabled
+#       GetVPNServer.py runs to connect in a secure way
+
+#TODO: make this loop so incomplete calls can be completed with subsequent sentences
+#TODO: every call returns [status, sentence] status can mean call completed or call incomplete
+
+analizedSentence = command.analize_sentence(sentence)
+print(analizedSentence)
+#analizedSentence_secondary = command.analize_sentence(sentence, True, 'Weather')
+#print(analizedSentence_secondary)
+
+#Voice to text ends here
+
+#Returns a dictionary where the key is the command and the value is a list with 
+# 0.Dictionary with key = secondary command and value = word 
+# 1.Sentence list broken into lists where the second value is the secondary command
+#Example:
+#       In: What is the weather in Spain tomorrow
+#       Out: {'Weather': [{'Time': {'Tomorrow'}}, [['What'], ['is'], ['the'], ['weather'], ['in'], ['Spain'], ['tomorrow', 'Time']]]}
+
+if (len(analizedSentence) > 0):
+        #Continue
+        pass
+        #moduleManager.runtime_manager(analizedSentence, sentence)
+        #if the sentence is incomplete return a reply sentence and the primaryKey(commandKey)
         
-        synsetList.append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
-
-commandDicPrimary[previousCommand] = synsetList
-commandDicScore[previousCommand] = 0
-
-db.execute("""
-SELECT cs.StrName, c.StrName, c.StrType, c.IntIndex, f.StrFunction FROM commandsetuptbl cs
-        JOIN secondarylisttbl p
-        JOIN functiontbl f
-        JOIN commandtbl c 
-WHERE 
-        cs.IntSecondaryList_Id = p.ListId and
-        p.Function_Id = f.Id and
-        f.Id = c.FunctionId""")
-
-commandDicSecondary = {}
-previousCommand = ""
-for row in db.fetchall():
-        functionName = row[4]
-        if previousCommand == "":
-                previousCommand = row[0]
-                synsetList = []
-        elif previousCommand != row[0]:
-                #Add the list of the dictionary
-                commandDicSecondary[previousCommand] = [functionName, synsetList]
-                previousCommand = row[0]
-                synsetList = []
-        
-        synsetList.append(wordnet.synsets(str(row[1]), pos=str(row[2]))[int(row[3])])
-
-commandDicSecondary[previousCommand] = [functionName, synsetList]
-
-print(commandDicPrimary)
-print(commandDicScore)
-print(commandDicSecondary)
-
-sentence = "How is the weather like today?"
-
-commandIdentifier(sentence, commandDicPrimary, commandDicScore)
-
-print(commandDicScore)
+else:
+        #Display error that command was not understood
+        pass

@@ -1,5 +1,8 @@
+NLTK
 SpeechRecognition
 PocketSphinx
 numpy
 soundfile
-pyaudioc
+pyaudio
+requests
+geograpy3

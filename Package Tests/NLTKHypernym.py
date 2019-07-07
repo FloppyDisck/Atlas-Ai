@@ -39,7 +39,7 @@ sentence_list = [
 
 #To test the recursive function
 word_set = wordnet.synsets("peculiar")
-#print("{}".format(hypernymFinder(word_set)))
+#print(f"{hypernymFinder(word_set)}")
 
 testRun = False
 
@@ -101,7 +101,7 @@ if test6_2_3 == True:
     def dialogue_act_features(post):
         features = {}
         for word in nltk.word_tokenize(post):
-            features['contains({})'.format(word.lower())] = True
+            features[f'contains({word.lower()})'] = True
         return features
 
     featuresets = [(dialogue_act_features(post.text), post.get('class'))
