@@ -1,0 +1,14 @@
+{
+  "today": "date",
+  "cold": "temp",
+  "hot": "temp",
+  "temperature": "temp",
+  "raining": "rain",
+  "humid": "humidity",
+  "spain": "location",
+  "russia": "location",
+  "tomorrow": "date",
+  "arizona": "location",
+  "much": "quantity",
+  "puerto rico": "location"
+}
