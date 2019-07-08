@@ -46,6 +46,134 @@
         "text": "good afternoon"
       },
       {
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "good evening"
+      },
+      {
+        "intent": "greet",
+        "text": "good afternoon"
+      },
+      {
+        "intent": "greet",
+        "text": "hey there"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there"
+      },
+      {
+        "intent": "greet",
+        "text": "hii"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi"
+      },
+      {
+        "intent": "fine_ask",
+        "text": "I am good, how are you doing?"
+      },
+      {
+        "intent": "fine_ask",
+        "text": "I'm fine, how are you?"
+      },
+      {
+        "intent": "fine_ask",
+        "text": "I'm good, how are you?"
+      },
+      {
+        "intent": "fine_ask",
+        "text": "I am good, how are you?"
+      },
+      {
+        "intent": "fine_ask",
+        "text": "Doing good, how are you?"
+      },
+      {
+        "intent": "fine_ask",
+        "text": "Awesome, how are you?"
+      },
+      {
+        "intent": "fine_ask",
+        "text": "im fine, how are you?"
+      },
+      {
+        "intent": "fine_ask",
+        "text": "im good, how are you?"
+      },
+      {
+        "intent": "fine_ask",
+        "text": "I am doing good. How about you?"
+      },
+      {
+        "intent": "fine_normal",
+        "text": "I am doing great"
+      },
+      {
+        "intent": "fine_normal",
+        "text": "I'm doing great"
+      },
+      {
+        "intent": "fine_normal",
+        "text": "I'm fine"
+      },
+      {
+        "intent": "fine_normal",
+        "text": "I'm good"
+      },
+      {
+        "intent": "fine_normal",
+        "text": "Doing good"
+      },
+      {
+        "intent": "fine_normal",
+        "text": "Awesome"
+      },
+      {
+        "intent": "fine_normal",
+        "text": "im fine"
+      },
+      {
+        "intent": "fine_normal",
+        "text": "im good"
+      },
+      {
+        "intent": "thanks",
+        "text": "Thanks"
+      },
+      {
+        "intent": "thanks",
+        "text": "Thank you so much"
+      },
+      {
+        "intent": "bye",
+        "text": "No, I am good as of now. Bye"
+      },
+      {
+        "intent": "bye",
+        "text": "Bye"
+      },
+      {
+        "intent": "bye",
+        "text": "Bbye"
+      },
+      {
         "intent": "goodbye",
         "text": "cu"
       },

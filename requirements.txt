@@ -1,8 +1,0 @@
-NLTK
-SpeechRecognition
-PocketSphinx
-numpy
-soundfile
-pyaudio
-requests
-geograpy3

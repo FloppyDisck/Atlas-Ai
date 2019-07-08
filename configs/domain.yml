@@ -1,5 +1,5 @@
 slots:
-  category:
+  weather_arg:
     type: text
 
 entities:
@@ -16,12 +16,14 @@ intents:
 
 actions:
 - action_restart
+- action_weather_return
 - utter_greet
 - utter_reply
 - utter_help
 - utter_anything_else
 - utter_bye
 - utter_default
+- utter_unclear
 
 templates:
   utter_greet:
@@ -43,4 +45,4 @@ templates:
   utter_default:
     - text: I am not sure what you're aiming for
     - text: I am sorry but I am not able to get you.
-- text: My appologies but I am not able to get you
+    - text: My appologies but I am not able to get you

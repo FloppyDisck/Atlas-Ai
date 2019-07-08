@@ -1,0 +1,29 @@
+{
+  "states": [
+    "intent_goodbye",
+    "intent_greet",
+    "intent_mood_affirm",
+    "intent_mood_deny",
+    "intent_mood_great",
+    "intent_mood_unhappy",
+    "intent_weather_request",
+    "entity_weather_arg",
+    "slot_weather_arg_0",
+    "prev_action_listen",
+    "prev_action_restart",
+    "prev_action_default_fallback",
+    "prev_action_deactivate_form",
+    "prev_action_revert_fallback_events",
+    "prev_action_default_ask_affirmation",
+    "prev_action_default_ask_rephrase",
+    "prev_action_back",
+    "prev_action_weather_return",
+    "prev_utter_greet",
+    "prev_utter_reply",
+    "prev_utter_help",
+    "prev_utter_anything_else",
+    "prev_utter_bye",
+    "prev_utter_default",
+    "prev_utter_unclear"
+  ]
+}

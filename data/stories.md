@@ -1,28 +1,28 @@
 stories_md = """
-## happy path               <!-- name of the story - just for debugging -->
-* greet              
-  - utter_greet
-* mood_great               <!-- user utterance, in format intent[entities] -->
-  - utter_happy            <!-- action the bot should execute -->
-* mood_affirm
-  - utter_happy
-* mood_affirm
-  - utter_goodbye
-  
-## strange user
-* mood_affirm
-  - utter_happy
-* mood_affirm
-  - utter_unclear
-
-## say goodbye
-* goodbye
-  - utter_goodbye
-
-## ask weather
-* weather_request
-  - action_return_weather
-
 ## fallback
-- utter_unclear
+- utter_default
+
+## greeting path 1
+* greet
+- utter_greet
+
+## fine path 1
+* fine_normal
+- utter_help
+
+## fine path 2
+* fine_ask
+- utter_reply
+
+## thanks path 1
+* thanks
+- utter_anything_else
+
+## bye path 1
+* bye
+- utter_bye
+
+## request weather
+* weather_request
+- action_weather_return
 """
