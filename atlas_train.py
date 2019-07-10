@@ -1,4 +1,4 @@
-import simplejson as json
+import simplejson as jsomln
 from rasa_nlu.training_data import load_data
 from rasa_nlu.config import RasaNLUModelConfig
 from rasa_nlu.model import Trainer
@@ -11,6 +11,8 @@ training_data = load_data("data/nlu.md")
 
 # trainer to educate our pipeline
 trainer = Trainer(config.load("configs/config.yml"))
+#Using duckling server for quantification classification stack exec duckling-example-exe
+#c libraries https://guide.aelve.com/haskell/missing-dependency-on-a-foreign-library-vf6h3d0p
 
 # train the model!
 interpreter = trainer.train(training_data)
@@ -32,6 +34,7 @@ pprint(interpreter.parse("Will it be raining today"))
 pprint(interpreter.parse("Will it be hot"))
 pprint(interpreter.parse("How much more will it rain in Africa"))
 pprint(interpreter.parse("How clowdy is it in San Francisco"))
+pprint(interpreter.parse("Set reminder for tomorrow at ten thirty pm"))
 
 #More robust metrics report
 #run_evaluation("data/nlu.md", model_directory) #Recommended to have a custom test set

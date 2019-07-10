@@ -1,3 +1,9 @@
+#pip install rasa_nlu[spacy]
+#python3 -m spacy download en
+#python3 -m spacy download en_core_web_md
+#python3 -m spacy link en_core_web_md en
+#(pipeline)pip install rasa_nlu[tensorflow]
+
 #Starting the Bot
 
 from rasa_core.agent import Agent

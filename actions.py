@@ -1,10 +1,6 @@
 #Custom actions
 #conda activate atlasai & python -m rasa_core_sdk.endpoint --actions actions
 
-#Possibly Deprecated
-#from rasa_core.actions import Action
-#from rasa_core.events import SlotSet
-
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 
