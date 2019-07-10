@@ -119,7 +119,15 @@
       },
       {
         "intent": "fine_ask",
-        "text": "I am doing good. How about you?"
+        "text": "I am doing good. what about you?"
+      },
+      {
+        "intent": "fine_ask",
+        "text": "I'm good, what about you"
+      },
+      {
+        "intent": "fine_ask",
+        "text": "awesome what about you"
       },
       {
         "intent": "fine_normal",
@@ -162,6 +170,10 @@
         "text": "Thank you so much"
       },
       {
+        "intent": "thanks",
+        "text": "awesome"
+      },
+      {
         "intent": "bye",
         "text": "No, I am good as of now. Bye"
       },
@@ -171,11 +183,7 @@
       },
       {
         "intent": "bye",
-        "text": "Bbye"
-      },
-      {
-        "intent": "goodbye",
-        "text": "cu"
+        "text": "see ya"
       },
       {
         "intent": "goodbye",
@@ -183,7 +191,7 @@
       },
       {
         "intent": "goodbye",
-        "text": "cee you later"
+        "text": "see you later"
       },
       {
         "intent": "goodbye",
@@ -662,6 +670,68 @@
           }
         ],
         "text": "Will it be raining and what temp will it be tomorrow in Puerto Rico"
+      },
+      {
+        "intent": "reminder_set",
+        "text": "set a reminder"
+      },
+      {
+        "intent": "reminder_set",
+        "text": "can you set a reminder"
+      },
+      {
+        "intent": "reminder_set",
+        "entities": [
+          {
+            "start": 19,
+            "end": 24,
+            "value": "today",
+            "entity": "reminder_date"
+          },
+          {
+            "start": 28,
+            "end": 41,
+            "value": "eleven thirty",
+            "entity": "reminder_arg_time"
+          }
+        ],
+        "text": "set a reminder for today at eleven thirty"
+      },
+      {
+        "intent": "reminder_set",
+        "entities": [
+          {
+            "start": 13,
+            "end": 26,
+            "value": "lock the door",
+            "entity": "reminder_arg"
+          }
+        ],
+        "text": "remind me to lock the door"
+      },
+      {
+        "intent": "reminder_set",
+        "entities": [
+          {
+            "start": 13,
+            "end": 32,
+            "value": "turn off the lights",
+            "entity": "reminder_arg"
+          },
+          {
+            "start": 33,
+            "end": 41,
+            "value": "tomorrow",
+            "entity": "reminder_arg_date"
+          },
+          {
+            "start": 45,
+            "end": 50,
+            "value": "night",
+            "entity": "reminder_arg_time"
+          }
+        ],
+        "text": "remind me to turn off the lights tomorrow at night"
       }
     ],
     "regex_features": [],
