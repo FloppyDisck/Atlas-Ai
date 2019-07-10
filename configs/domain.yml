@@ -1,6 +1,6 @@
 slots:
   weather_arg:
-    type: text
+    type: bool
 
 entities:
 - weather_arg
@@ -13,6 +13,7 @@ intents:
 - mood_great
 - mood_unhappy
 - weather_request
+- reminder_set
 
 actions:
 - action_restart

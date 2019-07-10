@@ -15,8 +15,8 @@ class ActionWeatherReturn(Action):
             argList = []
             trackerDic = tracker.current_state()
             for argument in trackerDic['latest_message']['entities']:
-                argList.append([argument['entity'], argument['value']])
-            dispatcher.utter_message(f"These are the args: {argList}")
+                argList.append(argument)
+            dispatcher.utter_message(trackerDic['latest_message'])
             #TODO: tracker.get_latest_entity_values() missing 1 required positional argument: 'entity_type'
         except Exception as e:
             dispatcher.utter_message(f"{e}")

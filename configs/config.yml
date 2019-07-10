@@ -7,6 +7,6 @@ pipeline:
 - name: "DucklingHTTPExtractor"
   url: "http://0.0.0.0:8000"
   timezone: "UTC"
-- name: "CRFEntityExtractor" #BILOU_flag: true if more than 100 examples per entitie
+- name: "CRFEntityExtractor" #BILOU_flag: true if more than 100 examples per entity
 - name: "EntitySynonymMapper"
 - name: "SklearnIntentClassifier"

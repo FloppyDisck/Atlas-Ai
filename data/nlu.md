@@ -125,7 +125,7 @@ nlu_md = """
 - Give me the weather
 - What's the current atmospheric conditions
 <!-- 1 entity questions --> 
-- What's the weather for [today](weather_arg:date) <!--Define a synonim (intent:word)-->
+- What's the weather for today <!--Define a synonim (intent:word)-->
 - Will it be [cold](weather_arg:temp)
 - How [hot](weather_arg:temp) is it
 - What is the current [temperature](weather_arg:temp)
@@ -137,19 +137,20 @@ nlu_md = """
 - What is the weather like in [Spain](weather_arg:location)
 <!-- 2 entity questions -->
 - What is the [temperature](weather_arg:temp) like in [Russia](weather_arg:location)
-- How [cold](weather_arg:temp) will it be [tomorrow](weather_arg:date)
+- How [cold](weather_arg:temp) will it be tomorrow
 - How [humid](weather_arg:humidity) is it how [hot](weather_arg:temp) can it get
 - Is it [raining](weather_arg:rain) over in [Arizona](weather_arg:location)
-- Will it [rain](weather_arg:rain) [today](weather_arg:date)
+- Will it [rain](weather_arg:rain) today
 - How [much](weather_arg:quantity) will it [rain](weather_arg:rain)
 <!-- Multiple entity questions -->
-- Will it be [raining](weather_arg:rain) and what [temp](weather_arg:temp) will it be [tomorrow](weather_arg:date) in [Puerto Rico](weather_arg:location)
+- Will it be [raining](weather_arg:rain) and what [temp](weather_arg:temp) will it be tomorrow in [Puerto Rico](weather_arg:location)
 
 ## intent:reminder_set
 - set a reminder
 - can you set a reminder
-- set a reminder for [today](reminder_date) at [eleven thirty](reminder_arg_time)
+- set a reminder for today at eleven thirty
 - remind me to [lock the door](reminder_arg)
-- remind me to [turn off the lights](reminder_arg) [tomorrow](reminder_arg_date) at [night](reminder_arg_time)
-- 
+- remind me to [turn off the lights](reminder_arg) tomorrow at night
+- remind me to [shut down the computer](reminder_arg) later today
+- set a reminder to [turn off the pc](reminder_arg)
 """
