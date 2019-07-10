@@ -31,7 +31,9 @@ nlu_md = """
 - Awesome, how are you?
 - im fine, how are you?
 - im good, how are you?
-- I am doing good. How about you?
+- I am doing good. what about you?
+- I'm good, what about you
+- awesome what about you
 
 ## intent:fine_normal
 - I am doing great
@@ -46,16 +48,16 @@ nlu_md = """
 ## intent:thanks
 - Thanks
 - Thank you so much
+- awesome
 
 ## intent:bye
 - No, I am good as of now. Bye
 - Bye
-- Bbye
+- see ya
 
 ## intent:goodbye
-- cu
 - good by
-- cee you later
+- see you later
 - good night
 - good afternoon
 - bye
@@ -142,4 +144,12 @@ nlu_md = """
 - How [much](weather_arg:quantity) will it [rain](weather_arg:rain)
 <!-- Multiple entity questions -->
 - Will it be [raining](weather_arg:rain) and what [temp](weather_arg:temp) will it be [tomorrow](weather_arg:date) in [Puerto Rico](weather_arg:location)
+
+## intent:reminder_set
+- set a reminder
+- can you set a reminder
+- set a reminder for [today](reminder_date) at [eleven thirty](reminder_arg_time)
+- remind me to [lock the door](reminder_arg)
+- remind me to [turn off the lights](reminder_arg) [tomorrow](reminder_arg_date) at [night](reminder_arg_time)
+- 
 """
