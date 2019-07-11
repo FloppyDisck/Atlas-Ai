@@ -1,0 +1,6 @@
+pip install rasa_nlu[spacy]
+python -m spacy download en
+python -m spacy download en_core_web_md
+python -m spacy link en_core_web_md en
+pip install rasa_nlu[tensorflow]
+pip install rasa_core
