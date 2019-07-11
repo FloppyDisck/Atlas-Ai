@@ -56,7 +56,7 @@ nlu_md = """
 - see ya
 
 ## intent:goodbye
-- good by
+- good bye
 - see you later
 - good night
 - good afternoon
@@ -73,6 +73,7 @@ nlu_md = """
 - of course
 - that sounds good
 - correct
+- right
 
 ## intent:mood_deny
 - no
@@ -81,6 +82,7 @@ nlu_md = """
 - don't like that
 - no way
 - not really
+- no thanks
 
 ## intent:mood_great
 - perfect
@@ -116,7 +118,7 @@ nlu_md = """
 - not so good
 - not very good
 - extremly sad
-- so saad
+- depressed
 
 ## intent:weather_request
 <!-- 0 entity questions -->
@@ -145,12 +147,55 @@ nlu_md = """
 <!-- Multiple entity questions -->
 - Will it be [raining](weather_arg:rain) and what [temp](weather_arg:temp) will it be tomorrow in [Puerto Rico](weather_arg:location)
 
-## intent:reminder_set
+## synonym:rain
+- precipitation
+- condensation
+- pour
+- rain fall
+- rainfall
+- pouring
+
+## synonym:temp
+- warm
+- chilly
+- burning
+- toasty
+- freezing
+- melting
+- condition
+- calefaction
+
+## synonym:humidity
+- moist
+- moisture
+- damp
+- dampness
+- evaporation
+- vapor
+
+<!--When using complex things like these sentences only train for the sentence and process on your own-->
+## intent:reminder_set_noIntent
 - set a reminder
 - can you set a reminder
-- set a reminder for today at eleven thirty
-- remind me to [lock the door](reminder_arg)
-- remind me to [turn off the lights](reminder_arg) tomorrow at night
-- remind me to [shut down the computer](reminder_arg) later today
-- set a reminder to [turn off the pc](reminder_arg)
+- please set a reminder
+- can you remind me something
+- set a reminder later tomorrow
+- remind me in a few hours
+- can you set a reminder at 10 am
+- Set reminder for tomorrow at ten thirty pm
+- remind me later today at nine twenty am
+- would you be so kind to notify me at ten forty five
+
+## intent:reminder_set_intent
+- remind me today to turn off computer today at eleven thirty
+- can you set a reminder today to turn off bathroom lights
+- remind me to lock the door
+- remind me to turn off the lights tomorrow at night
+- remind me to shut down the computer later today
+- set a reminder to turn off the pc
+- in twenty minutes remind me to feed my human pet
+- remind me at 5 pm to open the back door
+- can you remind me later today to buy groceries
+- will you set a reminder for tomorrow to buy new decorations
+- would you be so kind to notify me at ten forty five to turn off lights
 """

@@ -25,4 +25,12 @@ stories_md = """
 ## request weather
 * weather_request
 - action_weather_return
+
+## Reminder Intent was found
+* reminder_set_intent
+- utter_reminder_intent
+
+## Reminder Intent was NOT found
+* reminder_set_noIntent
+- utter_reminder_noIntent
 """

@@ -1,9 +1,21 @@
 slots:
   weather_arg:
-    type: bool
+    type: list
+  time:
+    type: list
+  number:
+    type: list
+  amount-of-money:
+    type: list
+  distance:
+    type: list
 
 entities:
 - weather_arg
+- time
+- number
+- amount-of-money
+- distance
 
 intents:
 - greet
@@ -13,11 +25,14 @@ intents:
 - mood_great
 - mood_unhappy
 - weather_request
-- reminder_set
+- reminder_set_intent
+- reminder_set_noIntent
 
 actions:
 - action_restart
 - action_weather_return
+- utter_reminder_intent
+- utter_reminder_noIntent
 - utter_greet
 - utter_reply
 - utter_help
@@ -27,6 +42,12 @@ actions:
 - utter_unclear
 
 templates:
+  utter_reminder_intent:
+    - text: Reminder set. Anything else?
+    - text: Reminder has been set.
+  utter_reminder_noIntent:
+    - text: What would your reminder be?
+    - text: Ok, whats the reminder about?
   utter_greet:
     - text: Hey, how are you?
     - text: Hello, How are you doing?
