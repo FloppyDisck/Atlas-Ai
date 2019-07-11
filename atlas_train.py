@@ -20,22 +20,6 @@ interpreter = trainer.train(training_data)
 # store it for future use
 model_directory = trainer.persist("./models", project_name='current', fixed_model_name='nlu')
 
-#quick test to see if it was trained correctly
-def pprint(o): 
-    #out = json.loads(o)
-    print(f'''
-    Sentence: {o["text"]}
-    Intent: {o["intent"]["name"]}
-    Confidence: {o["intent"]["confidence"]}
-    Entities: {[i["value"] for i in o["entities"]]}''')
-    #print(json.dumps(o, indent=2))
-    
-pprint(interpreter.parse("Will it be raining today"))
-pprint(interpreter.parse("Will it be hot"))
-pprint(interpreter.parse("How much more will it rain in Africa"))
-pprint(interpreter.parse("How clowdy is it in San Francisco"))
-pprint(interpreter.parse("Set reminder for tomorrow at ten thirty pm"))
-
 #More robust metrics report
 #run_evaluation("data/nlu.md", model_directory) #Recommended to have a custom test set
 
@@ -60,3 +44,20 @@ training_data = agent.load_data('data/stories.md')
 agent.train(training_data)
 
 agent.persist('models/dialogue')
+
+#quick test to see if it was trained correctly
+def pprint(o): 
+    #out = json.loads(o)
+    print(f'''
+    Sentence: {o["text"]}
+    Intent: {o["intent"]["name"]}
+    Confidence: {o["intent"]["confidence"]}
+    Entities: {[i["value"] for i in o["entities"]]}''')
+    #print(json.dumps(o, indent=2))
+    
+pprint(interpreter.parse("would you be so kind to notify me at ten forty five to turn off lights"))
+pprint(interpreter.parse("would you be so kind to notify me at ten forty five"))
+pprint(interpreter.parse("set a notification for nine thirty"))
+pprint(interpreter.parse("Remind me to feed my gecko"))
+pprint(interpreter.parse("Set reminder for tomorrow at ten thirty pm"))
+pprint(interpreter.parse("can you set a reminder"))
