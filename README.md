@@ -1,6 +1,6 @@
 # Atlas-Ai
 
-Atlas AI is a proof of concept for a completely open source home automation assistant with features aimed at facilitating the process of adding more features and commands. The program incorporates various libraries aimed at speech recognition, speech to text, text to speech and natural language processing while keeping certain data stored in a SQLite Database
+Atlas AI is a proof of concept for a completely open source home automation assistant with features aimed at facilitating the process of adding more features and commands. The concept is to incorporate the Rasa framework to an easy learning experience for the user and the assistant.
 
 ## Getting Started
 
@@ -8,33 +8,54 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+NOTE: This program has been tested with python 3.6 only
+
 Before starting you'll need to have a few libraries installed. First open console in the main program folder and then copy the line below and run it.
 
+It is recomended to setup a vm for this python version, first install miniconda. Then setup a python vm.
+```
+conda create -n env-name python=3.6
+```
+Then to start using your vm.
+```
+conda activate env-name
+```
+Finally install the required python packages.
 ```
 pip install -r requirements.txt
 ```
 
-### Installing
+### Training
 
-At the moment just running the main is the only process for setup
+Before training you'll need to setup the datasets and understand how they work.
+First you need to train the model to understand the specific intent, head over to /data/nlu.md
+A great tutorial for the nlu.md file can be found [here](https://rasa.com/docs/rasa/nlu/training-data-format/)
 
+Once this is done you'll need to work on the /data/stories.md and /configs/domain.yml
+Information on [stories](https://rasa.com/docs/rasa/core/stories/) and [domain](https://rasa.com/docs/rasa/core/domains/) can be found in their respective links.
+
+Later if you have any custom actions defined they'll be edited on the actions.py file. Information on actions can be found [here](https://rasa.com/docs/rasa/core/actions/).
+
+Once all of this is set and youre ready to begin training just run the atlas_train.py file and it should train everything.
+
+## Testing Atlas
+
+Before testing, download and compile [duckling](https://github.com/facebook/duckling). (This is used for time, date and distance recognition)
+
+After compilation in the duckling directory open an example file.
 ```
-python Main.py
+stack exec duckling-example-exe
 ```
 
-This should print out the sentence string and then decide in what category it fits in.
+Now run the actions local server.
+```
+python -m rasa_core_sdk.endpoint --actions actions
+```
 
-## Running the tests
-
-Instructions to testing certain functions are currently WIP
-
-## Deployment
-
-Better instructinos are currently WIP
-
-## Contributing
-
-Currently we are only accepting contributions from the users mentioned below.
+Finally run the testing dialog program.
+```
+python main.py
+```
 
 ## Authors
 
@@ -48,4 +69,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* This project would not be even close to possible without NLTK and the other mentioned libraries.
+* This project would not be even close to possible without the Rasa framework and Spacy
