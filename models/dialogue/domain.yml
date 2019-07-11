@@ -3,6 +3,8 @@
 actions:
 - action_restart
 - action_weather_return
+- utter_reminder_intent
+- utter_reminder_noIntent
 - utter_greet
 - utter_reply
 - utter_help
@@ -14,6 +16,10 @@ config:
   store_entities_as_slots: true
 entities:
 - weather_arg
+- time
+- number
+- amount-of-money
+- distance
 forms: []
 intents:
 - greet:
@@ -30,11 +36,31 @@ intents:
     use_entities: true
 - weather_request:
     use_entities: true
+- reminder_set_intent:
+    use_entities: true
+- reminder_set_noIntent:
+    use_entities: true
 slots:
+  amount-of-money:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
+  distance:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
+  number:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
+  time:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
   weather_arg:
     auto_fill: true
     initial_value: null
-    type: rasa_core.slots.TextSlot
+    type: rasa_core.slots.ListSlot
 templates:
   utter_anything_else:
   - text: No worries. Is there anything else I can help you with?
@@ -53,6 +79,12 @@ templates:
   - text: Great. How can I help you?
   - text: Great. Tell me How can I help you?
   - text: Great. Tell me what all news you would like to get.
+  utter_reminder_intent:
+  - text: Reminder set. Anything else?
+  - text: Reminder has been set.
+  utter_reminder_noIntent:
+  - text: What would your reminder be?
+  - text: Ok, whats the reminder about?
   utter_reply:
   - text: I'm doing great. Please let me know what I can do for you.
   - text: I'm doing great. Tell me How can I help you today?

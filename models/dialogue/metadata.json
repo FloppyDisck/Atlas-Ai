@@ -3,22 +3,28 @@
     "action_listen": {
       "slots": []
     },
+    "utter_anything_else": {
+      "slots": []
+    },
+    "utter_reminder_noIntent": {
+      "slots": []
+    },
     "utter_help": {
       "slots": []
     },
     "utter_reply": {
       "slots": []
     },
-    "utter_greet": {
-      "slots": []
-    },
-    "utter_anything_else": {
-      "slots": []
-    },
     "utter_default": {
       "slots": []
     },
     "action_weather_return": {
+      "slots": []
+    },
+    "utter_greet": {
+      "slots": []
+    },
+    "utter_reminder_intent": {
       "slots": []
     },
     "utter_bye": {
@@ -37,7 +43,7 @@
     "rasa_core.policies.keras_policy.KerasPolicy",
     "rasa_core.policies.fallback.FallbackPolicy"
   ],
-  "trained_at": "20190709-230926",
+  "trained_at": "20190710-165426",
   "rasa_core": "0.14.5",
   "tensorflow": "1.13.1",
   "sklearn": "0.20.3"

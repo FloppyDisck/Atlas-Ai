@@ -187,7 +187,7 @@
       },
       {
         "intent": "goodbye",
-        "text": "good by"
+        "text": "good bye"
       },
       {
         "intent": "goodbye",
@@ -246,6 +246,10 @@
         "text": "correct"
       },
       {
+        "intent": "mood_affirm",
+        "text": "right"
+      },
+      {
         "intent": "mood_deny",
         "text": "no"
       },
@@ -268,6 +272,10 @@
       {
         "intent": "mood_deny",
         "text": "not really"
+      },
+      {
+        "intent": "mood_deny",
+        "text": "no thanks"
       },
       {
         "intent": "mood_great",
@@ -395,7 +403,7 @@
       },
       {
         "intent": "mood_unhappy",
-        "text": "so saad"
+        "text": "depressed"
       },
       {
         "intent": "weather_request",
@@ -415,14 +423,6 @@
       },
       {
         "intent": "weather_request",
-        "entities": [
-          {
-            "start": 23,
-            "end": 28,
-            "value": "date",
-            "entity": "weather_arg"
-          }
-        ],
         "text": "What's the weather for today"
       },
       {
@@ -559,12 +559,6 @@
             "end": 8,
             "value": "temp",
             "entity": "weather_arg"
-          },
-          {
-            "start": 20,
-            "end": 28,
-            "value": "date",
-            "entity": "weather_arg"
           }
         ],
         "text": "How cold will it be tomorrow"
@@ -613,12 +607,6 @@
             "end": 12,
             "value": "rain",
             "entity": "weather_arg"
-          },
-          {
-            "start": 13,
-            "end": 18,
-            "value": "date",
-            "entity": "weather_arg"
           }
         ],
         "text": "Will it rain today"
@@ -657,12 +645,6 @@
             "entity": "weather_arg"
           },
           {
-            "start": 44,
-            "end": 52,
-            "value": "date",
-            "entity": "weather_arg"
-          },
-          {
             "start": 56,
             "end": 67,
             "value": "location",
@@ -672,96 +654,203 @@
         "text": "Will it be raining and what temp will it be tomorrow in Puerto Rico"
       },
       {
-        "intent": "reminder_set",
+        "intent": "reminder_set_noIntent",
         "text": "set a reminder"
       },
       {
-        "intent": "reminder_set",
+        "intent": "reminder_set_noIntent",
         "text": "can you set a reminder"
       },
       {
-        "intent": "reminder_set",
+        "intent": "reminder_set_noIntent",
+        "text": "please set a reminder"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "can you remind me something"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder later tomorrow"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me in a few hours"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "can you set a reminder at 10 am"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "Set reminder for tomorrow at ten thirty pm"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me later today at nine twenty am"
+      },
+      {
+        "intent": "reminder_set_intent",
         "entities": [
           {
             "start": 19,
-            "end": 24,
-            "value": "today",
-            "entity": "reminder_date"
-          },
-          {
-            "start": 28,
-            "end": 41,
-            "value": "eleven thirty",
-            "entity": "reminder_arg_time"
+            "end": 36,
+            "value": "turn off computer",
+            "entity": "reminder_intent"
           }
         ],
-        "text": "set a reminder for today at eleven thirty"
+        "text": "remind me today to turn off computer today at eleven thirty"
       },
       {
-        "intent": "reminder_set",
+        "intent": "reminder_set_intent",
+        "entities": [
+          {
+            "start": 32,
+            "end": 56,
+            "value": "turn off bathroom lights",
+            "entity": "reminder_intent"
+          }
+        ],
+        "text": "can you set a reminder today to turn off bathroom lights"
+      },
+      {
+        "intent": "reminder_set_intent",
         "entities": [
           {
             "start": 13,
             "end": 26,
             "value": "lock the door",
-            "entity": "reminder_arg"
+            "entity": "reminder_intent"
           }
         ],
         "text": "remind me to lock the door"
       },
       {
-        "intent": "reminder_set",
+        "intent": "reminder_set_intent",
         "entities": [
           {
             "start": 13,
             "end": 32,
             "value": "turn off the lights",
-            "entity": "reminder_arg"
-          },
-          {
-            "start": 33,
-            "end": 41,
-            "value": "tomorrow",
-            "entity": "reminder_arg_date"
-          },
-          {
-            "start": 45,
-            "end": 50,
-            "value": "night",
-            "entity": "reminder_arg_time"
+            "entity": "reminder_intent"
           }
         ],
         "text": "remind me to turn off the lights tomorrow at night"
+      },
+      {
+        "intent": "reminder_set_intent",
+        "entities": [
+          {
+            "start": 13,
+            "end": 35,
+            "value": "shut down the computer",
+            "entity": "reminder_intent"
+          }
+        ],
+        "text": "remind me to shut down the computer later today"
+      },
+      {
+        "intent": "reminder_set_intent",
+        "entities": [
+          {
+            "start": 18,
+            "end": 33,
+            "value": "turn off the pc",
+            "entity": "reminder_intent"
+          }
+        ],
+        "text": "set a reminder to turn off the pc"
+      },
+      {
+        "intent": "reminder_set_intent",
+        "entities": [
+          {
+            "start": 31,
+            "end": 48,
+            "value": "feed my human pet",
+            "entity": "reminder_intent"
+          }
+        ],
+        "text": "in twenty minutes remind me to feed my human pet"
+      },
+      {
+        "intent": "reminder_set_intent",
+        "entities": [
+          {
+            "start": 21,
+            "end": 39,
+            "value": "open the back door",
+            "entity": "reminder_intent"
+          }
+        ],
+        "text": "remind me at 5 pm to open the back door"
+      },
+      {
+        "intent": "reminder_set_intent",
+        "entities": [
+          {
+            "start": 33,
+            "end": 46,
+            "value": "buy groceries",
+            "entity": "reminder_intent"
+          }
+        ],
+        "text": "can you remind me later today to buy groceries"
+      },
+      {
+        "intent": "reminder_set_intent",
+        "entities": [
+          {
+            "start": 40,
+            "end": 59,
+            "value": "buy new decorations",
+            "entity": "reminder_intent"
+          }
+        ],
+        "text": "will you set a reminder for tomorrow to buy new decorations"
       }
     ],
     "regex_features": [],
     "lookup_tables": [],
     "entity_synonyms": [
       {
-        "value": "date",
-        "synonyms": [
-          "today",
-          "tomorrow"
-        ]
-      },
-      {
         "value": "temp",
         "synonyms": [
           "cold",
           "hot",
-          "temperature"
+          "temperature",
+          "warm",
+          "chilly",
+          "burning",
+          "toasty",
+          "freezing",
+          "melting",
+          "condition",
+          "calefaction"
         ]
       },
       {
         "value": "rain",
         "synonyms": [
-          "raining"
+          "raining",
+          "precipitation",
+          "condensation",
+          "pour",
+          "rain fall",
+          "rainfall",
+          "pouring"
         ]
       },
       {
         "value": "humidity",
         "synonyms": [
-          "humid"
+          "humid",
+          "moist",
+          "moisture",
+          "damp",
+          "dampness",
+          "evaporation",
+          "vapor"
         ]
       },
       {
