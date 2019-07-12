@@ -25,6 +25,17 @@ Finally install the required python packages.
 pip install -r requirements.txt
 ```
 
+NOTE: Some actions require enviroment variables to be setup (for the APIs)
+In linux input the following command
+```
+sudo -H gedit /etc/enviroment
+```
+Then inside the file write
+```
+ENV_VARIABLE_NAME="variableValue"
+```
+Save and then log out of the account so the variables are started.
+
 ### Training
 
 Before training you'll need to setup the datasets and understand how they work.
