@@ -20,6 +20,7 @@ entities:
 - number
 - amount-of-money
 - distance
+- location
 forms: []
 intents:
 - greet:
@@ -49,6 +50,10 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.ListSlot
+  location:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   number:
     auto_fill: true
     initial_value: null
