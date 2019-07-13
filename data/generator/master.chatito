@@ -1,0 +1,105 @@
+//python -m chatette data/generator/master.chatito -o data/nlu
+|affirmative.chatito
+|bye.chatito
+|common.chatito
+|fine_ask.chatito
+|greet.chatito
+|negative.chatito
+|notFine_ask.chatito
+
+%[weather_request]('training': '100', 'testing': '100')
+    ~[full sentence]  ~[short time?]
+    ~[sentence prefix] @[weather_arg] ~[short time?]
+    ~[sentence prefix] @[weather_arg] ~[short time?]  ~[conjunction] @[location]
+
+~[full sentence]
+    How is the weather
+    Show me the weather
+    Give me the weather
+    Whats the current atmospheric condition
+    whats the weather for today
+
+~[conjunction]
+    in
+    at
+    around
+    here in
+
+~[short time]
+    tomorrow
+    today
+    in five hours
+    in the next day
+    at ten thirty
+    at twenty eleven
+    in two days
+
+~[sentence prefix]
+    Will it be
+    How
+    What is the current
+    Is it
+    Is it going to be
+    How is the
+
+@[location]
+    new york
+    san francisco
+    atlanta
+    puerto rico
+    united states
+    africa
+    san juan
+    arizona
+    spain
+    russia
+    europe
+    england
+    united kingdom
+
+@[weather_arg]
+    ~[rain] = rain
+    ~[temp] = temp
+    ~[quantity] = quantity
+    ~[humidity] = humidity
+    ~[clowdy] = clowdy
+~[quantity]('synonym': 'true')
+    much
+
+~[clowdy]('synonym': 'true')
+    clowdy
+    clouds
+
+~[rain]('synonym': 'true')
+    rain
+    raining
+    precipitation
+    condensation
+    pour
+    rain fall
+    rainfall
+    pouring
+
+~[temp]('synonym': 'true')
+    temp
+    temperature
+    hot
+    cold
+    warm
+    chilly
+    burning
+    toasty
+    freezing
+    melting
+    condition
+    calefaction
+
+~[humidity]('synonym': 'true')
+    moist
+    moisture
+    damp
+    dampness
+    evaporation
+    vapor
+    humid
+    humidity

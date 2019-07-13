@@ -1,0 +1,33 @@
+// Ways to say yes
+
+|common.chatito
+
+%[affirmative]('training': '75', 'testing': '25')
+    *[20%] ~[yes]
+    ~[yes] ~[please?]
+    ~[yes] ~[yes?] ~[thanks?]
+    ~[yes?] ~[that is good] ~[yes?]
+
+~[yes]
+    yes
+    right
+    affirmative
+    agreed
+    correct
+    yep
+    yes sir
+    sounds good
+    im ok with that
+    awesome
+
+~[that is good]
+    that is good
+    i want that
+    that is fine
+    that is correct
+    that is what i want
+    you understood me
+    that is right
+    its fine
+    good
+    amazing

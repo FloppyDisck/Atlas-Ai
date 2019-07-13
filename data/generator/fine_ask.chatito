@@ -1,0 +1,35 @@
+|greet.chatito
+
+%[fine_ask]('training': '50', 'testing': '50')
+    ~[mood prefix personal] ~[mood prefix?] ~[good mood] ~[courtesy]
+    ~[mood prefix personal] ~[mood prefix?] ~[good mood] ~[whats up]
+
+%[fine_normal]('training': '50', 'testing': '50')
+    ~[mood prefix personal] ~[mood prefix?] ~[good mood]
+
+~[mood prefix personal]
+    I am
+    Im
+    I'm
+
+~[mood prefix]
+    doing
+    feeling
+
+~[good mood]
+    fine
+    good
+    Awesome
+    ok
+    perfect
+    very good
+    good
+    wonderful
+    amazing
+    great
+
+~[courtesy]
+    how about you
+    what about you
+    how are you doing
+    and you
