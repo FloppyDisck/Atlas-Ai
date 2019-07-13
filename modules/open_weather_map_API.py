@@ -1,23 +1,20 @@
 import os, json, requests
 
-def request_Weather(location, requestType): 
+def request_Weather(location, requestType, apiKey): 
     """
     Request weather string to read out loud.
 
     Args:
         location: From where to ask for forecast.
         requestType: Ask for either 'weather' or 'forecast'.
+        NOTE: the free version only allows:
+            * Current weather data
+            * 5 day / 3 hour forecast
 
     Returns:
         Forecast string, api key error or connection error.
     """
-    #if a date is requested ask forecast, if not weather
-
-    #Check if the enviroment variable exists
-    try:
-        apiKey = os.environ["OPEN_WEATHER_MAP_API_KEY"]
-    except:
-        return 'The enviroment variable was not found!'
+    #TODO: if a date is requested ask forecast, if not weather
     
     #Check if a connection to the API is present
     try:

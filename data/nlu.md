@@ -67,7 +67,7 @@ nlu_md = """
 - bye bye
 - see you later
 
-## intent:mood_affirm
+## intent:mood_affirm <!--affirmative sounds better-->
 - yes
 - indeed
 - of course
@@ -75,7 +75,7 @@ nlu_md = """
 - correct
 - right
 
-## intent:mood_deny
+## intent:mood_deny <!--Negative sounds way better-->
 - no
 - never
 - I don't think so
@@ -84,7 +84,7 @@ nlu_md = """
 - not really
 - no thanks
 
-## intent:mood_great
+## intent:mood_great <!--add to fine normal-->
 - perfect
 - very good
 - great
@@ -126,8 +126,10 @@ nlu_md = """
 - Show me the weather
 - Give me the weather
 - What's the current atmospheric conditions
+- What's the weather for today
 <!-- 1 entity questions --> 
-- What's the weather for today <!--Define a synonim (intent:word)-->
+<!--Define a synonim (intent:word)-->
+- How is the weather in [Africa](location?
 - Will it be [cold](weather_arg:temp)
 - How [hot](weather_arg:temp) is it
 - What is the current [temperature](weather_arg:temp)
@@ -136,16 +138,24 @@ nlu_md = """
 - How [clowdy](weather_arg:clowdy) is it going to be
 - What is the current [humidity](weather_arg:humidity)
 - How [humid](weather_arg:humidity) can it get
-- What is the weather like in [Spain](weather_arg:location)
-<!-- 2 entity questions -->
-- What is the [temperature](weather_arg:temp) like in [Russia](weather_arg:location)
-- How [cold](weather_arg:temp) will it be tomorrow
-- How [humid](weather_arg:humidity) is it how [hot](weather_arg:temp) can it get
-- Is it [raining](weather_arg:rain) over in [Arizona](weather_arg:location)
+- What is the weather like in [Spain](location)
+- How [warm](weather_arg:temp) will it be tomorrow
 - Will it [rain](weather_arg:rain) today
+<!-- 2 entity questions -->
+- What is the [temperature](weather_arg:temp) like in [Russia](location)
+- How [chilly](weather_arg:temp) is it in [Africa](location)
+- How [humid](weather_arg:humidity) is it how [hot](weather_arg:temp) can it get
+- Is it [hot](weather_arg:temp) over in [India](location)
+- Is it [raining](weather_arg:rain) over in [Arizona](location)
 - How [much](weather_arg:quantity) will it [rain](weather_arg:rain)
+- Is it going to be [cold](weather_arg:temp) over in [United States](location)
+- Is it [toasty](weather_arg:temp) over in [san juan](location)
 <!-- Multiple entity questions -->
-- Will it be [raining](weather_arg:rain) and what [temp](weather_arg:temp) will it be tomorrow in [Puerto Rico](weather_arg:location)
+- Will it be [raining](weather_arg:rain) and what [temp](weather_arg:temp) will it be tomorrow in [Puerto Rico](location)
+
+<!--This dataset was extracted from geonames.org-->
+## lookup:location
+    data/locations/countriesLookupNOCAPS.txt
 
 ## synonym:rain
 - precipitation
