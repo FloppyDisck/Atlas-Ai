@@ -9,6 +9,8 @@ slots:
     type: list
   distance:
     type: list
+  location:
+    type: text
 
 entities:
 - weather_arg
@@ -16,6 +18,7 @@ entities:
 - number
 - amount-of-money
 - distance
+- location
 
 intents:
 - greet
