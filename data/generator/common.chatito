@@ -17,3 +17,131 @@
     thank you
     thank you very much
 
+//Greet - ways to say hello
+~[greetings]
+    greetings
+    good morning
+    good afternoon
+    good day
+    good night
+    morning
+
+~[whats up]
+    how are you
+    whats up
+    how are you doing
+    how is it going
+    are you there
+    how are things going
+    are you around
+    whatsup
+    sup
+    are you around?
+
+//bye - ways to say goodbye
+~[bye]
+    bye
+    see ya
+    goodbye
+    got to go
+    adios
+    farewell
+    adieu
+    chao
+    chau
+
+~[leaving]
+    leaving
+    talk to you soon
+    have to go
+    got to go
+    talk to you later
+    heading out
+    im leaving now
+    going out
+
+//affirmative - ways to say yes
+~[yes]
+    yes
+    right
+    affirmative
+    agreed
+    correct
+    yep
+    yes sir
+    sounds good
+    im ok with that
+    awesome
+
+~[that is good]
+    that is good
+    i want that
+    that is fine
+    that is correct
+    that is what i want
+    you understood me
+    that is right
+    its fine
+    good
+    amazing
+
+//negative - ways to say no
+~[no]
+    no
+    nope
+    not really
+    that's not right
+    incorrect
+    don't do that
+    never
+    dont like that
+    no thanks
+
+~[its not ok]
+    i don't want that
+    didnt meant that
+    dont mean that
+    that's not what i want
+    that's not correct
+    that's wrong
+    it's not good
+    that is wrong
+    its not ok
+    its not correct
+
+//fine_ask - reply to "how are you"
+~[mood prefix personal]
+    I am
+    Im
+    I'm
+
+~[mood prefix]
+    doing
+    feeling
+
+~[courtesy]
+    how about you
+    what about you
+    how are you doing
+    and you
+
+~[good mood]
+    fine
+    good
+    Awesome
+    ok
+    perfect
+    very good
+    good
+    wonderful
+    amazing
+    great
+
+~[bad mood]
+    sad
+    bad
+    depressed
+    awful
+    terrible
+    not good
+    dissapointed
