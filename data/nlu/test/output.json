@@ -3,1563 +3,26 @@
     "common_examples": [
       {
         "entities": [],
-        "intent": "affirmative",
-        "text": "that is right"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "awesome that is correct"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "*20% sounds good"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "right its fine sounds good"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "awesome amazing yes sir"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "agreed sounds good thank you very much"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "correct that is good"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "yep that is correct yes"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "right"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "right sounds good thanks"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "im ok with that that is fine correct"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "yes sir awesome thank you"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "awesome thanks"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "good"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "sounds good pls"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "that is right im ok with that"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "yes that is correct affirmative"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "agreed please"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "affirmative agreed thank you"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "yes sir correct thanks"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "affirmative pls"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "that is fine"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "yes sir i want that im ok with that"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "right yes"
-      },
-      {
-        "entities": [],
-        "intent": "affirmative",
-        "text": "affirmative yes thank you"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "thank you chao"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "*20% chau"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "thanks got to go"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "chao thank you very much"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "*20% see ya"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "farewell thank you very much"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "thank you very much see ya"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "leaving"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "thank you adios"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "leaving goodbye"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "talk to you later bye"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "have to go farewell"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "chau"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "goodbye thanks"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "going out adios"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "got to go bye"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "leaving see ya"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "talk to you soon chau"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "going out"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "see ya thank you very much"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "thank you adieu"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "talk to you later adios"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "leaving adios"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "adios thank you very much"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "have to go goodbye"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "goodbye thank you"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "chau thanks"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "heading out see ya"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "adieu thank you"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "thank you very much got to go"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "going out adieu"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "thank you bye"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "thank you very much chau"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "got to go goodbye"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "leaving farewell"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "thank you goodbye"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "adios thank you"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "heading out adios"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "adieu thank you very much"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "see ya thanks"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "chau thank you"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "im leaving now goodbye"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "leaving chau"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "bye thank you"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "talk to you later chau"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "have to go see ya"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "got to go see ya"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "im leaving now adieu"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "farewell thank you"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "im leaving now adios"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey good day how are you doing"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "sup good day are you around"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hi how are things going"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hello are you there"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "good morning"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey there greetings how are things going"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hi good day how are things going"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "sup morning how is it going"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey there good morning how are things going"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "good day are you around?"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "good afternoon sup"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hi good night"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hello morning"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey there good day"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "good night"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey there good day are you around?"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "good afternoon are you around?"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey there morning are you around"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "good afternoon whats up"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "sup whats up"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "good night how are you"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey there sup"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hello good afternoon are you around?"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hello are you around?"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "good night sup"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "morning whatsup"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "morning are you around?"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "sup are you there"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey there good day how are you doing"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "greetings sup"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "greetings whats up"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey there how is it going"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "sup good day are you there"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hi whats up"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey there are you there"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "sup good day whatsup"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hello how are things going"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey good afternoon"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hi good afternoon sup"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hey good night are you there"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "good morning how are you"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "sup how are you doing"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "good morning whats up"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hello there good day"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "morning whats up"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "good day how are you"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hello how is it going"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hello there"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hello good morning how are you doing"
-      },
-      {
-        "entities": [],
-        "intent": "greet",
-        "text": "hi how is it going"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am bad what about you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm feeling good and you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm doing amazing sup"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am perfect what about you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am very good are you around"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm doing fine are you around"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im doing not good how is it going"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm terrible and you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm doing awful how about you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im good how is it going"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm doing dissapointed are you around?"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm Awesome whatsup"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im wonderful whatsup"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am doing ok are you around"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im wonderful how are you doing"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm amazing how are things going"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im awful and you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm doing awful how are things going"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im depressed how is it going"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am awful whatsup"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im dissapointed how are you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im dissapointed how about you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am feeling not good what about you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im terrible are you around"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am great are you there"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm doing perfect how are you doing"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am awful how are you doing"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im sad how are things going"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm feeling amazing sup"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im doing dissapointed are you around?"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am doing terrible and you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am bad how are you doing"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im great are you around"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im doing fine how are things going"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm feeling Awesome and you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im feeling wonderful how are you doing"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am feeling very good how are you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im ok and you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am doing awful whats up"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm ok are you around"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im doing terrible how are you doing"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am wonderful how about you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im doing not good how are you doing"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm doing not good how about you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am sad whatsup"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im amazing how are you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm feeling depressed whats up"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I'm feeling wonderful how is it going"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "I am great what about you"
-      },
-      {
-        "entities": [],
-        "intent": "fine_ask",
-        "text": "Im good whats up"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am feeling bad"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm terrible"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm doing good"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm doing very good"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm feeling ok"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm feeling terrible"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im feeling terrible"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am feeling very good"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im great"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am ok"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm ok"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im not good"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm sad"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am doing great"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm feeling great"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am feeling terrible"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm fine"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im feeling fine"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am feeling dissapointed"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im depressed"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am Awesome"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im bad"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am bad"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am feeling good"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am doing terrible"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm feeling dissapointed"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm dissapointed"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am feeling depressed"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im feeling great"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im good"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im fine"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im feeling wonderful"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am doing depressed"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am perfect"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im wonderful"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am feeling amazing"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm feeling fine"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im feeling awful"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm doing not good"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im doing bad"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im feeling ok"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm feeling Awesome"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am doing fine"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm not good"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im feeling bad"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "Im very good"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am feeling great"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am feeling ok"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I am wonderful"
-      },
-      {
-        "entities": [],
-        "intent": "fine_normal",
-        "text": "I'm perfect"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please no that's wrong"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "*20% its not ok"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "incorrect its not ok"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "not really please"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "not really please that's wrong"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "pls not really"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "pls nope that's not correct"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "no thanks"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "no that's not correct"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please that's not right it's not good"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "*20% that's not correct"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please dont like that i don't want that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "never didnt meant that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "don't do that pls"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "no dont mean that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please don't do that didnt meant that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "pls no"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please no"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please not really"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "no thanks its not ok"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please no thanks i don't want that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please nope didnt meant that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please incorrect i don't want that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "pls nope didnt meant that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "no thanks please"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "never pls that's not what i want"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "nope that's not what i want"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please dont like that that's wrong"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "incorrect"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please no thanks"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please no thanks its not correct"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "never pls"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "that's not right please"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "pls incorrect didnt meant that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "no thanks i don't want that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "incorrect please didnt meant that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "no thanks it's not good"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "incorrect please its not ok"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "that's not right didnt meant that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "pls dont like that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "pls no thanks"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "never pls it's not good"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "never please dont mean that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "pls that's not right that is wrong"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "please don't do that that is wrong"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "dont like that pls"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "incorrect pls"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "no i don't want that"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "that's not right pls"
-      },
-      {
-        "entities": [],
-        "intent": "negative",
-        "text": "not really that's not what i want"
-      },
-      {
-        "entities": [
-          {
-            "end": 22,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "humidity"
-          },
-          {
-            "end": 51,
-            "entity": "location",
-            "start": 45,
-            "value": "russia"
-          }
-        ],
         "intent": "weather_request",
-        "text": "How is the evaporation in five hours here in russia"
+        "text": "Show me the weather tomorrow"
       },
       {
         "entities": [
           {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "clowdy"
-          },
-          {
-            "end": 31,
-            "entity": "location",
-            "start": 25,
-            "value": "africa"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Will it be clouds around africa"
-      },
-      {
-        "entities": [
-          {
-            "end": 26,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "temp"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current toasty"
-      },
-      {
-        "entities": [
-          {
-            "end": 26,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "clowdy"
-          },
-          {
-            "end": 42,
-            "entity": "location",
-            "start": 35,
-            "value": "atlanta"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current clouds here in atlanta"
-      },
-      {
-        "entities": [
-          {
-            "end": 10,
+            "end": 11,
             "entity": "weather_arg",
             "start": 6,
-            "value": "quantity"
+            "value": "humidity"
           },
           {
             "end": 33,
             "entity": "location",
-            "start": 19,
-            "value": "united kingdom"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it much here in united kingdom"
-      },
-      {
-        "entities": [
-          {
-            "end": 22,
-            "entity": "weather_arg",
-            "start": 18,
-            "value": "quantity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it going to be much in two days"
-      },
-      {
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "rain"
-          },
-          {
-            "end": 46,
-            "entity": "location",
-            "start": 38,
+            "start": 25,
             "value": "san juan"
           }
         ],
         "intent": "weather_request",
-        "text": "How precipitation at twenty eleven in san juan"
-      },
-      {
-        "entities": [],
-        "intent": "weather_request",
-        "text": "How is the weather in the next day"
-      },
-      {
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          },
-          {
-            "end": 39,
-            "entity": "location",
-            "start": 33,
-            "value": "africa"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How is the toasty in two days in africa"
-      },
-      {
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "clowdy"
-          },
-          {
-            "end": 22,
-            "entity": "location",
-            "start": 14,
-            "value": "san juan"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How clouds in san juan"
-      },
-      {
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "rain"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it rain in five hours"
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "quantity"
-          },
-          {
-            "end": 39,
-            "entity": "location",
-            "start": 33,
-            "value": "europe"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Will it be much at ten thirty in europe"
+        "text": "Is it vapor today around san juan"
       },
       {
         "entities": [
@@ -1571,7 +34,244 @@
           }
         ],
         "intent": "weather_request",
-        "text": "Will it be raining"
+        "text": "How is the raining"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "rain"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the pour at ten thirty"
+      },
+      {
+        "entities": [
+          {
+            "end": 8,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "quantity"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How much in the next day"
+      },
+      {
+        "entities": [],
+        "intent": "weather_request",
+        "text": "Whats the current atmospheric condition at twenty eleven"
+      },
+      {
+        "entities": [
+          {
+            "end": 10,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "clowdy"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How clowdy"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "rain"
+          },
+          {
+            "end": 41,
+            "entity": "location",
+            "start": 28,
+            "value": "san francisco"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Will it be rain tomorrow in san francisco"
+      },
+      {
+        "entities": [
+          {
+            "end": 11,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "rain"
+          },
+          {
+            "end": 34,
+            "entity": "location",
+            "start": 21,
+            "value": "united states"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How raining today in united states"
+      },
+      {
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "rain"
+          },
+          {
+            "end": 35,
+            "entity": "location",
+            "start": 28,
+            "value": "atlanta"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "What is the current rain in atlanta"
+      },
+      {
+        "entities": [
+          {
+            "end": 10,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "quantity"
+          },
+          {
+            "end": 26,
+            "entity": "location",
+            "start": 19,
+            "value": "atlanta"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it much here in atlanta"
+      },
+      {
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "quantity"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "What is the current much"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "quantity"
+          },
+          {
+            "end": 31,
+            "entity": "location",
+            "start": 23,
+            "value": "new york"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Will it be much around new york"
+      },
+      {
+        "entities": [
+          {
+            "end": 28,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "humidity"
+          },
+          {
+            "end": 64,
+            "entity": "location",
+            "start": 53,
+            "value": "puerto rico"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "What is the current moisture in the next day here in puerto rico"
+      },
+      {
+        "entities": [
+          {
+            "end": 17,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "clowdy"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Will it be clowdy in two days"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "quantity"
+          },
+          {
+            "end": 29,
+            "entity": "location",
+            "start": 24,
+            "value": "spain"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the much here in spain"
+      },
+      {
+        "entities": [],
+        "intent": "weather_request",
+        "text": "Show me the weather at ten thirty"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "humidity"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How evaporation tomorrow"
+      },
+      {
+        "entities": [
+          {
+            "end": 22,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "temp"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the calefaction"
+      },
+      {
+        "entities": [
+          {
+            "end": 8,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "quantity"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How much"
+      },
+      {
+        "entities": [],
+        "intent": "weather_request",
+        "text": "How is the weather in the next day"
       },
       {
         "entities": [
@@ -1582,212 +282,102 @@
             "value": "clowdy"
           },
           {
-            "end": 27,
-            "entity": "location",
-            "start": 20,
-            "value": "england"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it clowdy around england"
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "quantity"
-          },
-          {
             "end": 41,
             "entity": "location",
-            "start": 35,
-            "value": "europe"
+            "start": 28,
+            "value": "united states"
           }
         ],
         "intent": "weather_request",
-        "text": "How is the much in the next day in europe"
+        "text": "Is it clowdy in two days in united states"
       },
       {
         "entities": [
           {
-            "end": 24,
+            "end": 20,
             "entity": "weather_arg",
-            "start": 18,
-            "value": "clowdy"
-          },
-          {
-            "end": 53,
-            "entity": "location",
-            "start": 46,
-            "value": "atlanta"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it going to be clowdy at ten thirty around atlanta"
-      },
-      {
-        "entities": [
-          {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 18,
+            "start": 11,
             "value": "temp"
           }
         ],
         "intent": "weather_request",
-        "text": "Is it going to be toasty"
+        "text": "How is the condition"
       },
       {
         "entities": [
           {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "rain"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How is the precipitation"
-      },
-      {
-        "entities": [
-          {
-            "end": 24,
+            "end": 22,
             "entity": "weather_arg",
             "start": 18,
-            "value": "clowdy"
-          },
-          {
-            "end": 50,
-            "entity": "location",
-            "start": 44,
-            "value": "africa"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it going to be clowdy in two days around africa"
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "quantity"
-          },
-          {
-            "end": 30,
-            "entity": "location",
-            "start": 24,
-            "value": "europe"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Will it be much here in europe"
-      },
-      {
-        "entities": [
-          {
-            "end": 23,
-            "entity": "weather_arg",
-            "start": 18,
-            "value": "humidity"
-          },
-          {
-            "end": 49,
-            "entity": "location",
-            "start": 36,
-            "value": "san francisco"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it going to be moist tomorrow in san francisco"
-      },
-      {
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 6,
             "value": "quantity"
           }
         ],
         "intent": "weather_request",
-        "text": "Is it much"
-      },
-      {
-        "entities": [
-          {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "quantity"
-          },
-          {
-            "end": 50,
-            "entity": "location",
-            "start": 42,
-            "value": "san juan"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current much tomorrow here in san juan"
-      },
-      {
-        "entities": [
-          {
-            "end": 18,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "rain"
-          },
-          {
-            "end": 41,
-            "entity": "location",
-            "start": 34,
-            "value": "atlanta"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Will it be raining in two days at atlanta"
-      },
-      {
-        "entities": [
-          {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "quantity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current much at twenty eleven"
+        "text": "Is it going to be much tomorrow"
       },
       {
         "entities": [
           {
             "end": 13,
             "entity": "weather_arg",
-            "start": 4,
+            "start": 6,
             "value": "rain"
+          },
+          {
+            "end": 24,
+            "entity": "location",
+            "start": 17,
+            "value": "arizona"
           }
         ],
         "intent": "weather_request",
-        "text": "How rain fall tomorrow"
+        "text": "Is it pouring in arizona"
       },
       {
         "entities": [
           {
-            "end": 18,
+            "end": 12,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "clowdy"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it clouds in the next day"
+      },
+      {
+        "entities": [],
+        "intent": "weather_request",
+        "text": "whats the weather for today in the next day"
+      },
+      {
+        "entities": [],
+        "intent": "weather_request",
+        "text": "Show me the weather in five hours"
+      },
+      {
+        "entities": [
+          {
+            "end": 17,
             "entity": "weather_arg",
             "start": 11,
+            "value": "clowdy"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Will it be clouds tomorrow"
+      },
+      {
+        "entities": [
+          {
+            "end": 11,
+            "entity": "weather_arg",
+            "start": 4,
             "value": "temp"
           }
         ],
         "intent": "weather_request",
-        "text": "Will it be melting at ten thirty"
+        "text": "How burning in the next day"
       },
       {
         "entities": [
@@ -1799,73 +389,143 @@
           }
         ],
         "intent": "weather_request",
-        "text": "Is it moisture today"
+        "text": "Is it humidity"
+      },
+      {
+        "entities": [
+          {
+            "end": 25,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "rain"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it going to be raining in five hours"
+      },
+      {
+        "entities": [],
+        "intent": "weather_request",
+        "text": "Show me the weather today"
+      },
+      {
+        "entities": [
+          {
+            "end": 14,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "temp"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it freezing"
       },
       {
         "entities": [
           {
             "end": 26,
             "entity": "weather_arg",
-            "start": 20,
+            "start": 18,
+            "value": "humidity"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it going to be dampness at ten thirty"
+      },
+      {
+        "entities": [
+          {
+            "end": 27,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "rain"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it going to be rain fall in the next day"
+      },
+      {
+        "entities": [
+          {
+            "end": 27,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "temp"
+          },
+          {
+            "end": 62,
+            "entity": "location",
+            "start": 49,
+            "value": "san francisco"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it going to be condition in five hours around san francisco"
+      },
+      {
+        "entities": [],
+        "intent": "weather_request",
+        "text": "Whats the current atmospheric condition tomorrow"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "quantity"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the much"
+      },
+      {
+        "entities": [
+          {
+            "end": 12,
+            "entity": "weather_arg",
+            "start": 6,
             "value": "clowdy"
           },
           {
-            "end": 56,
+            "end": 33,
             "entity": "location",
-            "start": 50,
-            "value": "russia"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current clouds in the next day around russia"
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "quantity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Will it be much"
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "quantity"
-          },
-          {
-            "end": 41,
-            "entity": "location",
-            "start": 35,
-            "value": "africa"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How is the much in two days around africa"
-      },
-      {
-        "entities": [
-          {
-            "end": 8,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "quantity"
-          },
-          {
-            "end": 25,
-            "entity": "location",
-            "start": 17,
+            "start": 25,
             "value": "new york"
           }
         ],
         "intent": "weather_request",
-        "text": "How much here in new york"
+        "text": "Is it clowdy tomorrow at new york"
+      },
+      {
+        "entities": [
+          {
+            "end": 28,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "rain"
+          },
+          {
+            "end": 39,
+            "entity": "location",
+            "start": 32,
+            "value": "england"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "What is the current rainfall at england"
+      },
+      {
+        "entities": [
+          {
+            "end": 31,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "rain"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it going to be precipitation"
       },
       {
         "entities": [
@@ -1874,22 +534,320 @@
             "entity": "weather_arg",
             "start": 11,
             "value": "clowdy"
+          },
+          {
+            "end": 44,
+            "entity": "location",
+            "start": 38,
+            "value": "europe"
           }
         ],
         "intent": "weather_request",
-        "text": "How is the clowdy"
+        "text": "How is the clouds at twenty eleven in europe"
       },
       {
         "entities": [
           {
-            "end": 9,
+            "end": 15,
             "entity": "weather_arg",
-            "start": 4,
+            "start": 11,
+            "value": "quantity"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the much in five hours"
+      },
+      {
+        "entities": [
+          {
+            "end": 26,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "clowdy"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "What is the current clowdy in the next day"
+      },
+      {
+        "entities": [
+          {
+            "end": 22,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "quantity"
+          },
+          {
+            "end": 42,
+            "entity": "location",
+            "start": 31,
+            "value": "puerto rico"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it going to be much here in puerto rico"
+      },
+      {
+        "entities": [
+          {
+            "end": 20,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "rain"
+          },
+          {
+            "end": 41,
+            "entity": "location",
+            "start": 35,
+            "value": "russia"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the rain fall today here in russia"
+      },
+      {
+        "entities": [],
+        "intent": "weather_request",
+        "text": "How is the weather in five hours"
+      },
+      {
+        "entities": [
+          {
+            "end": 22,
+            "entity": "weather_arg",
+            "start": 11,
             "value": "humidity"
           }
         ],
         "intent": "weather_request",
-        "text": "How humid at ten thirty"
+        "text": "Will it be evaporation"
+      },
+      {
+        "entities": [
+          {
+            "end": 10,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "clowdy"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How clouds in five hours"
+      },
+      {
+        "entities": [
+          {
+            "end": 25,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "temp"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it going to be melting"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "rain"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it rain fall"
+      },
+      {
+        "entities": [
+          {
+            "end": 10,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "quantity"
+          },
+          {
+            "end": 19,
+            "entity": "location",
+            "start": 14,
+            "value": "spain"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it much at spain"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "humidity"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the damp at twenty eleven"
+      },
+      {
+        "entities": [
+          {
+            "end": 26,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "temp"
+          },
+          {
+            "end": 56,
+            "entity": "location",
+            "start": 48,
+            "value": "new york"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "What is the current chilly in five hours around new york"
+      },
+      {
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "clowdy"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it going to be clowdy"
+      },
+      {
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "clowdy"
+          },
+          {
+            "end": 41,
+            "entity": "location",
+            "start": 33,
+            "value": "san juan"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it going to be clowdy here in san juan"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "quantity"
+          },
+          {
+            "end": 54,
+            "entity": "location",
+            "start": 41,
+            "value": "united states"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the much at twenty eleven here in united states"
+      },
+      {
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "quantity"
+          },
+          {
+            "end": 45,
+            "entity": "location",
+            "start": 39,
+            "value": "russia"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "What is the current much today here in russia"
+      },
+      {
+        "entities": [
+          {
+            "end": 26,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "clowdy"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "What is the current clowdy"
+      },
+      {
+        "entities": [],
+        "intent": "weather_request",
+        "text": "Show me the weather at twenty eleven"
+      },
+      {
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "humidity"
+          },
+          {
+            "end": 34,
+            "entity": "location",
+            "start": 28,
+            "value": "africa"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "What is the current damp in africa"
+      },
+      {
+        "entities": [
+          {
+            "end": 17,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "clowdy"
+          },
+          {
+            "end": 38,
+            "entity": "location",
+            "start": 25,
+            "value": "united states"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the clowdy around united states"
+      },
+      {
+        "entities": [
+          {
+            "end": 23,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "rain"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the condensation today"
+      },
+      {
+        "entities": [
+          {
+            "end": 12,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "clowdy"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it clouds today"
       },
       {
         "entities": [
@@ -1913,7 +871,66 @@
           }
         ],
         "intent": "weather_request",
-        "text": "How is the much"
+        "text": "Will it be much in two days"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "quantity"
+          },
+          {
+            "end": 41,
+            "entity": "location",
+            "start": 35,
+            "value": "africa"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Will it be much in two days around africa"
+      },
+      {
+        "entities": [
+          {
+            "end": 29,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "humidity"
+          },
+          {
+            "end": 55,
+            "entity": "location",
+            "start": 42,
+            "value": "san francisco"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it going to be evaporation tomorrow at san francisco"
+      },
+      {
+        "entities": [
+          {
+            "end": 11,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "humidity"
+          },
+          {
+            "end": 40,
+            "entity": "location",
+            "start": 33,
+            "value": "atlanta"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it vapor at ten thirty around atlanta"
+      },
+      {
+        "entities": [],
+        "intent": "weather_request",
+        "text": "whats the weather for today in five hours"
       },
       {
         "entities": [
@@ -1922,16 +939,64 @@
             "entity": "weather_arg",
             "start": 11,
             "value": "clowdy"
-          },
-          {
-            "end": 32,
-            "entity": "location",
-            "start": 25,
-            "value": "atlanta"
           }
         ],
         "intent": "weather_request",
-        "text": "Will it be clowdy around atlanta"
+        "text": "How is the clowdy"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "temp"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the cold"
+      },
+      {
+        "entities": [
+          {
+            "end": 12,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "humidity"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How humidity"
+      },
+      {
+        "entities": [
+          {
+            "end": 18,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "temp"
+          },
+          {
+            "end": 38,
+            "entity": "location",
+            "start": 27,
+            "value": "puerto rico"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How is the burning here in puerto rico"
+      },
+      {
+        "entities": [
+          {
+            "end": 23,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "humidity"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "Is it going to be vapor"
       },
       {
         "entities": [
@@ -1939,152 +1004,59 @@
             "end": 22,
             "entity": "weather_arg",
             "start": 18,
-            "value": "temp"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it going to be cold"
-      },
-      {
-        "entities": [
-          {
-            "end": 14,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "humidity"
+            "value": "rain"
           },
           {
-            "end": 25,
+            "end": 54,
             "entity": "location",
-            "start": 18,
-            "value": "england"
+            "start": 40,
+            "value": "united kingdom"
           }
         ],
         "intent": "weather_request",
-        "text": "Is it dampness in england"
+        "text": "Is it going to be rain at ten thirty in united kingdom"
       },
       {
         "entities": [
           {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "humidity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How evaporation at twenty eleven"
-      },
-      {
-        "entities": [],
-        "intent": "weather_request",
-        "text": "Show me the weather in five hours"
-      },
-      {
-        "entities": [
-          {
-            "end": 17,
+            "end": 22,
             "entity": "weather_arg",
             "start": 11,
             "value": "temp"
           },
           {
-            "end": 40,
+            "end": 37,
             "entity": "location",
-            "start": 33,
-            "value": "arizona"
+            "start": 30,
+            "value": "atlanta"
           }
         ],
         "intent": "weather_request",
-        "text": "How is the toasty in two days at arizona"
-      },
-      {
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "quantity"
-          },
-          {
-            "end": 21,
-            "entity": "location",
-            "start": 14,
-            "value": "arizona"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it much in arizona"
-      },
-      {
-        "entities": [
-          {
-            "end": 18,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Will it be burning at ten thirty"
+        "text": "How is the calefaction around atlanta"
       },
       {
         "entities": [
           {
             "end": 24,
             "entity": "weather_arg",
-            "start": 18,
-            "value": "clowdy"
-          },
-          {
-            "end": 34,
-            "entity": "location",
-            "start": 28,
-            "value": "europe"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it going to be clouds at europe"
-      },
-      {
-        "entities": [],
-        "intent": "weather_request",
-        "text": "Show me the weather in two days"
-      },
-      {
-        "entities": [
-          {
-            "end": 18,
-            "entity": "weather_arg",
             "start": 11,
             "value": "rain"
-          },
-          {
-            "end": 28,
-            "entity": "location",
-            "start": 22,
-            "value": "africa"
           }
         ],
         "intent": "weather_request",
-        "text": "How is the raining in africa"
-      },
-      {
-        "entities": [],
-        "intent": "weather_request",
-        "text": "Give me the weather tomorrow"
+        "text": "Will it be precipitation at ten thirty"
       },
       {
         "entities": [
           {
-            "end": 8,
+            "end": 25,
             "entity": "weather_arg",
-            "start": 4,
-            "value": "temp"
+            "start": 18,
+            "value": "rain"
           }
         ],
         "intent": "weather_request",
-        "text": "How cold"
+        "text": "Is it going to be pouring"
       },
       {
         "entities": [
@@ -2096,167 +1068,25 @@
           }
         ],
         "intent": "weather_request",
-        "text": "What is the current toasty at ten thirty"
-      },
-      {
-        "entities": [],
-        "intent": "weather_request",
-        "text": "Show me the weather at twenty eleven"
+        "text": "What is the current toasty at twenty eleven"
       },
       {
         "entities": [
           {
-            "end": 22,
+            "end": 18,
             "entity": "weather_arg",
-            "start": 18,
-            "value": "quantity"
+            "start": 6,
+            "value": "rain"
           },
           {
-            "end": 38,
+            "end": 35,
             "entity": "location",
-            "start": 31,
-            "value": "arizona"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it going to be much here in arizona"
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "quantity"
-          },
-          {
-            "end": 32,
-            "entity": "location",
-            "start": 19,
+            "start": 22,
             "value": "united states"
           }
         ],
         "intent": "weather_request",
-        "text": "Will it be much at united states"
-      },
-      {
-        "entities": [
-          {
-            "end": 8,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "quantity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How much tomorrow"
-      },
-      {
-        "entities": [
-          {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "humidity"
-          },
-          {
-            "end": 34,
-            "entity": "location",
-            "start": 28,
-            "value": "africa"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current damp at africa"
-      },
-      {
-        "entities": [
-          {
-            "end": 11,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "temp"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How burning today"
-      },
-      {
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "temp"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How toasty"
-      },
-      {
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "rain"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How precipitation"
-      },
-      {
-        "entities": [
-          {
-            "end": 8,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "quantity"
-          },
-          {
-            "end": 36,
-            "entity": "location",
-            "start": 30,
-            "value": "russia"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How much in five hours around russia"
-      },
-      {
-        "entities": [],
-        "intent": "weather_request",
-        "text": "How is the weather at ten thirty"
-      },
-      {
-        "entities": [
-          {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 18,
-            "value": "clowdy"
-          },
-          {
-            "end": 56,
-            "entity": "location",
-            "start": 50,
-            "value": "africa"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it going to be clouds at twenty eleven here in africa"
-      },
-      {
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "clowdy"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How clouds at ten thirty"
+        "text": "Is it condensation at united states"
       },
       {
         "entities": [
@@ -2268,205 +1098,19 @@
           }
         ],
         "intent": "weather_request",
-        "text": "Will it be much today"
+        "text": "Will it be much at twenty eleven"
       },
       {
         "entities": [
           {
-            "end": 33,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "rain"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current precipitation in two days"
-      },
-      {
-        "entities": [
-          {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "humidity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current damp in five hours"
-      },
-      {
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "temp"
-          },
-          {
-            "end": 40,
-            "entity": "location",
-            "start": 32,
-            "value": "san juan"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it calefaction today here in san juan"
-      },
-      {
-        "entities": [
-          {
-            "end": 16,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "rain"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How condensation in five hours"
-      },
-      {
-        "entities": [
-          {
-            "end": 16,
+            "end": 18,
             "entity": "weather_arg",
             "start": 11,
-            "value": "humidity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Will it be humid today"
-      },
-      {
-        "entities": [
-          {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "quantity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current much"
-      },
-      {
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 6,
             "value": "temp"
           }
         ],
         "intent": "weather_request",
-        "text": "Is it cold"
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "humidity"
-          },
-          {
-            "end": 38,
-            "entity": "location",
-            "start": 24,
-            "value": "united kingdom"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How is the damp here in united kingdom"
-      },
-      {
-        "entities": [
-          {
-            "end": 9,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "humidity"
-          },
-          {
-            "end": 33,
-            "entity": "location",
-            "start": 27,
-            "value": "russia"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How vapor at ten thirty in russia"
-      },
-      {
-        "entities": [
-          {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "quantity"
-          },
-          {
-            "end": 40,
-            "entity": "location",
-            "start": 33,
-            "value": "england"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current much here in england"
-      },
-      {
-        "entities": [
-          {
-            "end": 12,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "rain"
-          },
-          {
-            "end": 39,
-            "entity": "location",
-            "start": 26,
-            "value": "united states"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How rainfall today around united states"
-      },
-      {
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "quantity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it much today"
-      },
-      {
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "temp"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it temperature"
-      },
-      {
-        "entities": [
-          {
-            "end": 28,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "humidity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current humidity"
+        "text": "How is the burning"
       },
       {
         "entities": [
@@ -2474,89 +1118,41 @@
             "end": 29,
             "entity": "weather_arg",
             "start": 20,
-            "value": "temp"
-          },
-          {
-            "end": 61,
-            "entity": "location",
-            "start": 54,
-            "value": "arizona"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current condition at twenty eleven around arizona"
-      },
-      {
-        "entities": [
-          {
-            "end": 8,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "temp"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How warm"
-      },
-      {
-        "entities": [
-          {
-            "end": 26,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "temp"
-          },
-          {
-            "end": 41,
-            "entity": "location",
-            "start": 34,
-            "value": "england"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "What is the current chilly around england"
-      },
-      {
-        "entities": [
-          {
-            "end": 12,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "temp"
-          },
-          {
-            "end": 34,
-            "entity": "location",
-            "start": 27,
-            "value": "arizona"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "How freezing today here in arizona"
-      },
-      {
-        "entities": [
-          {
-            "end": 20,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Will it be condition"
-      },
-      {
-        "entities": [
-          {
-            "end": 19,
-            "entity": "weather_arg",
-            "start": 11,
             "value": "rain"
           }
         ],
         "intent": "weather_request",
-        "text": "Will it be rainfall"
+        "text": "What is the current rain fall in two days"
+      },
+      {
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "quantity"
+          },
+          {
+            "end": 43,
+            "entity": "location",
+            "start": 32,
+            "value": "puerto rico"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "What is the current much around puerto rico"
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "humidity"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How evaporation"
       },
       {
         "entities": [
@@ -2565,22 +1161,40 @@
             "entity": "weather_arg",
             "start": 11,
             "value": "humidity"
+          },
+          {
+            "end": 40,
+            "entity": "location",
+            "start": 33,
+            "value": "atlanta"
           }
         ],
         "intent": "weather_request",
-        "text": "How is the vapor"
+        "text": "Will it be vapor tomorrow around atlanta"
       },
       {
         "entities": [
           {
-            "end": 18,
+            "end": 10,
             "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
+            "start": 6,
+            "value": "quantity"
           }
         ],
         "intent": "weather_request",
-        "text": "Will it be melting at twenty eleven"
+        "text": "Is it much in the next day"
+      },
+      {
+        "entities": [
+          {
+            "end": 10,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "clowdy"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How clowdy at ten thirty"
       },
       {
         "entities": [
@@ -2592,19 +1206,25 @@
           }
         ],
         "intent": "weather_request",
-        "text": "Is it moisture"
+        "text": "Is it dampness in five hours"
       },
       {
         "entities": [
           {
-            "end": 22,
+            "end": 18,
             "entity": "weather_arg",
             "start": 11,
-            "value": "humidity"
+            "value": "rain"
+          },
+          {
+            "end": 33,
+            "entity": "location",
+            "start": 27,
+            "value": "europe"
           }
         ],
         "intent": "weather_request",
-        "text": "How is the evaporation"
+        "text": "How is the pouring here in europe"
       },
       {
         "entities": [
@@ -2616,55 +1236,48 @@
           }
         ],
         "intent": "weather_request",
-        "text": "Is it warm"
+        "text": "Is it warm at ten thirty"
       },
       {
         "entities": [
           {
-            "end": 32,
+            "end": 24,
             "entity": "weather_arg",
-            "start": 20,
+            "start": 11,
             "value": "rain"
           },
           {
-            "end": 65,
+            "end": 63,
             "entity": "location",
-            "start": 52,
-            "value": "united states"
+            "start": 49,
+            "value": "united kingdom"
           }
         ],
         "intent": "weather_request",
-        "text": "What is the current condensation in two days around united states"
+        "text": "Will it be precipitation at twenty eleven around united kingdom"
+      },
+      {
+        "entities": [],
+        "intent": "weather_request",
+        "text": "How is the weather at twenty eleven"
       },
       {
         "entities": [
           {
-            "end": 22,
+            "end": 18,
             "entity": "weather_arg",
-            "start": 18,
-            "value": "humidity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it going to be damp"
-      },
-      {
-        "entities": [
-          {
-            "end": 31,
-            "entity": "weather_arg",
-            "start": 18,
-            "value": "rain"
+            "start": 11,
+            "value": "temp"
           },
           {
-            "end": 46,
+            "end": 50,
             "entity": "location",
-            "start": 35,
-            "value": "puerto rico"
+            "start": 36,
+            "value": "united kingdom"
           }
         ],
         "intent": "weather_request",
-        "text": "Is it going to be precipitation at puerto rico"
+        "text": "Will it be melting tomorrow here in united kingdom"
       },
       {
         "entities": [
@@ -2672,173 +1285,1697 @@
             "end": 8,
             "entity": "weather_arg",
             "start": 4,
-            "value": "quantity"
+            "value": "temp"
+          }
+        ],
+        "intent": "weather_request",
+        "text": "How temp tomorrow"
+      },
+      {
+        "entities": [
+          {
+            "end": 11,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "humidity"
           },
           {
-            "end": 36,
+            "end": 28,
             "entity": "location",
-            "start": 28,
+            "start": 20,
             "value": "new york"
           }
         ],
         "intent": "weather_request",
-        "text": "How much in two days around new york"
+        "text": "Is it moist here in new york"
       },
       {
         "entities": [
           {
             "end": 24,
             "entity": "weather_arg",
-            "start": 18,
-            "value": "clowdy"
-          },
-          {
-            "end": 53,
-            "entity": "location",
-            "start": 42,
-            "value": "puerto rico"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it going to be clouds tomorrow here in puerto rico"
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          },
-          {
-            "end": 32,
-            "entity": "location",
-            "start": 19,
-            "value": "united states"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Will it be temp in united states"
-      },
-      {
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "humidity"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it damp"
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "rain"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it rain fall in two days"
-      },
-      {
-        "entities": [],
-        "intent": "weather_request",
-        "text": "Show me the weather at ten thirty"
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
+            "start": 20,
             "value": "quantity"
           },
           {
-            "end": 31,
+            "end": 46,
             "entity": "location",
-            "start": 23,
-            "value": "new york"
+            "start": 40,
+            "value": "europe"
           }
         ],
         "intent": "weather_request",
-        "text": "How is the much around new york"
+        "text": "What is the current much in two days at europe"
       },
       {
         "entities": [
           {
             "end": 26,
             "entity": "weather_arg",
-            "start": 20,
-            "value": "clowdy"
+            "start": 18,
+            "value": "humidity"
           }
         ],
         "intent": "weather_request",
-        "text": "What is the current clowdy today"
+        "text": "Is it going to be humidity tomorrow"
       },
       {
-        "entities": [
-          {
-            "end": 22,
-            "entity": "weather_arg",
-            "start": 18,
-            "value": "quantity"
-          },
-          {
-            "end": 38,
-            "entity": "location",
-            "start": 31,
-            "value": "atlanta"
-          }
-        ],
-        "intent": "weather_request",
-        "text": "Is it going to be much here in atlanta"
+        "entities": [],
+        "intent": "greet",
+        "text": "good night are you there"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "sup are you around"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey there good morning"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey there morning how are you"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey good morning"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good day are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good morning are you around"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey good day how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hi good day whats up"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey how are things going"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "morning whatsup"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey there good night whatsup"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "greetings are you around"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hello greetings are you around"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "*20% hello"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "greetings how are you"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey there good morning how is it going"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hello there good day how are you"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hi good night are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "sup are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "sup sup"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hi good day"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "sup how is it going"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good afternoon how is it going"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hi good night how are things going"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hi are you there"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey there good night how are things going"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey there are you there"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good day sup"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good day whatsup"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hello there whatsup"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good afternoon whatsup"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "sup morning how is it going"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hello whats up"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good night how are things going"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey good day"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hi greetings sup"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good morning how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "sup good afternoon whats up"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey morning are you around"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "sup good night how are you"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hi good afternoon sup"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "sup good night whatsup"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good afternoon sup"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "morning are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good morning whats up"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "*20% chau"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "*20% adios"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "im leaving now bye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "*20% see ya"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "going out chao"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thank you very much adios"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "im leaving now farewell"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "adios thank you"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "leaving adios"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "got to go farewell"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thanks farewell"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "im leaving now got to go"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thank you very much bye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thank you goodbye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "have to go farewell"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "going out see ya"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "got to go adios"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "have to go bye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "adios thanks"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "*20% got to go"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thanks chao"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "see ya thanks"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "going out bye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "heading out chau"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "going out farewell"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "im leaving now see ya"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "*20% adieu"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "adieu thank you"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thank you very much goodbye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "talk to you soon bye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thank you chao"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "adios thank you very much"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thanks got to go"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "chau"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "see ya thank you"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "have to go see ya"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thank you got to go"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thank you very much chau"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "chao thanks"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "have to go got to go"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thank you chau"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thank you adios"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "chao thank you"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "going out adios"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "heading out adios"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "got to go chao"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "leaving farewell"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thanks bye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thanks see ya"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "chau thank you"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "that is right correct"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "yep its fine yes"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "awesome awesome thank you"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "yes sir pls"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "i want that yep"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "correct"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "right pls"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "yes thanks"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "*20% agreed"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "sounds good good"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "affirmative that is fine yes"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "yep please"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "right correct"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "amazing"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "yes sir yep thank you very much"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "that is fine affirmative"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "yes sir affirmative"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "affirmative i want that"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "i want that yes sir"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "awesome that is what i want yep"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "affirmative that is what i want"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "that is what i want yes sir"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "amazing yes"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "*20% sounds good"
+      },
+      {
+        "entities": [],
+        "intent": "affirmative",
+        "text": "good agreed"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "incorrect that's not correct"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "pls that's not right"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "never please that is wrong"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "*20% that's not correct"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "pls dont like that it's not good"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "incorrect its not ok"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "nope pls"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "never pls didnt meant that"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "dont like that it's not good"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "incorrect pls"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "not really its not correct"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "never didnt meant that"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "not really it's not good"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "not really please it's not good"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "not really pls it's not good"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "please no thanks that's wrong"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "*20% incorrect"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "no didnt meant that"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "that's not right that's not what i want"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "not really pls i don't want that"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "nope please that's wrong"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "dont like that pls that is wrong"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "please never"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "please don't do that"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "don't do that please its not correct"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "incorrect pls that's not correct"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "please not really"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "no thanks it's not good"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "no that's not what i want"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "no please"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "no thanks that is wrong"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "don't do that please"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "no thanks its not correct"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "please nope dont mean that"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "incorrect dont mean that"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "no"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "pls not really that is wrong"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "pls that's not right that's not correct"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "don't do that didnt meant that"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "incorrect please that is wrong"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "incorrect that is wrong"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "dont like that that's not what i want"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "please incorrect dont mean that"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "not really please that's not what i want"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "don't do that that's wrong"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "don't do that that's not correct"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "nope please its not ok"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "pls that's not right that is wrong"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "not really didnt meant that"
+      },
+      {
+        "entities": [],
+        "intent": "negative",
+        "text": "pls don't do that its not correct"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm doing perfect are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm good are you around"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im ok and you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm doing amazing how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am feeling amazing sup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im Awesome how are you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im perfect how about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm wonderful how are things going"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im feeling amazing how about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am ok what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm doing wonderful are you there"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm ok are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im feeling good are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am feeling very good sup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm doing very good whatsup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm doing great are you around"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im amazing are you there"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am feeling wonderful and you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im Awesome what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm feeling perfect how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am Awesome are you there"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am feeling fine how is it going"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm very good what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am fine how about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im good how are you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm fine how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am doing very good sup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im doing Awesome and you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm great are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im amazing what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm perfect what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm Awesome how is it going"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im feeling amazing and you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im feeling ok how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im very good what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am doing amazing what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im perfect are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im doing amazing how is it going"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im doing good how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm Awesome are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am very good what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im amazing are you around"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am great and you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm Awesome are you there"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "Im feeling perfect sup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am feeling wonderful are you there"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am Awesome how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I'm doing fine sup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am good how about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_positive",
+        "text": "I am ok whatsup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im great"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I'm feeling fine"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I'm feeling good"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im fine"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im doing wonderful"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I am doing amazing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I am doing wonderful"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I am doing ok"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I'm Awesome"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I'm great"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im doing amazing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im feeling fine"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im feeling perfect"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im feeling wonderful"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im feeling great"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im Awesome"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I am doing perfect"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im feeling ok"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im wonderful"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im ok"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I'm doing very good"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I'm feeling ok"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I am great"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I'm feeling Awesome"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im doing great"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I am feeling great"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I am feeling very good"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I'm doing ok"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im feeling good"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "Im doing Awesome"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_positive",
+        "text": "I am doing fine"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm doing depressed how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im dissapointed what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am awful are you there"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im not good how are things going"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am depressed how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am doing terrible and you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am feeling not good how about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im dissapointed and you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am doing not good are you there"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im doing awful how are you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im doing awful how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am feeling depressed and you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im doing dissapointed what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm doing bad sup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im doing not good sup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am bad sup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am feeling dissapointed whats up"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm terrible what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am doing not good are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am feeling bad how is it going"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm doing awful how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im not good and you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm sad how about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm doing depressed what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am doing dissapointed what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm depressed are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im depressed are you around"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am sad and you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm sad and you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm doing sad how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am feeling dissapointed are you around"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm awful whatsup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am feeling not good are you around?"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am bad what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im sad are you around"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am feeling terrible sup"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm depressed what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am feeling awful how are things going"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am doing sad what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am terrible how about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm doing dissapointed are you there"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm terrible how about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im feeling sad what about you"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im doing dissapointed whats up"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am doing not good how are things going"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im feeling sad are you there"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im feeling depressed how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I am awful how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "I'm doing awful are you around"
+      },
+      {
+        "entities": [],
+        "intent": "fine_ask_negative",
+        "text": "Im bad how are you doing"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "I'm doing awful"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "I am feeling sad"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "Im feeling sad"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "I'm doing terrible"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "I am not good"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "I'm feeling depressed"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "I am feeling not good"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "I'm feeling bad"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "I am doing depressed"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "I am feeling depressed"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "Im feeling depressed"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "I'm doing not good"
+      },
+      {
+        "entities": [],
+        "intent": "fine_normal_negative",
+        "text": "I am doing dissapointed"
       }
     ],
     "entity_synonyms": [
       {
         "synonyms": [
-          "raining",
-          "precipitation",
-          "condensation",
-          "pour",
           "rain",
           "rain fall",
+          "condensation",
+          "raining",
+          "rainfall",
+          "precipitation",
           "pouring",
-          "rainfall"
+          "pour"
         ],
         "value": "rain"
       },
       {
         "synonyms": [
-          "temp",
-          "chilly",
-          "burning",
-          "melting",
-          "hot",
-          "freezing",
-          "condition",
           "temperature",
+          "melting",
+          "freezing",
+          "burning",
+          "calefaction",
           "warm",
           "toasty",
-          "calefaction",
+          "hot",
+          "condition",
+          "chilly",
+          "temp",
           "cold"
         ],
         "value": "temp"
       },
       {
         "synonyms": [
-          "humid",
-          "damp",
-          "dampness",
-          "moisture",
-          "moist",
           "evaporation",
+          "dampness",
+          "damp",
+          "moist",
+          "humid",
+          "vapor",
           "humidity",
-          "vapor"
+          "moisture"
         ],
         "value": "humidity"
       },
