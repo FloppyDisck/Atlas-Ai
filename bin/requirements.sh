@@ -1,3 +1,4 @@
+#!/bin/bash
 pip install rasa_nlu
 pip install rasa_nlu[spacy]
 python -m spacy download en
