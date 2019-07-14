@@ -8,10 +8,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Before starting you'll need to have a few libraries installed. First open console in the main program folder and then copy the line below and run it.
-
+Before starting you'll need to have a few libraries installed.
+NOTE: If youre using a virtualenv make sure to activate it beforehand.
 ```
-pip install -r requirements.txt
+cd bin/
+bash requirements.sh
 ```
 
 ### Installing
