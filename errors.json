@@ -1,0 +1,10 @@
+[
+    {
+        "text": "good",
+        "intent": "affirmative",
+        "intent_prediction": {
+            "name": "fine_ask_positive",
+            "confidence": 0.17972213595733622
+        }
+    }
+]
