@@ -23,7 +23,7 @@ interpreter = trainer.train(training_data)
 model_directory = trainer.persist("./models", project_name='current', fixed_model_name='nlu')
 
 #More robust metrics report
-#run_evaluation("data/nlu.md", model_directory) #Recommended to have a custom test set
+run_evaluation("data/nlu/test/output.json", model_directory) #Recommended to have a custom test set
 
 dialogueTrain = False
 if dialogueTrain == True:
