@@ -1,0 +1,38 @@
+~[reminder action]
+    remind me
+    set a reminder
+    notify me
+
+~[reminder example]
+    turn off computer
+    turn off bathroom lights
+    lock the door
+    feed my gecko
+    buy groceries
+    buy new decorations
+
+~[reminder time]
+    in ~[time day] days
+    [later?] {tomorrow/today?} [at?clock] ~[time clock?clock]
+
+~[time clock]
+    {1/2/3/4/5/6/7/8/9/10/11/12} {am/pm?}
+
+~[time day]
+    one
+    two
+    three
+    four
+    five
+    six
+    seve
+    eight
+    nine
+    ten
+    eleven
+    twelve
+    thirteen
+    fourteen
+    fifteen
+    sixteen
+    eighteen
