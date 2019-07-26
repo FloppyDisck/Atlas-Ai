@@ -1,10 +1,34 @@
 [
     {
-        "text": "good",
-        "intent": "affirmative",
+        "text": "*20% sup",
+        "intent": "greet",
         "intent_prediction": {
-            "name": "fine_ask_positive",
-            "confidence": 0.17972213595733622
+            "name": "affirmative",
+            "confidence": 0.3067689001780681
+        }
+    },
+    {
+        "text": "im leaving now farewell",
+        "intent": "bye",
+        "intent_prediction": {
+            "name": "fine_ask_negative",
+            "confidence": 0.6316041524105898
+        }
+    },
+    {
+        "text": "im leaving now",
+        "intent": "bye",
+        "intent_prediction": {
+            "name": "fine_ask_negative",
+            "confidence": 0.6659254609410432
+        }
+    },
+    {
+        "text": "you please nope",
+        "intent": "negative",
+        "intent_prediction": {
+            "name": "affirmative",
+            "confidence": 0.5649293699867663
         }
     }
 ]
