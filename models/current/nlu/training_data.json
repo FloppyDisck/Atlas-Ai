@@ -3,81 +3,41 @@
     "common_examples": [
       {
         "intent": "weather_request",
-        "text": "Give me the weather in two days"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "clowdy"
-          }
-        ],
-        "text": "Will it be clouds at ten thirty"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 22,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          }
-        ],
-        "text": "Will it be calefaction at twenty eleven"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "quantity"
-          },
-          {
-            "end": 32,
-            "entity": "location",
-            "start": 19,
-            "value": "united states"
-          }
-        ],
-        "text": "Is it much here in united states"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Give me the weather"
-      },
-      {
-        "intent": "weather_request",
         "text": "Whats the current atmospheric condition"
       },
       {
         "intent": "weather_request",
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "temp"
-          }
-        ],
-        "text": "How calefaction in two days"
+        "text": "Give me the weather at twenty eleven"
+      },
+      {
+        "intent": "weather_request",
+        "text": "How is the weather tomorrow"
       },
       {
         "intent": "weather_request",
         "entities": [
           {
-            "end": 12,
+            "end": 9,
             "entity": "weather_arg",
             "start": 6,
             "value": "temp"
+          },
+          {
+            "end": 34,
+            "entity": "location",
+            "start": 27,
+            "value": "england"
           }
         ],
-        "text": "Is it chilly at twenty eleven"
+        "text": "Is it hot at ten thirty at england"
+      },
+      {
+        "intent": "weather_request",
+        "text": "Give me the weather tomorrow"
+      },
+      {
+        "intent": "weather_request",
+        "text": "Give me the weather in the next day"
       },
       {
         "intent": "weather_request",
@@ -86,74 +46,16 @@
             "end": 19,
             "entity": "weather_arg",
             "start": 11,
-            "value": "humidity"
-          }
-        ],
-        "text": "Will it be humidity today"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 22,
-            "entity": "weather_arg",
-            "start": 18,
-            "value": "humidity"
-          }
-        ],
-        "text": "Is it going to be damp"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 22,
-            "entity": "weather_arg",
-            "start": 18,
-            "value": "rain"
+            "value": "temp"
           },
           {
-            "end": 40,
+            "end": 29,
             "entity": "location",
-            "start": 26,
-            "value": "united kingdom"
+            "start": 23,
+            "value": "russia"
           }
         ],
-        "text": "Is it going to be pour at united kingdom"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Show me the weather"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 25,
-            "entity": "weather_arg",
-            "start": 18,
-            "value": "rain"
-          },
-          {
-            "end": 35,
-            "entity": "location",
-            "start": 29,
-            "value": "africa"
-          }
-        ],
-        "text": "Is it going to be pouring at africa"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 8,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "quantity"
-          }
-        ],
-        "text": "How much"
+        "text": "Will it be freezing in russia"
       },
       {
         "intent": "weather_request",
@@ -161,211 +63,27 @@
       },
       {
         "intent": "weather_request",
-        "text": "whats the weather for today in five hours"
-      },
-      {
-        "intent": "weather_request",
         "entities": [
           {
-            "end": 12,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "clowdy"
-          },
-          {
-            "end": 27,
-            "entity": "location",
-            "start": 21,
-            "value": "africa"
-          }
-        ],
-        "text": "Is it clouds here in africa"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "clowdy"
-          },
-          {
-            "end": 27,
-            "entity": "location",
-            "start": 21,
-            "value": "europe"
-          }
-        ],
-        "text": "How is the clouds at europe"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Show me the weather in two days"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Show me the weather tomorrow"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "rain"
-          }
-        ],
-        "text": "Will it be rain tomorrow"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 26,
+            "end": 33,
             "entity": "weather_arg",
             "start": 20,
-            "value": "clowdy"
-          },
-          {
-            "end": 56,
-            "entity": "location",
-            "start": 48,
-            "value": "new york"
-          }
-        ],
-        "text": "What is the current clouds at ten thirty around new york"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "quantity"
-          },
-          {
-            "end": 36,
-            "entity": "location",
-            "start": 29,
-            "value": "atlanta"
-          }
-        ],
-        "text": "How is the much today around atlanta"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Give me the weather today"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "clowdy"
-          }
-        ],
-        "text": "Will it be clowdy"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 18,
-            "entity": "weather_arg",
-            "start": 6,
             "value": "rain"
           }
         ],
-        "text": "Is it condensation"
+        "text": "What is the current precipitation in two days"
       },
       {
         "intent": "weather_request",
         "entities": [
           {
-            "end": 14,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "temp"
-          },
-          {
-            "end": 30,
-            "entity": "location",
-            "start": 23,
-            "value": "arizona"
-          }
-        ],
-        "text": "Is it freezing here in arizona"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 8,
+            "end": 13,
             "entity": "weather_arg",
             "start": 4,
-            "value": "rain"
-          }
-        ],
-        "text": "How rain at twenty eleven"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
             "value": "temp"
-          },
-          {
-            "end": 42,
-            "entity": "location",
-            "start": 35,
-            "value": "arizona"
           }
         ],
-        "text": "Will it be cold in two days around arizona"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 28,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "humidity"
-          },
-          {
-            "end": 43,
-            "entity": "location",
-            "start": 37,
-            "value": "europe"
-          }
-        ],
-        "text": "What is the current humidity here in europe"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "quantity"
-          },
-          {
-            "end": 25,
-            "entity": "location",
-            "start": 18,
-            "value": "england"
-          }
-        ],
-        "text": "Is it much around england"
+        "text": "How condition"
       },
       {
         "intent": "weather_request",
@@ -375,81 +93,15 @@
             "entity": "weather_arg",
             "start": 11,
             "value": "clowdy"
-          }
-        ],
-        "text": "Will it be clouds"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 18,
-            "value": "clowdy"
           },
           {
-            "end": 43,
+            "end": 32,
             "entity": "location",
-            "start": 37,
+            "start": 26,
             "value": "russia"
           }
         ],
-        "text": "Is it going to be clouds tomorrow in russia"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 22,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          }
-        ],
-        "text": "Will it be calefaction"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 11,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "humidity"
-          }
-        ],
-        "text": "Is it moist at twenty eleven"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          },
-          {
-            "end": 28,
-            "entity": "location",
-            "start": 21,
-            "value": "arizona"
-          }
-        ],
-        "text": "Will it be toasty at arizona"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 22,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "humidity"
-          }
-        ],
-        "text": "Will it be evaporation tomorrow"
+        "text": "How is the clowdy here in russia"
       },
       {
         "intent": "weather_request",
@@ -459,83 +111,27 @@
             "entity": "weather_arg",
             "start": 11,
             "value": "clowdy"
-          }
-        ],
-        "text": "How is the clowdy"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "quantity"
           },
           {
             "end": 47,
             "entity": "location",
-            "start": 33,
-            "value": "united kingdom"
+            "start": 34,
+            "value": "san francisco"
           }
         ],
-        "text": "How is the much in five hours in united kingdom"
+        "text": "How is the clowdy tomorrow around san francisco"
       },
       {
         "intent": "weather_request",
         "entities": [
-          {
-            "end": 8,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "temp"
-          }
-        ],
-        "text": "How cold at ten thirty"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "quantity"
-          },
           {
             "end": 30,
-            "entity": "location",
-            "start": 25,
-            "value": "spain"
-          }
-        ],
-        "text": "How is the much today in spain"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Show me the weather today"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Whats the current atmospheric condition today"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 26,
             "entity": "weather_arg",
-            "start": 20,
-            "value": "clowdy"
-          },
-          {
-            "end": 56,
-            "entity": "location",
-            "start": 43,
-            "value": "united states"
+            "start": 18,
+            "value": "rain"
           }
         ],
-        "text": "What is the current clowdy tomorrow around united states"
+        "text": "Is it going to be condensation"
       },
       {
         "intent": "weather_request",
@@ -543,387 +139,11 @@
           {
             "end": 11,
             "entity": "weather_arg",
-            "start": 6,
-            "value": "humidity"
-          }
-        ],
-        "text": "Is it moist"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Whats the current atmospheric condition tomorrow"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 29,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "rain"
-          },
-          {
-            "end": 50,
-            "entity": "location",
-            "start": 39,
-            "value": "puerto rico"
-          }
-        ],
-        "text": "What is the current rain fall today in puerto rico"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 19,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "humidity"
-          },
-          {
-            "end": 43,
-            "entity": "location",
-            "start": 29,
-            "value": "united kingdom"
-          }
-        ],
-        "text": "How is the humidity today in united kingdom"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "quantity"
-          }
-        ],
-        "text": "What is the current much in the next day"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 31,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "humidity"
-          }
-        ],
-        "text": "What is the current evaporation at ten thirty"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Whats the current atmospheric condition at ten thirty"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 27,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "rain"
-          },
-          {
-            "end": 37,
-            "entity": "location",
-            "start": 31,
-            "value": "africa"
-          }
-        ],
-        "text": "What is the current raining in africa"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 27,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "temp"
-          },
-          {
-            "end": 55,
-            "entity": "location",
-            "start": 41,
-            "value": "united kingdom"
-          }
-        ],
-        "text": "What is the current burning today around united kingdom"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 12,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "clowdy"
-          },
-          {
-            "end": 46,
-            "entity": "location",
-            "start": 35,
-            "value": "puerto rico"
-          }
-        ],
-        "text": "Is it clouds at ten thirty here in puerto rico"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 28,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "humidity"
-          }
-        ],
-        "text": "What is the current humidity"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 22,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "humidity"
-          }
-        ],
-        "text": "How is the evaporation tomorrow"
-      },
-      {
-        "intent": "weather_request",
-        "text": "whats the weather for today at ten thirty"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "clowdy"
-          }
-        ],
-        "text": "How is the clowdy today"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 8,
-            "entity": "weather_arg",
             "start": 4,
-            "value": "quantity"
-          },
-          {
-            "end": 18,
-            "entity": "location",
-            "start": 12,
-            "value": "russia"
-          }
-        ],
-        "text": "How much in russia"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 26,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "temp"
-          }
-        ],
-        "text": "What is the current chilly"
-      },
-      {
-        "intent": "weather_request",
-        "text": "whats the weather for today in the next day"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "quantity"
-          }
-        ],
-        "text": "Will it be much tomorrow"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 22,
-            "entity": "weather_arg",
-            "start": 18,
-            "value": "quantity"
-          },
-          {
-            "end": 57,
-            "entity": "location",
-            "start": 43,
-            "value": "united kingdom"
-          }
-        ],
-        "text": "Is it going to be much at twenty eleven in united kingdom"
-      },
-      {
-        "intent": "weather_request",
-        "text": "How is the weather"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 26,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "clowdy"
-          }
-        ],
-        "text": "What is the current clowdy"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
             "value": "rain"
-          },
-          {
-            "end": 26,
-            "entity": "location",
-            "start": 19,
-            "value": "england"
           }
         ],
-        "text": "How is the pour in england"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 10,
-            "entity": "weather_arg",
-            "start": 6,
-            "value": "humidity"
-          },
-          {
-            "end": 38,
-            "entity": "location",
-            "start": 27,
-            "value": "puerto rico"
-          }
-        ],
-        "text": "Is it damp tomorrow around puerto rico"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "humidity"
-          },
-          {
-            "end": 29,
-            "entity": "location",
-            "start": 23,
-            "value": "europe"
-          }
-        ],
-        "text": "How evaporation around europe"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          }
-        ],
-        "text": "How is the toasty"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Give me the weather at ten thirty"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 18,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          }
-        ],
-        "text": "Will it be melting"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 29,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "temp"
-          }
-        ],
-        "text": "What is the current condition"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 17,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          },
-          {
-            "end": 48,
-            "entity": "location",
-            "start": 40,
-            "value": "new york"
-          }
-        ],
-        "text": "How is the toasty in five hours here in new york"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Show me the weather at ten thirty"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 22,
-            "entity": "weather_arg",
-            "start": 18,
-            "value": "quantity"
-          },
-          {
-            "end": 36,
-            "entity": "location",
-            "start": 30,
-            "value": "africa"
-          }
-        ],
-        "text": "Is it going to be much around africa"
+        "text": "How raining"
       },
       {
         "intent": "weather_request",
@@ -941,19 +161,149 @@
         "intent": "weather_request",
         "entities": [
           {
-            "end": 10,
+            "end": 17,
             "entity": "weather_arg",
-            "start": 4,
+            "start": 11,
             "value": "clowdy"
+          }
+        ],
+        "text": "Will it be clouds tomorrow"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 29,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "humidity"
           },
           {
-            "end": 31,
+            "end": 46,
             "entity": "location",
-            "start": 25,
+            "start": 33,
+            "value": "united states"
+          }
+        ],
+        "text": "Is it going to be evaporation in united states"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 18,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "rain"
+          }
+        ],
+        "text": "Is it condensation in the next day"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 16,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "humidity"
+          },
+          {
+            "end": 43,
+            "entity": "location",
+            "start": 37,
             "value": "africa"
           }
         ],
-        "text": "How clouds today here in africa"
+        "text": "How is the humid in two days here in africa"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 10,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "temp"
+          }
+        ],
+        "text": "Is it cold"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 26,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "clowdy"
+          }
+        ],
+        "text": "What is the current clowdy in the next day"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "quantity"
+          }
+        ],
+        "text": "Will it be much"
+      },
+      {
+        "intent": "weather_request",
+        "text": "Show me the weather in two days"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 27,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "rain"
+          },
+          {
+            "end": 44,
+            "entity": "location",
+            "start": 31,
+            "value": "san francisco"
+          }
+        ],
+        "text": "What is the current raining in san francisco"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 10,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "quantity"
+          }
+        ],
+        "text": "Is it much"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "quantity"
+          },
+          {
+            "end": 55,
+            "entity": "location",
+            "start": 42,
+            "value": "united states"
+          }
+        ],
+        "text": "What is the current much at ten thirty at united states"
       },
       {
         "intent": "weather_request",
@@ -965,105 +315,13 @@
             "value": "rain"
           },
           {
-            "end": 42,
+            "end": 37,
             "entity": "location",
             "start": 31,
-            "value": "puerto rico"
+            "value": "europe"
           }
         ],
-        "text": "Is it going to be rain fall in puerto rico"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 19,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "rain"
-          },
-          {
-            "end": 46,
-            "entity": "location",
-            "start": 39,
-            "value": "atlanta"
-          }
-        ],
-        "text": "Will it be rainfall in two days around atlanta"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          },
-          {
-            "end": 38,
-            "entity": "location",
-            "start": 33,
-            "value": "spain"
-          }
-        ],
-        "text": "Will it be warm at ten thirty at spain"
-      },
-      {
-        "intent": "weather_request",
-        "text": "How is the weather tomorrow"
-      },
-      {
-        "intent": "weather_request",
-        "text": "Show me the weather in the next day"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 8,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "rain"
-          }
-        ],
-        "text": "How pour"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 15,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "temp"
-          }
-        ],
-        "text": "Will it be warm today"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 23,
-            "entity": "weather_arg",
-            "start": 11,
-            "value": "rain"
-          }
-        ],
-        "text": "Will it be condensation in the next day"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 24,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "temp"
-          }
-        ],
-        "text": "What is the current temp"
+        "text": "Is it going to be rain fall at europe"
       },
       {
         "intent": "weather_request",
@@ -1073,33 +331,27 @@
             "entity": "weather_arg",
             "start": 4,
             "value": "clowdy"
-          },
-          {
-            "end": 36,
-            "entity": "location",
-            "start": 28,
-            "value": "new york"
           }
         ],
-        "text": "How clouds at ten thirty in new york"
+        "text": "How clouds"
       },
       {
         "intent": "weather_request",
         "entities": [
           {
-            "end": 11,
+            "end": 13,
             "entity": "weather_arg",
             "start": 6,
-            "value": "humidity"
+            "value": "rain"
           },
           {
-            "end": 23,
+            "end": 24,
             "entity": "location",
-            "start": 15,
-            "value": "san juan"
+            "start": 17,
+            "value": "atlanta"
           }
         ],
-        "text": "Is it humid at san juan"
+        "text": "Is it raining in atlanta"
       },
       {
         "intent": "weather_request",
@@ -1107,41 +359,41 @@
           {
             "end": 15,
             "entity": "weather_arg",
-            "start": 4,
-            "value": "humidity"
+            "start": 11,
+            "value": "quantity"
           }
         ],
-        "text": "How evaporation in five hours"
+        "text": "Will it be much in two days"
       },
       {
         "intent": "weather_request",
         "entities": [
           {
-            "end": 26,
+            "end": 10,
             "entity": "weather_arg",
-            "start": 18,
-            "value": "rain"
+            "start": 6,
+            "value": "quantity"
+          }
+        ],
+        "text": "Is it much today"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 12,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "clowdy"
           },
           {
-            "end": 40,
+            "end": 38,
             "entity": "location",
-            "start": 34,
+            "start": 32,
             "value": "africa"
           }
         ],
-        "text": "Is it going to be rainfall around africa"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 11,
-            "entity": "weather_arg",
-            "start": 4,
-            "value": "temp"
-          }
-        ],
-        "text": "How burning at twenty eleven"
+        "text": "Is it clouds in the next day at africa"
       },
       {
         "intent": "weather_request",
@@ -1159,31 +411,19 @@
         "intent": "weather_request",
         "entities": [
           {
-            "end": 29,
+            "end": 12,
             "entity": "weather_arg",
-            "start": 18,
-            "value": "temp"
-          }
-        ],
-        "text": "Is it going to be calefaction in two days"
-      },
-      {
-        "intent": "weather_request",
-        "entities": [
-          {
-            "end": 25,
-            "entity": "weather_arg",
-            "start": 20,
-            "value": "humidity"
+            "start": 6,
+            "value": "clowdy"
           },
           {
-            "end": 48,
+            "end": 30,
             "entity": "location",
-            "start": 42,
-            "value": "africa"
+            "start": 16,
+            "value": "united kingdom"
           }
         ],
-        "text": "What is the current moist tomorrow around africa"
+        "text": "Is it clowdy in united kingdom"
       },
       {
         "intent": "weather_request",
@@ -1195,17 +435,77 @@
             "value": "humidity"
           },
           {
-            "end": 34,
+            "end": 36,
             "entity": "location",
-            "start": 27,
-            "value": "england"
+            "start": 23,
+            "value": "san francisco"
           }
         ],
-        "text": "Is it humidity tomorrow in england"
+        "text": "Is it humidity here in san francisco"
       },
       {
         "intent": "weather_request",
-        "text": "Give me the weather at twenty eleven"
+        "entities": [
+          {
+            "end": 10,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "clowdy"
+          }
+        ],
+        "text": "How clouds in five hours"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 31,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "humidity"
+          }
+        ],
+        "text": "What is the current evaporation at twenty eleven"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 12,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "clowdy"
+          },
+          {
+            "end": 27,
+            "entity": "location",
+            "start": 22,
+            "value": "spain"
+          }
+        ],
+        "text": "Is it clouds today at spain"
+      },
+      {
+        "intent": "weather_request",
+        "text": "whats the weather for today in five hours"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 8,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "quantity"
+          },
+          {
+            "end": 31,
+            "entity": "location",
+            "start": 17,
+            "value": "united kingdom"
+          }
+        ],
+        "text": "How much here in united kingdom"
       },
       {
         "intent": "weather_request",
@@ -1215,21 +515,235 @@
             "entity": "weather_arg",
             "start": 11,
             "value": "humidity"
+          },
+          {
+            "end": 35,
+            "entity": "location",
+            "start": 29,
+            "value": "russia"
           }
         ],
-        "text": "How is the humidity at ten thirty"
+        "text": "How is the moisture today at russia"
       },
       {
         "intent": "weather_request",
         "entities": [
           {
-            "end": 25,
+            "end": 15,
             "entity": "weather_arg",
-            "start": 18,
+            "start": 4,
+            "value": "humidity"
+          }
+        ],
+        "text": "How evaporation in two days"
+      },
+      {
+        "intent": "weather_request",
+        "text": "How is the weather"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 9,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "temp"
+          }
+        ],
+        "text": "Is it hot"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
             "value": "rain"
           }
         ],
-        "text": "Is it going to be raining"
+        "text": "What is the current pour"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 17,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "clowdy"
+          }
+        ],
+        "text": "How is the clowdy today"
+      },
+      {
+        "intent": "weather_request",
+        "text": "Show me the weather"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 17,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "clowdy"
+          }
+        ],
+        "text": "Will it be clouds at ten thirty"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 29,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "temp"
+          },
+          {
+            "end": 60,
+            "entity": "location",
+            "start": 54,
+            "value": "europe"
+          }
+        ],
+        "text": "What is the current condition in the next day here in europe"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 10,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "clowdy"
+          }
+        ],
+        "text": "How clowdy"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 27,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "rain"
+          },
+          {
+            "end": 39,
+            "entity": "location",
+            "start": 31,
+            "value": "san juan"
+          }
+        ],
+        "text": "What is the current pouring at san juan"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 10,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "rain"
+          },
+          {
+            "end": 24,
+            "entity": "location",
+            "start": 19,
+            "value": "spain"
+          }
+        ],
+        "text": "Is it rain here in spain"
+      },
+      {
+        "intent": "weather_request",
+        "text": "Show me the weather at ten thirty"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 18,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "temp"
+          },
+          {
+            "end": 36,
+            "entity": "location",
+            "start": 31,
+            "value": "spain"
+          }
+        ],
+        "text": "Will it be melting tomorrow at spain"
+      },
+      {
+        "intent": "weather_request",
+        "text": "Whats the current atmospheric condition in the next day"
+      },
+      {
+        "intent": "weather_request",
+        "text": "Give me the weather at ten thirty"
+      },
+      {
+        "intent": "weather_request",
+        "text": "Whats the current atmospheric condition in five hours"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 12,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "clowdy"
+          }
+        ],
+        "text": "Is it clouds"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "humidity"
+          },
+          {
+            "end": 24,
+            "entity": "location",
+            "start": 19,
+            "value": "spain"
+          }
+        ],
+        "text": "How evaporation in spain"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 17,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "temp"
+          },
+          {
+            "end": 27,
+            "entity": "location",
+            "start": 21,
+            "value": "russia"
+          }
+        ],
+        "text": "How is the toasty at russia"
+      },
+      {
+        "intent": "weather_request",
+        "text": "Whats the current atmospheric condition in two days"
       },
       {
         "intent": "weather_request",
@@ -1241,363 +755,517 @@
             "value": "quantity"
           },
           {
-            "end": 33,
+            "end": 57,
             "entity": "location",
-            "start": 26,
-            "value": "england"
+            "start": 43,
+            "value": "united kingdom"
           }
         ],
-        "text": "Is it going to be much in england"
+        "text": "Is it going to be much in two days here in united kingdom"
       },
       {
         "intent": "weather_request",
         "entities": [
           {
-            "end": 18,
+            "end": 12,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "humidity"
+          },
+          {
+            "end": 38,
+            "entity": "location",
+            "start": 30,
+            "value": "san juan"
+          }
+        ],
+        "text": "How humidity in five hours at san juan"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 12,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "clowdy"
+          },
+          {
+            "end": 43,
+            "entity": "location",
+            "start": 30,
+            "value": "san francisco"
+          }
+        ],
+        "text": "Is it clouds in five hours at san francisco"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 17,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "clowdy"
+          }
+        ],
+        "text": "How is the clowdy at twenty eleven"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 29,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "humidity"
+          },
+          {
+            "end": 44,
+            "entity": "location",
+            "start": 38,
+            "value": "africa"
+          }
+        ],
+        "text": "Is it going to be evaporation here in africa"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "rain"
+          },
+          {
+            "end": 56,
+            "entity": "location",
+            "start": 50,
+            "value": "europe"
+          }
+        ],
+        "text": "What is the current pour at twenty eleven here in europe"
+      },
+      {
+        "intent": "weather_request",
+        "text": "How is the weather in two days"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 17,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "clowdy"
+          }
+        ],
+        "text": "Will it be clowdy"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 26,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "humidity"
+          }
+        ],
+        "text": "Is it going to be humidity in two days"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "temp"
+          }
+        ],
+        "text": "How is the cold in two days"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 25,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "rain"
+          },
+          {
+            "end": 48,
+            "entity": "location",
+            "start": 34,
+            "value": "united kingdom"
+          }
+        ],
+        "text": "Is it going to be raining here in united kingdom"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 25,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "temp"
+          }
+        ],
+        "text": "Is it going to be burning today"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 13,
             "entity": "weather_arg",
             "start": 6,
             "value": "rain"
           },
           {
-            "end": 40,
+            "end": 23,
             "entity": "location",
-            "start": 33,
-            "value": "arizona"
+            "start": 17,
+            "value": "europe"
           }
         ],
-        "text": "Is it condensation today here in arizona"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls set a reminder later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me for at 11"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me for in eighteen days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls remind me for at 2"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls notify me in twelve days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder for in twelve days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you set a reminder for in six days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me for in fourteen days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder at 12"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls remind me for"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls notify me in fourteen days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you set a reminder later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me for later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you remind me in one days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you set a reminder for"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me in six days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls remind me in three days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder in eighteen days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you please remind me for in fourteen days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me later at 9"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me for in nine days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me in ten days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls notify me"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me for"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder for at 4"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder in fourteen days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me for in eleven days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder later at 8"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls remind me later at 11"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you notify me for in nine days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder in four days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me for later at 2"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me for at 10"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you notify me for later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you remind me for"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you remind me in ten days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder later at 7"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me for later at 5"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you please set a reminder later at 6"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me for later at 6"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me in seve days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me in nine days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you set a reminder in eleven days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder for in five days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me for in twelve days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder for"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me in three days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls remind me for at 11"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you please notify me for later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you set a reminder at 10"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you remind me for later at 11"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me in one days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you remind me for in thirteen days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls remind me for in sixteen days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls remind me later at 6"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you set a reminder later at 11"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls notify me in eleven days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder for in three days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you set a reminder for later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you please set a reminder in one days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me for in twelve days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me for in eight days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls notify me later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you please notify me in seve days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you please remind me for in seve days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls remind me"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you please remind me in fifteen days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls notify me in three days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "notify me for in three days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls set a reminder in seve days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls set a reminder"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls remind me for in four days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me for"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you set a reminder at 3"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder for later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls notify me for at 11"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "remind me for later at 3"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "you set a reminder for in fifteen days"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "pls remind me for in seve days"
+        "text": "Is it pouring in europe"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "quantity"
+          }
+        ],
+        "text": "What is the current much"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "clowdy"
+          }
+        ],
+        "text": "Is it going to be clowdy"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 11,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "humidity"
+          }
+        ],
+        "text": "Is it humid in two days"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 14,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "humidity"
+          },
+          {
+            "end": 32,
+            "entity": "location",
+            "start": 18,
+            "value": "united kingdom"
+          }
+        ],
+        "text": "Is it humidity in united kingdom"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 17,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "clowdy"
+          },
+          {
+            "end": 45,
+            "entity": "location",
+            "start": 39,
+            "value": "africa"
+          }
+        ],
+        "text": "How is the clouds in five hours around africa"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 22,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "temp"
+          }
+        ],
+        "text": "How is the temperature in two days"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 14,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "humidity"
+          }
+        ],
+        "text": "Is it humidity tomorrow"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "quantity"
+          },
+          {
+            "end": 46,
+            "entity": "location",
+            "start": 40,
+            "value": "europe"
+          }
+        ],
+        "text": "Will it be much at twenty eleven around europe"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 10,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "clowdy"
+          },
+          {
+            "end": 38,
+            "entity": "location",
+            "start": 33,
+            "value": "spain"
+          }
+        ],
+        "text": "How clowdy at ten thirty here in spain"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 11,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "humidity"
+          },
+          {
+            "end": 42,
+            "entity": "location",
+            "start": 36,
+            "value": "europe"
+          }
+        ],
+        "text": "Is it vapor at twenty eleven around europe"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 27,
+            "entity": "weather_arg",
+            "start": 18,
+            "value": "temp"
+          }
+        ],
+        "text": "Is it going to be condition"
+      },
+      {
+        "intent": "weather_request",
+        "text": "whats the weather for today today"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "humidity"
+          }
+        ],
+        "text": "How evaporation"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 17,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "temp"
+          }
+        ],
+        "text": "Is it temperature today"
+      },
+      {
+        "intent": "weather_request",
+        "text": "Give me the weather today"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "rain"
+          }
+        ],
+        "text": "What is the current rain in two days"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 17,
+            "entity": "weather_arg",
+            "start": 4,
+            "value": "rain"
+          },
+          {
+            "end": 34,
+            "entity": "location",
+            "start": 21,
+            "value": "united states"
+          }
+        ],
+        "text": "How precipitation in united states"
+      },
+      {
+        "intent": "weather_request",
+        "text": "Show me the weather in the next day"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 11,
+            "value": "rain"
+          }
+        ],
+        "text": "Will it be pour"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "quantity"
+          },
+          {
+            "end": 36,
+            "entity": "location",
+            "start": 28,
+            "value": "san juan"
+          }
+        ],
+        "text": "What is the current much at san juan"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 11,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "humidity"
+          }
+        ],
+        "text": "Is it vapor in two days"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 15,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "rain"
+          },
+          {
+            "end": 51,
+            "entity": "location",
+            "start": 38,
+            "value": "united states"
+          }
+        ],
+        "text": "Is it rain fall at ten thirty here in united states"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 24,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "humidity"
+          }
+        ],
+        "text": "What is the current damp"
+      },
+      {
+        "intent": "weather_request",
+        "text": "whats the weather for today tomorrow"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 28,
+            "entity": "weather_arg",
+            "start": 20,
+            "value": "rain"
+          }
+        ],
+        "text": "What is the current rainfall"
+      },
+      {
+        "intent": "weather_request",
+        "entities": [
+          {
+            "end": 13,
+            "entity": "weather_arg",
+            "start": 6,
+            "value": "temp"
+          }
+        ],
+        "text": "Is it burning"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder later at 11"
       },
       {
         "intent": "reminder_set_noIntent",
@@ -1605,23 +1273,151 @@
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "pls remind me for later"
+        "text": "notify me for later"
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "set a reminder later at 2"
+        "text": "notify me for in seve days"
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "pls remind me for at 9"
+        "text": "pls remind me for in six days"
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "pls notify me for later at 11"
+        "text": "pls notify me for in six days"
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "pls set a reminder for in five days"
+        "text": "notify me later"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for later at 12"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you set a reminder later"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls remind me for in ten days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder in three days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you remind me in twelve days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls remind me for"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you please remind me for"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "notify me for in eight days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls notify me for later"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder for in eleven days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder in two days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me at 3"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "notify me for in eighteen days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you set a reminder for at 12"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "notify me for in ten days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "notify me"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for in eight days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls set a reminder for"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder for in one days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls notify me later at 8"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder for later"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you please remind me for at 6"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for later at 8"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls remind me in three days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for in twelve days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you remind me for"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for later at 1"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder for at 12"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you notify me in four days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder in six days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me in twelve days"
       },
       {
         "intent": "reminder_set_noIntent",
@@ -1629,19 +1425,15 @@
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "notify me later at 6"
+        "text": "notify me in two days"
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "set a reminder for in nine days"
+        "text": "pls remind me for later at 8"
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "you remind me for later"
-      },
-      {
-        "intent": "reminder_set_noIntent",
-        "text": "set a reminder in twelve days"
+        "text": "notify me at 4"
       },
       {
         "intent": "reminder_set_noIntent",
@@ -1649,491 +1441,1427 @@
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "remind me later at 1"
+        "text": "remind me in fifteen days"
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "you please notify me in one days"
+        "text": "remind me"
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "remind me for later at 11"
+        "text": "pls set a reminder for in three days"
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "remind me at 9"
+        "text": "pls remind me for later at 11"
       },
       {
         "intent": "reminder_set_noIntent",
-        "text": "you notify me for in seve days"
+        "text": "remind me for at 9"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "you please notify me in seve days to turn off computer"
+        "intent": "reminder_set_noIntent",
+        "text": "remind me later at 11"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "pls notify me to buy groceries"
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder later"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "remind me to buy groceries in eight days"
+        "intent": "reminder_set_noIntent",
+        "text": "pls notify me in three days"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "remind me to buy groceries in nine days"
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for in fourteen days"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "notify me later at 5 to turn off bathroom lights"
+        "intent": "reminder_set_noIntent",
+        "text": "pls set a reminder at 1"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "you notify me to buy groceries in seve days"
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder in four days"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "remind me to lock the door in eleven days"
+        "intent": "reminder_set_noIntent",
+        "text": "pls remind me for later at 5"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "you set a reminder in one days to turn off bathroom lights"
+        "intent": "reminder_set_noIntent",
+        "text": "pls notify me later"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "you please remind me to lock the door at 1"
+        "intent": "reminder_set_noIntent",
+        "text": "pls set a reminder in ten days"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "pls remind me to turn off computer in two days"
+        "intent": "reminder_set_noIntent",
+        "text": "you remind me for in eleven days"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "notify me to turn off bathroom lights in sixteen days"
+        "intent": "reminder_set_noIntent",
+        "text": "you please notify me later"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "pls set a reminder to buy groceries"
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder for at 2"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "set a reminder to feed my gecko"
+        "intent": "reminder_set_noIntent",
+        "text": "pls notify me in thirteen days"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "notify me later at 11 to feed my gecko in nine days"
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder in eighteen days"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "set a reminder in six days to feed my gecko"
+        "intent": "reminder_set_noIntent",
+        "text": "you notify me for in nine days"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "remind me later at 7 to buy groceries in five days"
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for in five days"
       },
       {
-        "intent": "reminder-set-intent",
-        "text": "pls notify me to feed my gecko"
+        "intent": "reminder_set_noIntent",
+        "text": "notify me at 1"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls notify me in seve days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for later"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "notify me for"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you please set a reminder later"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls set a reminder for in two days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you set a reminder"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for in sixteen days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you please notify me in eight days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls notify me in eight days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder in thirteen days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for in fifteen days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "notify me for in sixteen days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me for in nine days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you please remind me in nine days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you please remind me for at 1"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "notify me for in three days"
       },
       {
+        "intent": "reminder_set_noIntent",
+        "text": "pls remind me later at 5"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you please remind me in fourteen days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls remind me"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls set a reminder for later"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls remind me for later"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you notify me for later at 7"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "notify me for later at 8"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you remind me for later"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you set a reminder in sixteen days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "pls remind me at 9"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you remind me at 4"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you set a reminder for in eight days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you set a reminder at 1"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "set a reminder for in six days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "you please set a reminder for later"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "remind me in sixteen days"
+      },
+      {
+        "intent": "reminder_set_noIntent",
+        "text": "notify me for at 3"
+      },
+      {
         "intent": "reminder-set-intent",
-        "text": "you please remind me to turn off computer in fifteen days"
+        "entities": [
+          {
+            "end": 37,
+            "entity": "reminder",
+            "start": 28,
+            "value": "enable to"
+          }
+        ],
+        "text": "you notify me later at 5 to enable to"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls remind me in nine days to turn off bathroom lights"
+        "entities": [
+          {
+            "end": 28,
+            "entity": "reminder",
+            "start": 17,
+            "value": "sound after"
+          }
+        ],
+        "text": "pls notify me to sound after later at 10"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "set a reminder to buy groceries later at 1"
+        "entities": [
+          {
+            "end": 27,
+            "entity": "reminder",
+            "start": 17,
+            "value": "anticipate"
+          }
+        ],
+        "text": "pls remind me to anticipate in eight days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls set a reminder to lock the door in seve days"
+        "entities": [
+          {
+            "end": 30,
+            "entity": "reminder",
+            "start": 24,
+            "value": "combat"
+          }
+        ],
+        "text": "you please notify me to combat in eight days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me to turn off bathroom lights in fourteen days"
+        "entities": [
+          {
+            "end": 44,
+            "entity": "reminder",
+            "start": 22,
+            "value": "gain across that lunch"
+          }
+        ],
+        "text": "pls set a reminder to gain across that lunch later at 2"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls remind me to buy groceries"
+        "entities": [
+          {
+            "end": 39,
+            "entity": "reminder",
+            "start": 17,
+            "value": "solve under much heart"
+          }
+        ],
+        "text": "pls remind me to solve under much heart"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you please remind me to buy groceries"
+        "entities": [
+          {
+            "end": 24,
+            "entity": "reminder",
+            "start": 19,
+            "value": "merge"
+          }
+        ],
+        "text": "notify me at 12 to merge"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "set a reminder to lock the door later at 11"
+        "entities": [
+          {
+            "end": 34,
+            "entity": "reminder",
+            "start": 24,
+            "value": "confuse on"
+          }
+        ],
+        "text": "you please notify me to confuse on in thirteen days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you notify me to turn off computer"
+        "entities": [
+          {
+            "end": 33,
+            "entity": "reminder",
+            "start": 13,
+            "value": "interest most debate"
+          }
+        ],
+        "text": "notify me to interest most debate"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls remind me in two days to turn off bathroom lights in one days"
+        "entities": [
+          {
+            "end": 40,
+            "entity": "reminder",
+            "start": 22,
+            "value": "correspond despite"
+          }
+        ],
+        "text": "pls notify me at 7 to correspond despite"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me later at 4 to feed my gecko"
+        "entities": [
+          {
+            "end": 38,
+            "entity": "reminder",
+            "start": 13,
+            "value": "improve much organisation"
+          }
+        ],
+        "text": "remind me to improve much organisation"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me to buy groceries in one days"
+        "entities": [
+          {
+            "end": 34,
+            "entity": "reminder",
+            "start": 26,
+            "value": "disclose"
+          }
+        ],
+        "text": "notify me in five days to disclose"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you notify me to lock the door"
+        "entities": [
+          {
+            "end": 28,
+            "entity": "reminder",
+            "start": 13,
+            "value": "explode against"
+          }
+        ],
+        "text": "notify me to explode against later"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "set a reminder in sixteen days to lock the door"
+        "entities": [
+          {
+            "end": 47,
+            "entity": "reminder",
+            "start": 28,
+            "value": "criticise an branch"
+          }
+        ],
+        "text": "you set a reminder later to criticise an branch later"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls notify me in six days to buy new decorations"
+        "entities": [
+          {
+            "end": 23,
+            "entity": "reminder",
+            "start": 13,
+            "value": "contribute"
+          }
+        ],
+        "text": "notify me to contribute in sixteen days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me to buy new decorations"
+        "entities": [
+          {
+            "end": 33,
+            "entity": "reminder",
+            "start": 18,
+            "value": "spot the leader"
+          }
+        ],
+        "text": "remind me at 2 to spot the leader"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls remind me in fourteen days to feed my gecko"
+        "entities": [
+          {
+            "end": 44,
+            "entity": "reminder",
+            "start": 29,
+            "value": "park every goal"
+          }
+        ],
+        "text": "pls remind me in two days to park every goal later"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you notify me to feed my gecko"
+        "entities": [
+          {
+            "end": 57,
+            "entity": "reminder",
+            "start": 30,
+            "value": "enter against their release"
+          }
+        ],
+        "text": "remind me in eighteen days to enter against their release"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me later at 5 to lock the door in twelve days"
+        "entities": [
+          {
+            "end": 60,
+            "entity": "reminder",
+            "start": 29,
+            "value": "dismiss throughout much display"
+          }
+        ],
+        "text": "pls notify me later at 11 to dismiss throughout much display"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you please notify me to buy groceries"
+        "entities": [
+          {
+            "end": 51,
+            "entity": "reminder",
+            "start": 28,
+            "value": "assign until an failure"
+          }
+        ],
+        "text": "remind me in twelve days to assign until an failure"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you please notify me to turn off bathroom lights"
+        "entities": [
+          {
+            "end": 62,
+            "entity": "reminder",
+            "start": 34,
+            "value": "exchange concerning his call"
+          }
+        ],
+        "text": "pls remind me in eighteen days to exchange concerning his call"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you please notify me to lock the door in three days"
+        "entities": [
+          {
+            "end": 48,
+            "entity": "reminder",
+            "start": 37,
+            "value": "indicate on"
+          }
+        ],
+        "text": "you set a reminder in eleven days to indicate on in ten days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you remind me to buy new decorations in seve days"
+        "entities": [
+          {
+            "end": 31,
+            "entity": "reminder",
+            "start": 19,
+            "value": "trace behind"
+          }
+        ],
+        "text": "notify me later to trace behind later"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you please set a reminder in eleven days to turn off computer in five days"
+        "entities": [
+          {
+            "end": 34,
+            "entity": "reminder",
+            "start": 19,
+            "value": "pass many mouth"
+          }
+        ],
+        "text": "notify me later to pass many mouth"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me in eight days to lock the door"
+        "entities": [
+          {
+            "end": 41,
+            "entity": "reminder",
+            "start": 17,
+            "value": "arrive like a few design"
+          }
+        ],
+        "text": "you remind me to arrive like a few design in eighteen days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me to turn off bathroom lights later"
+        "entities": [
+          {
+            "end": 52,
+            "entity": "reminder",
+            "start": 24,
+            "value": "scratch except enough member"
+          }
+        ],
+        "text": "you please remind me to scratch except enough member"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls set a reminder later to buy new decorations in two days"
+        "entities": [
+          {
+            "end": 17,
+            "entity": "reminder",
+            "start": 13,
+            "value": "spin"
+          }
+        ],
+        "text": "remind me to spin"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "set a reminder later at 5 to buy groceries later"
+        "entities": [
+          {
+            "end": 48,
+            "entity": "reminder",
+            "start": 28,
+            "value": "smell with each meal"
+          }
+        ],
+        "text": "remind me in eleven days to smell with each meal"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me in eighteen days to turn off bathroom lights in ten days"
+        "entities": [
+          {
+            "end": 53,
+            "entity": "reminder",
+            "start": 31,
+            "value": "relax to rather mother"
+          }
+        ],
+        "text": "set a reminder in seve days to relax to rather mother"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you set a reminder to feed my gecko later at 2"
+        "entities": [
+          {
+            "end": 36,
+            "entity": "reminder",
+            "start": 17,
+            "value": "remain rather break"
+          }
+        ],
+        "text": "you notify me to remain rather break"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls notify me to lock the door at 6"
+        "entities": [
+          {
+            "end": 34,
+            "entity": "reminder",
+            "start": 17,
+            "value": "need a few profit"
+          }
+        ],
+        "text": "you remind me to need a few profit later at 7"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me to feed my gecko"
+        "entities": [
+          {
+            "end": 44,
+            "entity": "reminder",
+            "start": 26,
+            "value": "repair its pension"
+          }
+        ],
+        "text": "remind me in seve days to repair its pension in nine days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me to feed my gecko in sixteen days"
+        "entities": [
+          {
+            "end": 41,
+            "entity": "reminder",
+            "start": 17,
+            "value": "withstand a little place"
+          }
+        ],
+        "text": "pls remind me to withstand a little place later"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls set a reminder to lock the door"
+        "entities": [
+          {
+            "end": 20,
+            "entity": "reminder",
+            "start": 13,
+            "value": "welcome"
+          }
+        ],
+        "text": "notify me to welcome"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you please remind me in four days to buy new decorations in twelve days"
+        "entities": [
+          {
+            "end": 53,
+            "entity": "reminder",
+            "start": 33,
+            "value": "cry a little history"
+          }
+        ],
+        "text": "pls set a reminder later at 7 to cry a little history"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "set a reminder in sixteen days to feed my gecko in thirteen days"
+        "entities": [
+          {
+            "end": 45,
+            "entity": "reminder",
+            "start": 24,
+            "value": "order under such bank"
+          }
+        ],
+        "text": "set a reminder later to order under such bank later"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you remind me to turn off computer in one days"
+        "entities": [
+          {
+            "end": 35,
+            "entity": "reminder",
+            "start": 18,
+            "value": "want all audience"
+          }
+        ],
+        "text": "set a reminder to want all audience"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me in thirteen days to feed my gecko"
+        "entities": [
+          {
+            "end": 39,
+            "entity": "reminder",
+            "start": 22,
+            "value": "confuse many item"
+          }
+        ],
+        "text": "you set a reminder to confuse many item"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me in ten days to buy groceries in thirteen days"
+        "entities": [
+          {
+            "end": 21,
+            "entity": "reminder",
+            "start": 17,
+            "value": "bake"
+          }
+        ],
+        "text": "you remind me to bake"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me later to lock the door"
+        "entities": [
+          {
+            "end": 48,
+            "entity": "reminder",
+            "start": 22,
+            "value": "accept through both square"
+          }
+        ],
+        "text": "pls set a reminder to accept through both square"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me to turn off computer"
+        "entities": [
+          {
+            "end": 39,
+            "entity": "reminder",
+            "start": 35,
+            "value": "lack"
+          }
+        ],
+        "text": "set a reminder in eighteen days to lack in eight days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "set a reminder to feed my gecko at 10"
+        "entities": [
+          {
+            "end": 30,
+            "entity": "reminder",
+            "start": 17,
+            "value": "devise within"
+          }
+        ],
+        "text": "you notify me to devise within"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls notify me at 12 to turn off bathroom lights"
+        "entities": [
+          {
+            "end": 31,
+            "entity": "reminder",
+            "start": 25,
+            "value": "effect"
+          }
+        ],
+        "text": "notify me in ten days to effect"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls remind me later at 5 to turn off computer"
+        "entities": [
+          {
+            "end": 51,
+            "entity": "reminder",
+            "start": 25,
+            "value": "attend from either college"
+          }
+        ],
+        "text": "notify me in two days to attend from either college in three days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls set a reminder to turn off computer at 9"
+        "entities": [
+          {
+            "end": 38,
+            "entity": "reminder",
+            "start": 30,
+            "value": "contrast"
+          }
+        ],
+        "text": "pls remind me in five days to contrast"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls set a reminder in thirteen days to turn off computer"
+        "entities": [
+          {
+            "end": 40,
+            "entity": "reminder",
+            "start": 24,
+            "value": "vary other party"
+          }
+        ],
+        "text": "remind me later at 6 to vary other party"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you notify me to turn off bathroom lights"
+        "entities": [
+          {
+            "end": 41,
+            "entity": "reminder",
+            "start": 13,
+            "value": "facilitate without any touch"
+          }
+        ],
+        "text": "remind me to facilitate without any touch in three days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me to feed my gecko"
+        "entities": [
+          {
+            "end": 35,
+            "entity": "reminder",
+            "start": 13,
+            "value": "need until enough play"
+          }
+        ],
+        "text": "notify me to need until enough play"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me to lock the door in eleven days"
+        "entities": [
+          {
+            "end": 27,
+            "entity": "reminder",
+            "start": 22,
+            "value": "fetch"
+          }
+        ],
+        "text": "pls set a reminder to fetch in fifteen days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "set a reminder to feed my gecko in twelve days"
+        "entities": [
+          {
+            "end": 47,
+            "entity": "reminder",
+            "start": 17,
+            "value": "discourage without his contact"
+          }
+        ],
+        "text": "pls notify me to discourage without his contact later at 5"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me at 6 to buy new decorations"
+        "entities": [
+          {
+            "end": 51,
+            "entity": "reminder",
+            "start": 40,
+            "value": "attend over"
+          }
+        ],
+        "text": "you please remind me in fifteen days to attend over in fourteen days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me in seve days to turn off computer in sixteen days"
+        "entities": [
+          {
+            "end": 32,
+            "entity": "reminder",
+            "start": 13,
+            "value": "can since our death"
+          }
+        ],
+        "text": "notify me to can since our death in eighteen days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls notify me later to turn off computer"
+        "entities": [
+          {
+            "end": 25,
+            "entity": "reminder",
+            "start": 17,
+            "value": "opt from"
+          }
+        ],
+        "text": "you notify me to opt from later at 6"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls set a reminder to buy new decorations"
+        "entities": [
+          {
+            "end": 27,
+            "entity": "reminder",
+            "start": 22,
+            "value": "range"
+          }
+        ],
+        "text": "pls set a reminder to range in three days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you please set a reminder in three days to feed my gecko in eleven days"
+        "entities": [
+          {
+            "end": 44,
+            "entity": "reminder",
+            "start": 30,
+            "value": "stir half town"
+          }
+        ],
+        "text": "pls notify me in seve days to stir half town"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me in eleven days to buy groceries later"
+        "entities": [
+          {
+            "end": 46,
+            "entity": "reminder",
+            "start": 22,
+            "value": "waste near a few concern"
+          }
+        ],
+        "text": "pls set a reminder to waste near a few concern in nine days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you please remind me in eight days to buy groceries later at 10"
+        "entities": [
+          {
+            "end": 54,
+            "entity": "reminder",
+            "start": 30,
+            "value": "survive without a member"
+          }
+        ],
+        "text": "you please remind me later to survive without a member in seve days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "set a reminder later to turn off bathroom lights in eighteen days"
+        "entities": [
+          {
+            "end": 31,
+            "entity": "reminder",
+            "start": 13,
+            "value": "specify concerning"
+          }
+        ],
+        "text": "remind me to specify concerning in fifteen days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me later to turn off bathroom lights in seve days"
+        "entities": [
+          {
+            "end": 30,
+            "entity": "reminder",
+            "start": 18,
+            "value": "telephone in"
+          }
+        ],
+        "text": "set a reminder to telephone in"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you please notify me to buy new decorations"
+        "entities": [
+          {
+            "end": 31,
+            "entity": "reminder",
+            "start": 17,
+            "value": "teach those co"
+          }
+        ],
+        "text": "pls notify me to teach those co"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "set a reminder in fifteen days to turn off computer in six days"
+        "entities": [
+          {
+            "end": 24,
+            "entity": "reminder",
+            "start": 13,
+            "value": "attempt off"
+          }
+        ],
+        "text": "remind me to attempt off in sixteen days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls set a reminder in eighteen days to buy new decorations in eight days"
+        "entities": [
+          {
+            "end": 33,
+            "entity": "reminder",
+            "start": 18,
+            "value": "score following"
+          }
+        ],
+        "text": "remind me at 4 to score following later"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you set a reminder in six days to buy new decorations"
+        "entities": [
+          {
+            "end": 41,
+            "entity": "reminder",
+            "start": 29,
+            "value": "harm without"
+          }
+        ],
+        "text": "you please notify me at 3 to harm without in eleven days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "set a reminder to buy new decorations in two days"
+        "entities": [
+          {
+            "end": 35,
+            "entity": "reminder",
+            "start": 17,
+            "value": "cut in this breath"
+          }
+        ],
+        "text": "pls notify me to cut in this breath"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me to turn off computer in three days"
+        "entities": [
+          {
+            "end": 22,
+            "entity": "reminder",
+            "start": 17,
+            "value": "blame"
+          }
+        ],
+        "text": "pls remind me to blame in four days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you remind me to turn off bathroom lights"
+        "entities": [
+          {
+            "end": 39,
+            "entity": "reminder",
+            "start": 24,
+            "value": "position across"
+          }
+        ],
+        "text": "set a reminder later to position across"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me to turn off computer at 9"
+        "entities": [
+          {
+            "end": 61,
+            "entity": "reminder",
+            "start": 34,
+            "value": "announce into either prince"
+          }
+        ],
+        "text": "set a reminder in sixteen days to announce into either prince"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me at 7 to turn off computer in one days"
+        "entities": [
+          {
+            "end": 25,
+            "entity": "reminder",
+            "start": 13,
+            "value": "impose after"
+          }
+        ],
+        "text": "notify me to impose after"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me later to turn off bathroom lights"
+        "entities": [
+          {
+            "end": 54,
+            "entity": "reminder",
+            "start": 35,
+            "value": "merge neither horse"
+          }
+        ],
+        "text": "set a reminder in fourteen days to merge neither horse in fifteen days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me later at 10 to lock the door"
+        "entities": [
+          {
+            "end": 41,
+            "entity": "reminder",
+            "start": 18,
+            "value": "expand out rather lunch"
+          }
+        ],
+        "text": "set a reminder to expand out rather lunch"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you please set a reminder to feed my gecko"
+        "entities": [
+          {
+            "end": 45,
+            "entity": "reminder",
+            "start": 22,
+            "value": "spell neither tradition"
+          }
+        ],
+        "text": "pls set a reminder to spell neither tradition"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me later to feed my gecko in four days"
+        "entities": [
+          {
+            "end": 56,
+            "entity": "reminder",
+            "start": 39,
+            "value": "receive the voice"
+          }
+        ],
+        "text": "pls set a reminder in thirteen days to receive the voice at 6"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you please remind me to feed my gecko"
+        "entities": [
+          {
+            "end": 41,
+            "entity": "reminder",
+            "start": 17,
+            "value": "throw their intelligence"
+          }
+        ],
+        "text": "pls notify me to throw their intelligence in eleven days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls notify me in four days to buy groceries"
+        "entities": [
+          {
+            "end": 50,
+            "entity": "reminder",
+            "start": 29,
+            "value": "regulate many victory"
+          }
+        ],
+        "text": "you please notify me at 1 to regulate many victory"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "notify me at 6 to lock the door at 2"
+        "entities": [
+          {
+            "end": 29,
+            "entity": "reminder",
+            "start": 18,
+            "value": "wan through"
+          }
+        ],
+        "text": "notify me at 7 to wan through in one days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you set a reminder to feed my gecko in eleven days"
+        "entities": [
+          {
+            "end": 42,
+            "entity": "reminder",
+            "start": 35,
+            "value": "rebuild"
+          }
+        ],
+        "text": "set a reminder in eighteen days to rebuild in seve days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "you set a reminder to feed my gecko"
+        "entities": [
+          {
+            "end": 60,
+            "entity": "reminder",
+            "start": 31,
+            "value": "telephone behind a few border"
+          }
+        ],
+        "text": "pls remind me in eight days to telephone behind a few border"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls set a reminder in eight days to buy new decorations in three days"
+        "entities": [
+          {
+            "end": 28,
+            "entity": "reminder",
+            "start": 17,
+            "value": "do all soil"
+          }
+        ],
+        "text": "pls remind me to do all soil"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me in fifteen days to buy new decorations"
+        "entities": [
+          {
+            "end": 36,
+            "entity": "reminder",
+            "start": 30,
+            "value": "reform"
+          }
+        ],
+        "text": "notify me in fourteen days to reform"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me in two days to turn off bathroom lights"
+        "entities": [
+          {
+            "end": 23,
+            "entity": "reminder",
+            "start": 17,
+            "value": "assist"
+          }
+        ],
+        "text": "pls remind me to assist in sixteen days"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "remind me to lock the door in eighteen days"
+        "entities": [
+          {
+            "end": 32,
+            "entity": "reminder",
+            "start": 13,
+            "value": "tie by these summer"
+          }
+        ],
+        "text": "notify me to tie by these summer"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls notify me later to turn off computer in five days"
+        "entities": [
+          {
+            "end": 37,
+            "entity": "reminder",
+            "start": 18,
+            "value": "purchase throughout"
+          }
+        ],
+        "text": "set a reminder to purchase throughout"
       },
       {
         "intent": "reminder-set-intent",
-        "text": "pls set a reminder in eight days to buy new decorations in thirteen days"
+        "entities": [
+          {
+            "end": 43,
+            "entity": "reminder",
+            "start": 28,
+            "value": "dwell many deal"
+          }
+        ],
+        "text": "you notify me later at 8 to dwell many deal"
       },
       {
-        "intent": "greet",
-        "text": "*20% sup"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 37,
+            "entity": "reminder",
+            "start": 18,
+            "value": "block of their boat"
+          }
+        ],
+        "text": "set a reminder to block of their boat"
       },
       {
-        "intent": "greet",
-        "text": "hey there morning whats up"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 23,
+            "entity": "reminder",
+            "start": 17,
+            "value": "oppose"
+          }
+        ],
+        "text": "pls notify me to oppose"
       },
       {
-        "intent": "greet",
-        "text": "*20% hi"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 38,
+            "entity": "reminder",
+            "start": 13,
+            "value": "ensure except those henry"
+          }
+        ],
+        "text": "remind me to ensure except those henry"
       },
       {
-        "intent": "greet",
-        "text": "good afternoon"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 36,
+            "entity": "reminder",
+            "start": 17,
+            "value": "land plus our voice"
+          }
+        ],
+        "text": "you notify me to land plus our voice"
       },
       {
-        "intent": "greet",
-        "text": "hey there"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 51,
+            "entity": "reminder",
+            "start": 28,
+            "value": "change during our drama"
+          }
+        ],
+        "text": "you notify me later at 3 to change during our drama in eight days"
       },
       {
-        "intent": "greet",
-        "text": "hey there greetings"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 42,
+            "entity": "reminder",
+            "start": 18,
+            "value": "lend down her opposition"
+          }
+        ],
+        "text": "remind me at 2 to lend down her opposition in six days"
       },
       {
-        "intent": "greet",
-        "text": "hello there whatsup"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 55,
+            "entity": "reminder",
+            "start": 24,
+            "value": "comprehend towards rather child"
+          }
+        ],
+        "text": "you please remind me to comprehend towards rather child"
       },
       {
-        "intent": "greet",
-        "text": "hey morning whats up"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 34,
+            "entity": "reminder",
+            "start": 22,
+            "value": "implement up"
+          }
+        ],
+        "text": "you notify me at 5 to implement up at 1"
       },
       {
-        "intent": "greet",
-        "text": "hello there how are you"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 37,
+            "entity": "reminder",
+            "start": 30,
+            "value": "operate"
+          }
+        ],
+        "text": "set a reminder later at 12 to operate"
       },
       {
-        "intent": "greet",
-        "text": "*20% hey there"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 59,
+            "entity": "reminder",
+            "start": 37,
+            "value": "strip until a few town"
+          }
+        ],
+        "text": "pls set a reminder in twelve days to strip until a few town in one days"
       },
       {
-        "intent": "greet",
-        "text": "hey morning how are you"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 27,
+            "entity": "reminder",
+            "start": 22,
+            "value": "fancy"
+          }
+        ],
+        "text": "pls set a reminder to fancy"
       },
       {
-        "intent": "greet",
-        "text": "*20% hello there"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 33,
+            "entity": "reminder",
+            "start": 18,
+            "value": "lead your peter"
+          }
+        ],
+        "text": "notify me at 7 to lead your peter in two days"
       },
       {
-        "intent": "greet",
-        "text": "hi good night are you around"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 47,
+            "entity": "reminder",
+            "start": 35,
+            "value": "suit without"
+          }
+        ],
+        "text": "you set a reminder in four days to suit without"
       },
       {
-        "intent": "greet",
-        "text": "hey"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 53,
+            "entity": "reminder",
+            "start": 30,
+            "value": "thrust around my review"
+          }
+        ],
+        "text": "pls remind me in seve days to thrust around my review"
       },
       {
-        "intent": "greet",
-        "text": "good night"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 44,
+            "entity": "reminder",
+            "start": 25,
+            "value": "consider what plant"
+          }
+        ],
+        "text": "remind me later at 12 to consider what plant"
       },
       {
-        "intent": "greet",
-        "text": "good day are you around"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 42,
+            "entity": "reminder",
+            "start": 26,
+            "value": "doubt these sale"
+          }
+        ],
+        "text": "notify me in seve days to doubt these sale in eighteen days"
       },
       {
-        "intent": "greet",
-        "text": "greetings how are you"
+        "intent": "reminder-set-intent",
+        "entities": [
+          {
+            "end": 23,
+            "entity": "reminder",
+            "start": 17,
+            "value": "invent"
+          }
+        ],
+        "text": "pls remind me to invent later"
       },
       {
         "intent": "greet",
@@ -2141,11 +2869,11 @@
       },
       {
         "intent": "greet",
-        "text": "good day"
+        "text": "hi good morning"
       },
       {
         "intent": "greet",
-        "text": "good morning how are you"
+        "text": "hello there good night how are you"
       },
       {
         "intent": "greet",
@@ -2153,79 +2881,23 @@
       },
       {
         "intent": "greet",
-        "text": "greetings are you there"
+        "text": "good afternoon"
       },
       {
         "intent": "greet",
-        "text": "hi how are things going"
+        "text": "*20% hey there"
       },
       {
         "intent": "greet",
-        "text": "hey there how is it going"
+        "text": "good morning"
       },
       {
         "intent": "greet",
-        "text": "hello are you around"
+        "text": "*20% hi"
       },
       {
         "intent": "greet",
-        "text": "hey whatsup"
-      },
-      {
-        "intent": "greet",
-        "text": "good afternoon how are you doing"
-      },
-      {
-        "intent": "greet",
-        "text": "good night how are you"
-      },
-      {
-        "intent": "greet",
-        "text": "hello there good night how are you doing"
-      },
-      {
-        "intent": "greet",
-        "text": "good day sup"
-      },
-      {
-        "intent": "greet",
-        "text": "hey there how are you doing"
-      },
-      {
-        "intent": "greet",
-        "text": "hello good afternoon sup"
-      },
-      {
-        "intent": "greet",
-        "text": "sup whatsup"
-      },
-      {
-        "intent": "greet",
-        "text": "sup morning are you around"
-      },
-      {
-        "intent": "greet",
-        "text": "hey there whatsup"
-      },
-      {
-        "intent": "greet",
-        "text": "hello how are you"
-      },
-      {
-        "intent": "greet",
-        "text": "*20% hello"
-      },
-      {
-        "intent": "greet",
-        "text": "hey there good night"
-      },
-      {
-        "intent": "greet",
-        "text": "hello there good night are you there"
-      },
-      {
-        "intent": "greet",
-        "text": "morning"
+        "text": "good night are you there"
       },
       {
         "intent": "greet",
@@ -2233,31 +2905,79 @@
       },
       {
         "intent": "greet",
-        "text": "sup whats up"
+        "text": "*20% hey"
       },
       {
         "intent": "greet",
-        "text": "hello good morning are you there"
+        "text": "*20% hello there"
       },
       {
         "intent": "greet",
-        "text": "hello whats up"
+        "text": "hey there"
       },
       {
         "intent": "greet",
-        "text": "greetings"
+        "text": "hello there"
       },
       {
         "intent": "greet",
-        "text": "hello there morning are you around"
+        "text": "good night how are you"
       },
       {
         "intent": "greet",
-        "text": "hey good afternoon are you around"
+        "text": "good night"
       },
       {
         "intent": "greet",
-        "text": "hey there good afternoon are you around"
+        "text": "hey there good afternoon"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning whatsup"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hey there sup"
+      },
+      {
+        "intent": "greet",
+        "text": "hello sup"
+      },
+      {
+        "intent": "greet",
+        "text": "good day how are things going"
+      },
+      {
+        "intent": "greet",
+        "text": "sup good morning are you around"
+      },
+      {
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "intent": "greet",
+        "text": "sup are you there"
+      },
+      {
+        "intent": "greet",
+        "text": "morning"
+      },
+      {
+        "intent": "greet",
+        "text": "*20% hello"
+      },
+      {
+        "intent": "greet",
+        "text": "morning whats up"
+      },
+      {
+        "intent": "greet",
+        "text": "hello good night"
       },
       {
         "intent": "greet",
@@ -2265,103 +2985,83 @@
       },
       {
         "intent": "greet",
-        "text": "hello good afternoon whats up"
+        "text": "good night sup"
       },
       {
-        "intent": "bye",
-        "text": "*20% adieu"
+        "intent": "greet",
+        "text": "hey there whats up"
       },
       {
-        "intent": "bye",
-        "text": "have to go chau"
+        "intent": "greet",
+        "text": "hi greetings whatsup"
       },
       {
-        "intent": "bye",
-        "text": "talk to you soon see ya"
+        "intent": "greet",
+        "text": "good night whats up"
       },
       {
-        "intent": "bye",
-        "text": "got to go"
+        "intent": "greet",
+        "text": "hello whatsup"
       },
       {
-        "intent": "bye",
-        "text": "*20% chao"
+        "intent": "greet",
+        "text": "good afternoon are you around?"
       },
       {
-        "intent": "bye",
-        "text": "heading out"
+        "intent": "greet",
+        "text": "hi"
       },
       {
-        "intent": "bye",
-        "text": "*20% chau"
+        "intent": "greet",
+        "text": "good afternoon are you there"
       },
       {
-        "intent": "bye",
-        "text": "have to go goodbye"
+        "intent": "greet",
+        "text": "hi how are you"
       },
       {
-        "intent": "bye",
-        "text": "*20% goodbye"
+        "intent": "greet",
+        "text": "greetings whatsup"
       },
       {
-        "intent": "bye",
-        "text": "got to go goodbye"
+        "intent": "greet",
+        "text": "hey good day are you around?"
       },
       {
-        "intent": "bye",
-        "text": "talk to you later"
+        "intent": "greet",
+        "text": "good day"
       },
       {
-        "intent": "bye",
-        "text": "have to go"
+        "intent": "greet",
+        "text": "good afternoon how are you doing"
       },
       {
-        "intent": "bye",
-        "text": "got to go chau"
+        "intent": "greet",
+        "text": "hi are you around"
       },
       {
-        "intent": "bye",
-        "text": "*20% farewell"
+        "intent": "greet",
+        "text": "good morning sup"
       },
       {
-        "intent": "bye",
-        "text": "bye thank you"
+        "intent": "greet",
+        "text": "greetings"
       },
       {
-        "intent": "bye",
-        "text": "thank you goodbye"
+        "intent": "greet",
+        "text": "hey there morning are you around"
       },
       {
-        "intent": "bye",
-        "text": "have to go farewell"
+        "intent": "greet",
+        "text": "hey how are you"
       },
       {
-        "intent": "bye",
-        "text": "adieu thank you very much"
+        "intent": "greet",
+        "text": "hey there good morning how are things going"
       },
       {
-        "intent": "bye",
-        "text": "*20% see ya"
-      },
-      {
-        "intent": "bye",
-        "text": "im leaving now"
-      },
-      {
-        "intent": "bye",
-        "text": "have to go adieu"
-      },
-      {
-        "intent": "bye",
-        "text": "farewell thank you very much"
-      },
-      {
-        "intent": "bye",
-        "text": "*20% adios"
-      },
-      {
-        "intent": "bye",
-        "text": "talk to you later got to go"
+        "intent": "greet",
+        "text": "hey whatsup"
       },
       {
         "intent": "bye",
@@ -2369,83 +3069,15 @@
       },
       {
         "intent": "bye",
-        "text": "heading out see ya"
+        "text": "got to go"
       },
       {
         "intent": "bye",
-        "text": "adios"
+        "text": "*20% adios"
       },
       {
         "intent": "bye",
-        "text": "leaving goodbye"
-      },
-      {
-        "intent": "bye",
-        "text": "bye"
-      },
-      {
-        "intent": "bye",
-        "text": "see ya"
-      },
-      {
-        "intent": "bye",
-        "text": "thanks adieu"
-      },
-      {
-        "intent": "bye",
-        "text": "leaving adieu"
-      },
-      {
-        "intent": "bye",
-        "text": "chao thank you very much"
-      },
-      {
-        "intent": "bye",
-        "text": "leaving farewell"
-      },
-      {
-        "intent": "bye",
-        "text": "*20% got to go"
-      },
-      {
-        "intent": "bye",
-        "text": "leaving bye"
-      },
-      {
-        "intent": "bye",
-        "text": "goodbye"
-      },
-      {
-        "intent": "bye",
-        "text": "got to go adieu"
-      },
-      {
-        "intent": "bye",
-        "text": "got to go got to go"
-      },
-      {
-        "intent": "bye",
-        "text": "chao"
-      },
-      {
-        "intent": "bye",
-        "text": "got to go adios"
-      },
-      {
-        "intent": "bye",
-        "text": "farewell"
-      },
-      {
-        "intent": "bye",
-        "text": "adieu"
-      },
-      {
-        "intent": "bye",
-        "text": "got to go thank you"
-      },
-      {
-        "intent": "bye",
-        "text": "leaving see ya"
+        "text": "*20% see ya"
       },
       {
         "intent": "bye",
@@ -2453,143 +3085,187 @@
       },
       {
         "intent": "bye",
-        "text": "talk to you soon adios"
+        "text": "goodbye thank you very much"
       },
       {
         "intent": "bye",
-        "text": "got to go chao"
+        "text": "chao thank you"
       },
       {
         "intent": "bye",
-        "text": "see ya thank you very much"
+        "text": "got to go thanks"
       },
       {
         "intent": "bye",
-        "text": "got to go see ya"
+        "text": "have to go bye"
+      },
+      {
+        "intent": "bye",
+        "text": "leaving adieu"
+      },
+      {
+        "intent": "bye",
+        "text": "got to go thank you very much"
+      },
+      {
+        "intent": "bye",
+        "text": "see ya"
+      },
+      {
+        "intent": "bye",
+        "text": "leaving"
+      },
+      {
+        "intent": "bye",
+        "text": "*20% adieu"
+      },
+      {
+        "intent": "bye",
+        "text": "thanks adios"
+      },
+      {
+        "intent": "bye",
+        "text": "adios"
+      },
+      {
+        "intent": "bye",
+        "text": "adieu thank you"
+      },
+      {
+        "intent": "bye",
+        "text": "*20% bye"
+      },
+      {
+        "intent": "bye",
+        "text": "have to go"
+      },
+      {
+        "intent": "bye",
+        "text": "*20% goodbye"
+      },
+      {
+        "intent": "bye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "bye",
+        "text": "heading out chao"
+      },
+      {
+        "intent": "bye",
+        "text": "*20% farewell"
+      },
+      {
+        "intent": "bye",
+        "text": "thank you see ya"
+      },
+      {
+        "intent": "bye",
+        "text": "thank you adios"
+      },
+      {
+        "intent": "bye",
+        "text": "got to go thank you"
+      },
+      {
+        "intent": "bye",
+        "text": "talk to you later farewell"
+      },
+      {
+        "intent": "bye",
+        "text": "thank you adieu"
+      },
+      {
+        "intent": "bye",
+        "text": "heading out adios"
+      },
+      {
+        "intent": "bye",
+        "text": "going out see ya"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "talk to you soon farewell"
+      },
+      {
+        "intent": "bye",
+        "text": "chau thanks"
+      },
+      {
+        "intent": "bye",
+        "text": "thank you very much bye"
+      },
+      {
+        "intent": "bye",
+        "text": "going out bye"
+      },
+      {
+        "intent": "bye",
+        "text": "leaving chau"
+      },
+      {
+        "intent": "bye",
+        "text": "talk to you later"
+      },
+      {
+        "intent": "bye",
+        "text": "thanks goodbye"
+      },
+      {
+        "intent": "bye",
+        "text": "thank you farewell"
+      },
+      {
+        "intent": "bye",
+        "text": "*20% chau"
+      },
+      {
+        "intent": "bye",
+        "text": "*20% chao"
+      },
+      {
+        "intent": "bye",
+        "text": "talk to you soon goodbye"
+      },
+      {
+        "intent": "bye",
+        "text": "talk to you later chau"
+      },
+      {
+        "intent": "bye",
+        "text": "talk to you soon"
+      },
+      {
+        "intent": "bye",
+        "text": "going out farewell"
+      },
+      {
+        "intent": "bye",
+        "text": "got to go chau"
+      },
+      {
+        "intent": "bye",
+        "text": "thanks chao"
+      },
+      {
+        "intent": "bye",
+        "text": "heading out"
+      },
+      {
+        "intent": "bye",
+        "text": "leaving bye"
+      },
+      {
+        "intent": "bye",
+        "text": "leaving goodbye"
       },
       {
         "intent": "affirmative",
-        "text": "good yep"
-      },
-      {
-        "intent": "affirmative",
-        "text": "that is correct im ok with that"
-      },
-      {
-        "intent": "affirmative",
-        "text": "right right thank you very much"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yep that is correct"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yes yes"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yes sir"
-      },
-      {
-        "intent": "affirmative",
-        "text": "*20% im ok with that"
-      },
-      {
-        "intent": "affirmative",
-        "text": "that is what i want"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yes sir thanks"
-      },
-      {
-        "intent": "affirmative",
-        "text": "that is what i want yes"
-      },
-      {
-        "intent": "affirmative",
-        "text": "awesome correct thank you very much"
-      },
-      {
-        "intent": "affirmative",
-        "text": "correct pls"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yes sir amazing yes sir"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yes sir i want that"
-      },
-      {
-        "intent": "affirmative",
-        "text": "*20% correct"
-      },
-      {
-        "intent": "affirmative",
-        "text": "*20% agreed"
-      },
-      {
-        "intent": "affirmative",
-        "text": "im ok with that that is what i want"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yep sounds good thank you"
-      },
-      {
-        "intent": "affirmative",
-        "text": "agreed"
-      },
-      {
-        "intent": "affirmative",
-        "text": "awesome"
-      },
-      {
-        "intent": "affirmative",
-        "text": "right that is fine agreed"
-      },
-      {
-        "intent": "affirmative",
-        "text": "right"
-      },
-      {
-        "intent": "affirmative",
-        "text": "*20% yes"
-      },
-      {
-        "intent": "affirmative",
-        "text": "*20% yep"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yep thank you"
-      },
-      {
-        "intent": "affirmative",
-        "text": "right thanks"
-      },
-      {
-        "intent": "affirmative",
-        "text": "*20% affirmative"
-      },
-      {
-        "intent": "affirmative",
-        "text": "that is right"
-      },
-      {
-        "intent": "affirmative",
-        "text": "that is good"
-      },
-      {
-        "intent": "affirmative",
-        "text": "amazing right"
-      },
-      {
-        "intent": "affirmative",
-        "text": "sounds good you"
+        "text": "sounds good pls"
       },
       {
         "intent": "affirmative",
@@ -2597,99 +3273,15 @@
       },
       {
         "intent": "affirmative",
-        "text": "sounds good i want that im ok with that"
+        "text": "*20% agreed"
       },
       {
         "intent": "affirmative",
-        "text": "sounds good right thank you"
+        "text": "sounds good you"
       },
       {
         "intent": "affirmative",
-        "text": "*20% awesome"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yes sir affirmative thank you very much"
-      },
-      {
-        "intent": "affirmative",
-        "text": "affirmative you"
-      },
-      {
-        "intent": "affirmative",
-        "text": "its fine yep"
-      },
-      {
-        "intent": "affirmative",
-        "text": "sounds good sounds good thanks"
-      },
-      {
-        "intent": "affirmative",
-        "text": "im ok with that"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yes sir you"
-      },
-      {
-        "intent": "affirmative",
-        "text": "affirmative yes sir"
-      },
-      {
-        "intent": "affirmative",
-        "text": "agreed that is what i want"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yep pls"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yes"
-      },
-      {
-        "intent": "affirmative",
-        "text": "you understood me im ok with that"
-      },
-      {
-        "intent": "affirmative",
-        "text": "that is fine yes"
-      },
-      {
-        "intent": "affirmative",
-        "text": "agreed thank you very much"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yep that is right"
-      },
-      {
-        "intent": "affirmative",
-        "text": "that is right agreed"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yep"
-      },
-      {
-        "intent": "affirmative",
-        "text": "affirmative pls"
-      },
-      {
-        "intent": "affirmative",
-        "text": "*20% right"
-      },
-      {
-        "intent": "affirmative",
-        "text": "its fine"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yep its fine yep"
-      },
-      {
-        "intent": "affirmative",
-        "text": "you understood me"
+        "text": "affirmative awesome"
       },
       {
         "intent": "affirmative",
@@ -2697,7 +3289,27 @@
       },
       {
         "intent": "affirmative",
-        "text": "i want that sounds good"
+        "text": "yes sir you please"
+      },
+      {
+        "intent": "affirmative",
+        "text": "*20% yep"
+      },
+      {
+        "intent": "affirmative",
+        "text": "*20% right"
+      },
+      {
+        "intent": "affirmative",
+        "text": "yep you please"
+      },
+      {
+        "intent": "affirmative",
+        "text": "agreed that is fine"
+      },
+      {
+        "intent": "affirmative",
+        "text": "amazing"
       },
       {
         "intent": "affirmative",
@@ -2705,55 +3317,39 @@
       },
       {
         "intent": "affirmative",
-        "text": "yes you please"
+        "text": "*20% yes"
       },
       {
         "intent": "affirmative",
-        "text": "affirmative thank you very much"
+        "text": "good agreed"
       },
       {
         "intent": "affirmative",
-        "text": "im ok with that you please"
+        "text": "*20% correct"
       },
       {
         "intent": "affirmative",
-        "text": "im ok with that correct"
+        "text": "yes good"
       },
       {
         "intent": "affirmative",
-        "text": "sounds good thanks"
+        "text": "yes sir right thank you very much"
       },
       {
         "intent": "affirmative",
-        "text": "i want that right"
+        "text": "awesome pls"
       },
       {
         "intent": "affirmative",
-        "text": "yes sounds good thanks"
+        "text": "yep"
       },
       {
         "intent": "affirmative",
-        "text": "awesome that is fine"
+        "text": "sounds good i want that yep"
       },
       {
         "intent": "affirmative",
-        "text": "its fine yes sir"
-      },
-      {
-        "intent": "affirmative",
-        "text": "affirmative"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yep yes sir thank you"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yes sir its fine"
-      },
-      {
-        "intent": "affirmative",
-        "text": "yes pls"
+        "text": "agreed that is good affirmative"
       },
       {
         "intent": "affirmative",
@@ -2761,51 +3357,211 @@
       },
       {
         "intent": "affirmative",
-        "text": "sounds good yes sir thank you very much"
+        "text": "affirmative you understood me yep"
       },
       {
         "intent": "affirmative",
-        "text": "right awesome thanks"
+        "text": "im ok with that"
       },
       {
-        "intent": "negative",
-        "text": "never you please"
+        "intent": "affirmative",
+        "text": "yes sir yep"
       },
       {
-        "intent": "negative",
-        "text": "*20% its not ok"
+        "intent": "affirmative",
+        "text": "you understood me sounds good"
       },
       {
-        "intent": "negative",
-        "text": "*20% dont mean that"
+        "intent": "affirmative",
+        "text": "yes i want that yes sir"
       },
       {
-        "intent": "negative",
-        "text": "*20% no thanks"
+        "intent": "affirmative",
+        "text": "agreed awesome thank you very much"
       },
       {
-        "intent": "negative",
-        "text": "*20% it's not good"
+        "intent": "affirmative",
+        "text": "right you please"
       },
       {
-        "intent": "negative",
-        "text": "never"
+        "intent": "affirmative",
+        "text": "agreed that is right"
       },
       {
-        "intent": "negative",
-        "text": "don't do that that is wrong"
+        "intent": "affirmative",
+        "text": "yes sir thank you very much"
       },
       {
-        "intent": "negative",
-        "text": "nope"
+        "intent": "affirmative",
+        "text": "*20% awesome"
       },
       {
-        "intent": "negative",
-        "text": "pls incorrect"
+        "intent": "affirmative",
+        "text": "im ok with that awesome"
       },
       {
-        "intent": "negative",
-        "text": "*20% not really"
+        "intent": "affirmative",
+        "text": "im ok with that pls"
+      },
+      {
+        "intent": "affirmative",
+        "text": "affirmative"
+      },
+      {
+        "intent": "affirmative",
+        "text": "right pls"
+      },
+      {
+        "intent": "affirmative",
+        "text": "yes"
+      },
+      {
+        "intent": "affirmative",
+        "text": "i want that yes"
+      },
+      {
+        "intent": "affirmative",
+        "text": "awesome i want that im ok with that"
+      },
+      {
+        "intent": "affirmative",
+        "text": "sounds good good"
+      },
+      {
+        "intent": "affirmative",
+        "text": "affirmative you please"
+      },
+      {
+        "intent": "affirmative",
+        "text": "yes amazing"
+      },
+      {
+        "intent": "affirmative",
+        "text": "i want that sounds good"
+      },
+      {
+        "intent": "affirmative",
+        "text": "that is right sounds good"
+      },
+      {
+        "intent": "affirmative",
+        "text": "right thank you"
+      },
+      {
+        "intent": "affirmative",
+        "text": "yes sir its fine awesome"
+      },
+      {
+        "intent": "affirmative",
+        "text": "correct im ok with that thank you"
+      },
+      {
+        "intent": "affirmative",
+        "text": "correct that is good affirmative"
+      },
+      {
+        "intent": "affirmative",
+        "text": "sounds good sounds good thank you very much"
+      },
+      {
+        "intent": "affirmative",
+        "text": "sounds good you please"
+      },
+      {
+        "intent": "affirmative",
+        "text": "that is fine yes"
+      },
+      {
+        "intent": "affirmative",
+        "text": "agreed you please"
+      },
+      {
+        "intent": "affirmative",
+        "text": "awesome i want that yes sir"
+      },
+      {
+        "intent": "affirmative",
+        "text": "agreed pls"
+      },
+      {
+        "intent": "affirmative",
+        "text": "yes you understood me yep"
+      },
+      {
+        "intent": "affirmative",
+        "text": "its fine yes"
+      },
+      {
+        "intent": "affirmative",
+        "text": "agreed i want that"
+      },
+      {
+        "intent": "affirmative",
+        "text": "that is correct awesome"
+      },
+      {
+        "intent": "affirmative",
+        "text": "yes sir"
+      },
+      {
+        "intent": "affirmative",
+        "text": "*20% affirmative"
+      },
+      {
+        "intent": "affirmative",
+        "text": "that is good right"
+      },
+      {
+        "intent": "affirmative",
+        "text": "correct i want that yes"
+      },
+      {
+        "intent": "affirmative",
+        "text": "yes thank you"
+      },
+      {
+        "intent": "affirmative",
+        "text": "correct you"
+      },
+      {
+        "intent": "affirmative",
+        "text": "correct im ok with that thanks"
+      },
+      {
+        "intent": "affirmative",
+        "text": "im ok with that correct"
+      },
+      {
+        "intent": "affirmative",
+        "text": "that is good"
+      },
+      {
+        "intent": "affirmative",
+        "text": "*20% im ok with that"
+      },
+      {
+        "intent": "affirmative",
+        "text": "yes you understood me"
+      },
+      {
+        "intent": "affirmative",
+        "text": "that is right affirmative"
+      },
+      {
+        "intent": "affirmative",
+        "text": "agreed yes sir thank you very much"
+      },
+      {
+        "intent": "affirmative",
+        "text": "yep that is correct"
+      },
+      {
+        "intent": "affirmative",
+        "text": "agreed im ok with that"
+      },
+      {
+        "intent": "affirmative",
+        "text": "yep correct thanks"
       },
       {
         "intent": "negative",
@@ -2813,83 +3569,11 @@
       },
       {
         "intent": "negative",
-        "text": "*20% don't do that"
+        "text": "*20% didnt meant that"
       },
       {
         "intent": "negative",
-        "text": "not really that's not correct"
-      },
-      {
-        "intent": "negative",
-        "text": "no thanks that's not what i want"
-      },
-      {
-        "intent": "negative",
-        "text": "never pls its not correct"
-      },
-      {
-        "intent": "negative",
-        "text": "you please not really that is wrong"
-      },
-      {
-        "intent": "negative",
-        "text": "*20% that's not correct"
-      },
-      {
-        "intent": "negative",
-        "text": "not really pls"
-      },
-      {
-        "intent": "negative",
-        "text": "you dont like that dont mean that"
-      },
-      {
-        "intent": "negative",
-        "text": "nope pls its not correct"
-      },
-      {
-        "intent": "negative",
-        "text": "not really that is wrong"
-      },
-      {
-        "intent": "negative",
-        "text": "no thanks"
-      },
-      {
-        "intent": "negative",
-        "text": "nope you please that's not correct"
-      },
-      {
-        "intent": "negative",
-        "text": "*20% never"
-      },
-      {
-        "intent": "negative",
-        "text": "that's not right that is wrong"
-      },
-      {
-        "intent": "negative",
-        "text": "no didnt meant that"
-      },
-      {
-        "intent": "negative",
-        "text": "no thanks i don't want that"
-      },
-      {
-        "intent": "negative",
-        "text": "you incorrect that's wrong"
-      },
-      {
-        "intent": "negative",
-        "text": "don't do that you didnt meant that"
-      },
-      {
-        "intent": "negative",
-        "text": "incorrect its not correct"
-      },
-      {
-        "intent": "negative",
-        "text": "that's not right you please"
+        "text": "not really you"
       },
       {
         "intent": "negative",
@@ -2897,43 +3581,51 @@
       },
       {
         "intent": "negative",
-        "text": "incorrect you"
-      },
-      {
-        "intent": "negative",
-        "text": "that's not right that's not correct"
-      },
-      {
-        "intent": "negative",
-        "text": "that's not right you please that is wrong"
-      },
-      {
-        "intent": "negative",
-        "text": "incorrect pls"
-      },
-      {
-        "intent": "negative",
-        "text": "*20% nope"
-      },
-      {
-        "intent": "negative",
-        "text": "you please don't do that dont mean that"
-      },
-      {
-        "intent": "negative",
-        "text": "pls never didnt meant that"
-      },
-      {
-        "intent": "negative",
         "text": "no dont mean that"
       },
       {
         "intent": "negative",
-        "text": "never its not correct"
+        "text": "that's not right"
       },
       {
         "intent": "negative",
-        "text": "you please that's not right i don't want that"
+        "text": "never pls"
+      },
+      {
+        "intent": "negative",
+        "text": "no thanks that's not correct"
+      },
+      {
+        "intent": "negative",
+        "text": "not really you please its not correct"
+      },
+      {
+        "intent": "negative",
+        "text": "*20% dont mean that"
+      },
+      {
+        "intent": "negative",
+        "text": "*20% never"
+      },
+      {
+        "intent": "negative",
+        "text": "*20% no thanks"
+      },
+      {
+        "intent": "negative",
+        "text": "not really that's wrong"
+      },
+      {
+        "intent": "negative",
+        "text": "never you"
+      },
+      {
+        "intent": "negative",
+        "text": "nope pls its not ok"
+      },
+      {
+        "intent": "negative",
+        "text": "pls never i don't want that"
       },
       {
         "intent": "negative",
@@ -2941,19 +3633,15 @@
       },
       {
         "intent": "negative",
+        "text": "nope"
+      },
+      {
+        "intent": "negative",
+        "text": "no"
+      },
+      {
+        "intent": "negative",
         "text": "*20% its not correct"
-      },
-      {
-        "intent": "negative",
-        "text": "not really"
-      },
-      {
-        "intent": "negative",
-        "text": "*20% dont like that"
-      },
-      {
-        "intent": "negative",
-        "text": "*20% that's not what i want"
       },
       {
         "intent": "negative",
@@ -2961,19 +3649,243 @@
       },
       {
         "intent": "negative",
+        "text": "*20% not really"
+      },
+      {
+        "intent": "negative",
+        "text": "you please that's not right dont mean that"
+      },
+      {
+        "intent": "negative",
+        "text": "don't do that that's not correct"
+      },
+      {
+        "intent": "negative",
+        "text": "*20% incorrect"
+      },
+      {
+        "intent": "negative",
+        "text": "never you that is wrong"
+      },
+      {
+        "intent": "negative",
+        "text": "pls that's not right"
+      },
+      {
+        "intent": "negative",
+        "text": "that's not right that's wrong"
+      },
+      {
+        "intent": "negative",
+        "text": "*20% it's not good"
+      },
+      {
+        "intent": "negative",
+        "text": "no thanks that's not what i want"
+      },
+      {
+        "intent": "negative",
+        "text": "*20% that's not right"
+      },
+      {
+        "intent": "negative",
+        "text": "no pls its not ok"
+      },
+      {
+        "intent": "negative",
+        "text": "no thanks"
+      },
+      {
+        "intent": "negative",
+        "text": "you never that's wrong"
+      },
+      {
+        "intent": "negative",
+        "text": "don't do that"
+      },
+      {
+        "intent": "negative",
+        "text": "*20% don't do that"
+      },
+      {
+        "intent": "negative",
         "text": "don't do that pls"
       },
       {
         "intent": "negative",
-        "text": "never that's not what i want"
+        "text": "pls no thanks"
+      },
+      {
+        "intent": "negative",
+        "text": "not really its not ok"
+      },
+      {
+        "intent": "negative",
+        "text": "pls incorrect"
+      },
+      {
+        "intent": "negative",
+        "text": "don't do that its not correct"
+      },
+      {
+        "intent": "negative",
+        "text": "*20% that's not what i want"
+      },
+      {
+        "intent": "negative",
+        "text": "*20% that's not correct"
+      },
+      {
+        "intent": "negative",
+        "text": "*20% that's wrong"
+      },
+      {
+        "intent": "negative",
+        "text": "not really you please"
+      },
+      {
+        "intent": "negative",
+        "text": "no i don't want that"
+      },
+      {
+        "intent": "negative",
+        "text": "don't do that you please its not correct"
+      },
+      {
+        "intent": "negative",
+        "text": "*20% dont like that"
+      },
+      {
+        "intent": "negative",
+        "text": "don't do that you"
+      },
+      {
+        "intent": "negative",
+        "text": "not really dont mean that"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "Im feeling perfect whats up"
+        "text": "Im good are you there"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I am Awesome are you around"
+        "text": "I am feeling amazing how are you doing"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "Im ok how is it going"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I am doing Awesome whatsup"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I'm feeling Awesome whats up"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I am ok sup"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "Im doing amazing how about you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I am doing amazing how are you doing"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I'm doing wonderful how are you doing"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "Im doing good how are you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I am doing fine and you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I'm wonderful and you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I am feeling amazing how are things going"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "Im doing ok how about you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I am doing great how are you doing"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I am amazing how about you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "Im doing great what about you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I am great how are you doing"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I am feeling fine how are you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "Im doing perfect are you around"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "Im feeling great how are you doing"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "Im doing very good what about you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I am doing wonderful what about you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "Im doing very good are you there"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "Im fine are you around"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I am perfect how is it going"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "Im great what about you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I'm Awesome how are you doing"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I'm doing perfect how are you doing"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I'm amazing how about you"
+      },
+      {
+        "intent": "fine_ask_positive",
+        "text": "I'm feeling good how are you doing"
       },
       {
         "intent": "fine_ask_positive",
@@ -2981,243 +3893,75 @@
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I am good how about you"
+        "text": "I am very good and you"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I'm very good how about you"
+        "text": "I am wonderful and you"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I am feeling good how are you"
+        "text": "I am amazing what about you"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I'm amazing how are you doing"
+        "text": "I am doing good and you"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I'm feeling great what about you"
+        "text": "I'm good how are you doing"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "Im doing ok how are you doing"
+        "text": "Im feeling amazing how about you"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I am doing fine what about you"
+        "text": "I am feeling wonderful what about you"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "Im fine whats up"
+        "text": "I'm doing Awesome what about you"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "Im fine how is it going"
+        "text": "I'm doing Awesome sup"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I am doing fine whats up"
+        "text": "I am fine whatsup"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I'm ok how are things going"
+        "text": "I'm doing very good are you around"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I am perfect sup"
+        "text": "Im doing amazing and you"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I am doing wonderful how are things going"
+        "text": "I'm doing Awesome how are you doing"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "Im good what about you"
+        "text": "I am doing great how is it going"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I'm doing perfect how about you"
+        "text": "I'm doing great how are things going"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "Im fine whatsup"
+        "text": "I'm amazing how are things going"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "Im doing ok and you"
+        "text": "I'm amazing whats up"
       },
       {
         "intent": "fine_ask_positive",
-        "text": "I am ok how is it going"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am Awesome what about you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "Im doing good how about you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "Im great how are you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am doing Awesome how about you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I'm Awesome what about you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am doing great and you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "Im feeling wonderful how are you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am feeling good how are you doing"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am doing great how about you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I'm very good and you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I'm feeling good are you around"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I'm amazing are you around?"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am doing perfect how are you doing"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am Awesome are you around?"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am doing Awesome whats up"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "Im wonderful and you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "Im feeling wonderful whats up"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am feeling ok and you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I'm perfect how about you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am feeling wonderful how about you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am perfect what about you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "Im doing Awesome and you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "Im doing fine how about you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "Im wonderful how are things going"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "Im doing perfect how are you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I'm doing fine how are you doing"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I'm feeling very good and you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I'm good how about you"
-      },
-      {
-        "intent": "fine_ask_positive",
-        "text": "I am doing great how are you doing"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am fine"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "Im doing great"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am feeling ok"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "Im feeling fine"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I'm Awesome"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am doing good"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I'm very good"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "Im good"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am Awesome"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I'm fine"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am doing wonderful"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "Im great"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "Im feeling Awesome"
+        "text": "Im very good are you around"
       },
       {
         "intent": "fine_normal_positive",
@@ -3225,103 +3969,7 @@
       },
       {
         "intent": "fine_normal_positive",
-        "text": "I am amazing"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am perfect"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "Im Awesome"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am doing very good"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I'm good"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "Im good"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "Im feeling wonderful"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "Im ok"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am doing amazing"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am good"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I'm doing great"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am feeling wonderful"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I'm feeling great"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I'm feeling fine"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am feeling amazing"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "Im amazing"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "Im feeling very good"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am feeling perfect"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I'm doing ok"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am doing ok"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I'm doing very good"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I'm feeling ok"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am good"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I'm doing good"
-      },
-      {
-        "intent": "fine_normal_positive",
-        "text": "I am doing great"
+        "text": "I am feeling good"
       },
       {
         "intent": "fine_normal_positive",
@@ -3329,35 +3977,55 @@
       },
       {
         "intent": "fine_normal_positive",
-        "text": "I'm doing fine"
+        "text": "I am feeling very good"
       },
       {
         "intent": "fine_normal_positive",
-        "text": "I'm doing wonderful"
+        "text": "Im feeling amazing"
       },
       {
         "intent": "fine_normal_positive",
-        "text": "I'm feeling perfect"
+        "text": "I am good"
       },
       {
         "intent": "fine_normal_positive",
-        "text": "I am doing fine"
+        "text": "I am doing wonderful"
       },
       {
         "intent": "fine_normal_positive",
-        "text": "I'm feeling wonderful"
+        "text": "Im feeling very good"
       },
       {
         "intent": "fine_normal_positive",
-        "text": "Im doing perfect"
+        "text": "I am feeling great"
       },
       {
         "intent": "fine_normal_positive",
-        "text": "I am feeling good"
+        "text": "Im perfect"
       },
       {
         "intent": "fine_normal_positive",
-        "text": "I am feeling good"
+        "text": "I'm feeling ok"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "Im fine"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I am feeling fine"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm very good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm doing Awesome"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I am feeling amazing"
       },
       {
         "intent": "fine_normal_positive",
@@ -3365,59 +4033,147 @@
       },
       {
         "intent": "fine_normal_positive",
+        "text": "I'm feeling perfect"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm feeling Awesome"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "Im very good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "Im feeling good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm Awesome"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm wonderful"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I am feeling wonderful"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm feeling very good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I am doing ok"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "Im doing amazing"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I am fine"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I am doing perfect"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "Im amazing"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I am doing fine"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I am feeling good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "Im doing ok"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "Im good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm doing good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm great"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm doing good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "Im doing good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm feeling amazing"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm doing ok"
+      },
+      {
+        "intent": "fine_normal_positive",
         "text": "I'm perfect"
       },
       {
-        "intent": "fine_ask_negative",
-        "text": "I'm bad how are you"
+        "intent": "fine_normal_positive",
+        "text": "Im feeling ok"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "Im feeling perfect"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm feeling good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I am doing good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "Im good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm amazing"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I'm good"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "Im doing great"
+      },
+      {
+        "intent": "fine_normal_positive",
+        "text": "I am doing good"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "Im depressed what about you"
+        "text": "I am terrible how are things going"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I am terrible what about you"
+        "text": "I am bad are you around"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I am not good whatsup"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "Im doing dissapointed what about you"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I am not good how about you"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "Im feeling terrible how are you doing"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I am feeling depressed how are you doing"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I am feeling terrible sup"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I am feeling sad what about you"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I am not good whats up"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I'm doing not good how are you doing"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I'm awful whats up"
+        "text": "I'm feeling depressed and you"
       },
       {
         "intent": "fine_ask_negative",
@@ -3425,135 +4181,95 @@
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I am terrible whatsup"
+        "text": "Im bad are you there"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I'm awful how is it going"
+        "text": "I am not good how is it going"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I'm awful what about you"
+        "text": "Im awful and you"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I'm awful are you around?"
+        "text": "I'm depressed how are you doing"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "Im terrible and you"
+        "text": "I'm terrible sup"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I'm doing not good and you"
+        "text": "I am depressed whats up"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I'm bad whats up"
+        "text": "I'm doing awful are you there"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "Im awful how is it going"
+        "text": "I am feeling not good how are you doing"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I'm awful and you"
+        "text": "Im feeling sad how are things going"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I'm doing bad how are you doing"
+        "text": "Im doing dissapointed what about you"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I am dissapointed how about you"
+        "text": "Im dissapointed how about you"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I'm awful how are you doing"
+        "text": "Im doing depressed what about you"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I'm feeling depressed what about you"
+        "text": "I am doing dissapointed how are things going"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I am doing depressed how are you doing"
+        "text": "Im awful whats up"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I am doing dissapointed and you"
+        "text": "I am doing not good how are you doing"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "Im not good and you"
+        "text": "Im doing not good how are you doing"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "Im doing dissapointed how are you"
+        "text": "I'm feeling depressed are you there"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "Im doing bad how are you doing"
+        "text": "I am bad how are you doing"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I am feeling awful how are you doing"
+        "text": "Im sad how are you"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "Im doing sad sup"
+        "text": "I am doing sad how about you"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "Im depressed how are you doing"
+        "text": "I'm feeling bad and you"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I'm depressed what about you"
+        "text": "I'm sad are you there"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I am dissapointed what about you"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "Im doing not good and you"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I'm terrible what about you"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I'm doing dissapointed how about you"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I am depressed how are you doing"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "Im doing dissapointed are you around?"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "Im dissapointed how are you doing"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "Im doing dissapointed how are you doing"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "Im sad what about you"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I'm feeling bad how about you"
-      },
-      {
-        "intent": "fine_ask_negative",
-        "text": "I'm feeling sad how are you doing"
+        "text": "I am doing awful are you there"
       },
       {
         "intent": "fine_ask_negative",
@@ -3561,55 +4277,99 @@
       },
       {
         "intent": "fine_ask_negative",
-        "text": "Im doing terrible sup"
+        "text": "Im feeling not good how about you"
       },
       {
         "intent": "fine_ask_negative",
-        "text": "I'm depressed are you around"
+        "text": "I am feeling terrible whats up"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "I'm terrible how about you"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "I am doing depressed are you around?"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "I'm awful how are you doing"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "Im depressed how about you"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "I'm terrible whatsup"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "Im doing bad what about you"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "I'm sad how are you doing"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "Im feeling not good how are things going"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "Im feeling not good how are you doing"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "Im doing terrible what about you"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "Im doing awful what about you"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "I am awful are you around"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "I am doing depressed how are you doing"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "Im doing not good how about you"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "Im sad whatsup"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "I am dissapointed how about you"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "I'm not good how are you doing"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "Im doing awful how are things going"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "I am doing not good how is it going"
+      },
+      {
+        "intent": "fine_ask_negative",
+        "text": "Im doing bad and you"
       },
       {
         "intent": "fine_normal_negative",
-        "text": "Im dissapointed"
+        "text": "Im doing sad"
       },
       {
         "intent": "fine_normal_negative",
-        "text": "I am feeling depressed"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im feeling awful"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I'm depressed"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im feeling not good"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I am dissapointed"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I am doing bad"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I am doing not good"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I'm terrible"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im doing bad"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im not good"
+        "text": "I'm sad"
       },
       {
         "intent": "fine_normal_negative",
@@ -3617,11 +4377,7 @@
       },
       {
         "intent": "fine_normal_negative",
-        "text": "I'm doing awful"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im depressed"
+        "text": "I'm doing depressed"
       },
       {
         "intent": "fine_normal_negative",
@@ -3629,55 +4385,11 @@
       },
       {
         "intent": "fine_normal_negative",
-        "text": "I'm feeling sad"
+        "text": "Im bad"
       },
       {
         "intent": "fine_normal_negative",
-        "text": "I am not good"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I'm doing sad"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I am bad"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I am feeling not good"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im sad"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I'm awful"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im feeling bad"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I'm doing depressed"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im awful"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im doing awful"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I'm feeling terrible"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im feeling terrible"
+        "text": "I'm doing awful"
       },
       {
         "intent": "fine_normal_negative",
@@ -3685,63 +4397,19 @@
       },
       {
         "intent": "fine_normal_negative",
-        "text": "I am sad"
+        "text": "I am not good"
       },
       {
         "intent": "fine_normal_negative",
-        "text": "I am feeling dissapointed"
+        "text": "I'm feeling bad"
       },
       {
         "intent": "fine_normal_negative",
-        "text": "I am depressed"
+        "text": "I'm depressed"
       },
       {
         "intent": "fine_normal_negative",
-        "text": "I'm feeling not good"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I am doing depressed"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im feeling dissapointed"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I'm doing terrible"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I'm feeling awful"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I am terrible"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I am doing terrible"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I am feeling awful"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I am feeling sad"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im doing terrible"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "I'm feeling dissapointed"
-      },
-      {
-        "intent": "fine_normal_negative",
-        "text": "Im doing depressed"
+        "text": "I am doing bad"
       },
       {
         "intent": "fine_normal_negative",
@@ -3749,7 +4417,23 @@
       },
       {
         "intent": "fine_normal_negative",
-        "text": "I am doing dissapointed"
+        "text": "Im feeling awful"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "Im doing depressed"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "Im doing awful"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I am feeling depressed"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I'm feeling dissapointed"
       },
       {
         "intent": "fine_normal_negative",
@@ -3757,63 +4441,170 @@
       },
       {
         "intent": "fine_normal_negative",
+        "text": "Im feeling depressed"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I'm doing not good"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I'm feeling not good"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I am awful"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I am doing dissapointed"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I am dissapointed"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "Im not good"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I am feeling awful"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I am depressed"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I am doing terrible"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I'm not good"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I'm feeling sad"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I'm feeling terrible"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "Im doing bad"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I'm bad"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I'm terrible"
+      },
+      {
+        "intent": "fine_normal_negative",
         "text": "I'm doing bad"
       },
       {
         "intent": "fine_normal_negative",
-        "text": "I am feeling bad"
+        "text": "I am doing not good"
       },
       {
         "intent": "fine_normal_negative",
-        "text": "Im terrible"
+        "text": "I am terrible"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I am feeling terrible"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I'm doing sad"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "Im feeling terrible"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I'm doing dissapointed"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I am feeling dissapointed"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "Im doing terrible"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I am sad"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "Im depressed"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I'm feeling awful"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "Im dissapointed"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "Im feeling not good"
+      },
+      {
+        "intent": "fine_normal_negative",
+        "text": "I am feeling sad"
       }
     ],
     "regex_features": [],
-    "lookup_tables": [
-      {
-        "name": "location",
-        "elements": "data/locations/countriesLookupNOCAPS.txt"
-      }
-    ],
+    "lookup_tables": [],
     "entity_synonyms": [
       {
         "value": "rain",
         "synonyms": [
-          "rainfall",
-          "pouring",
-          "rain fall",
-          "raining",
-          "condensation",
           "pour",
-          "precipitation"
+          "condensation",
+          "raining",
+          "pouring",
+          "rainfall",
+          "precipitation",
+          "rain fall"
         ]
       },
       {
         "value": "temp",
         "synonyms": [
-          "chilly",
-          "toasty",
+          "temperature",
           "condition",
-          "cold",
           "hot",
-          "calefaction",
-          "freezing",
-          "burning",
-          "warm",
           "melting",
-          "temperature"
+          "toasty",
+          "chilly",
+          "freezing",
+          "warm",
+          "cold",
+          "burning",
+          "calefaction"
         ]
       },
       {
         "value": "humidity",
         "synonyms": [
-          "vapor",
           "damp",
-          "humid",
+          "vapor",
+          "moisture",
+          "moist",
           "evaporation",
           "dampness",
-          "moisture",
-          "moist"
+          "humid"
         ]
       },
       {
