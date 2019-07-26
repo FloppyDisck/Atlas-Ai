@@ -49,6 +49,7 @@
     ~[quantity] = quantity
     ~[humidity] = humidity
     ~[clowdy] = clowdy
+    
 ~[quantity]('synonym': 'true')
     much
 

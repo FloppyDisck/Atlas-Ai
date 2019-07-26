@@ -1,15 +1,13 @@
+|wordlist.chatito
+
+@[reminder]
+    ~[verb singular] ~[adverb?] ~[determiner] ~[noun singular]
+    ~[verb singular] ~[adverb?]
+
 ~[reminder action]
     remind me
     set a reminder
     notify me
-
-~[reminder example]
-    turn off computer
-    turn off bathroom lights
-    lock the door
-    feed my gecko
-    buy groceries
-    buy new decorations
 
 ~[reminder time]
     in ~[time day] days
