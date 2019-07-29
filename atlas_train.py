@@ -1,3 +1,4 @@
+import json
 import simplejson as jsomln
 from rasa_nlu.training_data import load_data
 from rasa_nlu.config import RasaNLUModelConfig
@@ -6,7 +7,14 @@ from rasa_nlu.model import Interpreter
 from rasa_nlu import config
 from rasa_nlu.test import run_evaluation
 
-#TODO: read json and add the nessesary datasets
+openFile = open("data/nlu/train/output.json", "r")
+trainData = json.load(openFile)
+openFile.close()
+
+trainData['rasa_nlu_data']['lookup_tables'] = [{"name": "location", "elements": "data/locations/countriesLookupNOCAPS.txt"}]
+
+with open("data/nlu/train/output.json", "w") as openFile:
+    json.dump(trainData, openFile)
 
 # loading the nlu training samples
 training_data = load_data("data/nlu/train/output.json")
