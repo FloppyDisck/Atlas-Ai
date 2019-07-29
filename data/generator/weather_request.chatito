@@ -49,7 +49,31 @@
     ~[quantity] = quantity
     ~[humidity] = humidity
     ~[clowdy] = clowdy
-    
+    ~[snowing] = snowing
+    ~[wind] = wind
+    ~[metric] = metric
+    ~[imperial] = imperial
+
+~[wind]('synonym': 'true')
+    windy
+    wind
+
+~[metric]('synonym': 'true')
+    metric
+    celcius
+    c
+
+~[imperial]('synonym': 'true')
+    imperial
+    fahrenheit
+    f
+
+~[snowing]('synonym': 'true')
+    snow
+    snowing
+    snowy
+
+
 ~[quantity]('synonym': 'true')
     much
 
