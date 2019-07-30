@@ -1,4 +1,3 @@
-//python -m chatette data/generator/master.chatito -o data/nlu
 |weather_request.chatito
 |common.chatito
 |reminder_set.chatito
@@ -10,10 +9,8 @@
     ~[sentence prefix] @[weather_arg] ~[short time?]  ~[conjunction] @[location]
 
 //reminder_set
-%[reminder_set_noIntent]('training': '100', 'testing': '100')
+%[reminder_set]('training': '100', 'testing': '100')
     ~[please?] ~[reminder action] [for?] ~[reminder time]
-
-%[reminder-set-intent]('training': '100', 'testing': '100')
     ~[please?] ~[reminder action] ~[reminder time?way1] to @[reminder] ~[reminder time?way2]
 
 //greet - ways to say hello
