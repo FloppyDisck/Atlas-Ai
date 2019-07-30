@@ -1,0 +1,29 @@
+language: "en"
+pipeline:
+  - name: "SpacyNLP"
+  - name: "SpacyTokenizer"
+  - name: "SpacyFeaturizer"
+  - name: "RegexFeaturizer"
+  - name: "DucklingHTTPExtractor"
+    url: "http://0.0.0.0:8000"
+    timezone: "UTC"
+  - name: "SpacyEntityExtractor"
+  - name: "CRFEntityExtractor" #BILOU_flag: true if more than 100 examples per entity
+    features: [
+                ["low", "title", "upper"],
+                ["bias", "low", "prefix5", "prefix2", "suffix5", "suffix3",
+                "suffix2", "upper", "title", "digit", "pattern"],
+                ["low", "title", "upper"]
+              ]
+  - name: "EntitySynonymMapper"
+  - name: "SklearnIntentClassifier"
+policies:
+  - name: "MemoizationPolicy"
+    max_history: 5
+  - name: "KerasPolicy"
+    epochs: 200
+    validation_split: 0.0
+  - name: "FallbackPolicy"
+    fallback_action_name: "utter_unclear"
+    core_threshold: 0.2
+    nlu_threshold: 0.1
