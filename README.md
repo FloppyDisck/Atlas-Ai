@@ -47,12 +47,16 @@ Information on [stories](https://rasa.com/docs/rasa/core/stories/) and [domain](
 
 Later if you have any custom actions defined they'll be edited on the actions.py file. Information on actions can be found [here](https://rasa.com/docs/rasa/core/actions/).
 
-Once all of this is set and youre ready to begin training just run the atlas_train.py file and it should train everything.
+Once all of this is set and youre ready to begin training just run train.sh file and it should train everything.
+```
+bash /bin/train.py
+```
 
-NOTE: If you want interactive learning use Rasa X
+If you just want to test the latest NLU training data with some written examples found in /bin/modelTrain.py
 ```
-pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
+bash /bin/train.py model
 ```
+
 ## Testing Atlas
 
 Before testing, download and compile [duckling](https://github.com/facebook/duckling). (This is used for time, date and distance recognition)
@@ -62,14 +66,14 @@ After compilation in the duckling directory open an example file.
 stack exec duckling-example-exe
 ```
 
-Now run the actions local server.
+Now run the actions local server and dialogue program
 ```
-python -m rasa_core_sdk.endpoint --actions actions
+bash /bin/run.sh /models/--latest--.tar.gz
 ```
 
-Finally run the testing dialog program.
+If you want to train while you test run is like this.
 ```
-python main.py
+bash /bin/run.sh /models/--latest--.tar.gz learn
 ```
 
 ## Authors
