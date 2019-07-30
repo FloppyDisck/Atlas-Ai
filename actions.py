@@ -131,3 +131,13 @@ class ActionWeatherReturn(Action):
         except Exception as e:
             print(e)
             dispatcher.utter_message(f"Could not connect to Open Weather Map services!")
+
+class ActionWeatherReturn(Action):
+
+    def name(self):
+        self.actionName = "action_reminder_set"
+        return self.actionName
+
+    def run(self, dispatcher, tracker, domain):
+        trackers = tracker.current_slot_values()
+        print("trackers ", trackers)

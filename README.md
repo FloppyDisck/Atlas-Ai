@@ -49,6 +49,10 @@ Later if you have any custom actions defined they'll be edited on the actions.py
 
 Once all of this is set and youre ready to begin training just run the atlas_train.py file and it should train everything.
 
+NOTE: If you want interactive learning use Rasa X
+```
+pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
+```
 ## Testing Atlas
 
 Before testing, download and compile [duckling](https://github.com/facebook/duckling). (This is used for time, date and distance recognition)
