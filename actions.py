@@ -1,10 +1,9 @@
-#conda activate atlasai && python -m rasa_core_sdk.endpoint --actions actions
 # in duckling files stack exec duckling-example-exe
 
 #Enviroment vars are setup in ~/.profile, export varName=varValue
 
-from rasa_core_sdk import Action
-from rasa_core_sdk.events import SlotSet
+from rasa_sdk import Action
+from rasa_sdk.events import SlotSet
 import os
 
 def get_var(variable):
