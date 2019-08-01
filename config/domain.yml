@@ -65,6 +65,9 @@ templates:
   - text: I am not sure what you're aiming for
   - text: I am sorry but I am not able to get you.
   - text: My appologies but I am not able to get you
+  utter_unclear:
+  - text: Sorry I did not understand
+  - text: What did you mean?
 actions:
 - action_restart
 - action_weather_return
@@ -78,3 +81,4 @@ actions:
 - utter_anything_else
 - utter_bye
 - utter_default
+- utter_unclear

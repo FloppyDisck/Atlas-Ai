@@ -1,4 +1,3 @@
-stories_md = """
 ## fallback
 - utter_default
 
@@ -49,4 +48,3 @@ stories_md = """
     - utter_reminder_noTime
 * inform{time:'2019-07-29T00:00:00.000+00:00'}
     - action_reminder_set
-"""
