@@ -131,12 +131,54 @@ class ActionWeatherReturn(Action):
             print(e)
             dispatcher.utter_message(f"Could not connect to Open Weather Map services!")
 
-class ActionWeatherReturn(Action):
+class ActionReminderSet(Action):
 
     def name(self):
         self.actionName = "action_reminder_set"
         return self.actionName
 
     def run(self, dispatcher, tracker, domain):
+        from custom_actions.action_reminder_set import CurrentReminders
+
         trackers = tracker.current_slot_values()
         print("trackers ", trackers)
+        
+        reminder = CurrentReminders()
+        reminder_string = tracker.get_slot("reminder")
+        reminder_date = tracker.get_slot("time")[0][:-6]
+        from datetime import datetime, timezone
+        reminder_date = int(datetime.strptime(reminder_date,"%Y-%m-%dT%H:%M:%S.%f").timestamp())
+        
+        returnString = reminder.set_reminder(reminder_string, reminder_date)
+        dispatcher.utter_message(f"{returnString}")
+
+
+class ActionReminderDelete(Action):
+
+    def name(self):
+        self.actionName = "action_reminder_delete"
+        return self.actionName
+
+    def run(self, dispatcher, tracker, domain):
+        from custom_actions.action_reminder_set import CurrentReminders
+        reminder = CurrentReminders()
+        reminder_string = tracker.get_slot("reminder")
+
+        returnString = reminder.delete_reminder(reminder)
+        dispatcher.utter_message(f"{returnString}")
+
+class ActionReminderList(Action):
+
+    def name(self):
+        self.actionName = "action_reminder_list"
+        return self.actionName
+
+    def run(self, dispatcher, tracker, domain):
+        from custom_actions.action_reminder_set import CurrentReminders
+        reminder = CurrentReminders()
+        reminder_date = tracker.get_slot("time")[0][:-6]
+        from datetime import datetime, timezone
+        reminder_date = int(datetime.strptime(reminder_date,"%Y-%m-%dT%H:%M:%S.%f").timestamp())
+        
+        returnString = reminder.list_reminder(reminder_date)
+        dispatcher.utter_message(f"{returnString}")
