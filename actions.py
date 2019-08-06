@@ -108,7 +108,7 @@ class ActionWeatherReturn(Action):
                                     tempUnit = "Fahrenheit"
                                 returnDic[arg] = f"temperatures of {weatherData['main']['temp']} {tempUnit}"
                             if arg == "wind":
-                                eturnDic[arg] = f"a wind speed of {weatherData['wind']['speed']} miles per hour"
+                                returnDic[arg] = f"a wind speed of {weatherData['wind']['speed']} miles per hour"
                             if arg == "humidity":
                                 returnDic[arg] = f"a humidity of {weatherData['main']['humidity']} percent" #TODO: humidity verbal descriptors
                             if arg == "clowdy":
@@ -164,7 +164,7 @@ class ActionReminderDelete(Action):
         reminder = CurrentReminders()
         reminder_string = tracker.get_slot("reminder")
 
-        returnString = reminder.delete_reminder(reminder)
+        returnString = reminder.delete_reminder(reminder_string)
         dispatcher.utter_message(f"{returnString}")
 
 class ActionReminderList(Action):

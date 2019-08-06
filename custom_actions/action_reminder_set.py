@@ -58,15 +58,49 @@ class CurrentReminders:
             db = self.conn.cursor()
             db.execute('DELETE FROM reminderstbl WHERE reminderStr = ?', (reminder))
             self.conn.commit()
-
+            self.update_list()
             return f"Deleted {reminder} from reminders"
         except:
             return f"Could not find {reminder} as a reminder."
 
     def list_reminder(self, alarm_epoch):
         #Get all reminders that match that day
-        pass
+        epoch_day = int(alarm_epoch / 86400) * 86400 #This will cleanup epoch
 
+        #check that dates between epoch_today and epoch_tomorrow
+        db = self.conn.cursor()
+        db.execute("""
+        SELECT reminderStr, alarm, status FROM remindersTbl r
+        WHERE r.status > 0 AND r.alarm >= ? AND r.alarm < ?""", (epoch_day, epoch_day + 86400))
+        self.conn.commit()
+        #If status is greater than 0 then it is still available
+        reminderList = []
+        
+        for reminder in db.fetchall():
+            reminderList.append(reminder)
+
+        #sort by epoch
+        reminderList.sort(key = itemgetter(1))
+
+        #if a day in the close week say so
+        #You have reminders tomorrow; you have reminders this sunday
+        dayDate = datetime.fromtimestamp(epoch_day).strftime('%m %d') 
+        if len(reminderList) == 0:
+            returnString = f"You have no reminders for {dayDate}"
+        elif len(reminderList) == 1:
+            returnString = f"You only have to {reminderList[0][0]} at {datetime.fromtimestamp(reminderList[0][1]).strftime('%H %M')}"
+        elif len(reminderList) == 2:
+            returnString = f"You have to {reminderList[0][0]} at {datetime.fromtimestamp(reminderList[0][1]).strftime('%H %M')} and then {reminderList[1][0]} at {datetime.fromtimestamp(reminderList[1][1]).strftime('%H %M')}"
+        elif len(reminderList) > 2:
+            import random
+            flavorStrings = ["then ", "later ", "after ", "and ", "also "]
+            returnString = f"You have to {reminderList[0][0]} at {datetime.fromtimestamp(reminderList[0][1]).strftime('%H %M')} "
+            for index in range(1, len(reminderList) - 1):
+                randIndex = random.randint(0, len(flavorStrings) - 1)
+                returnString = returnString + flavorStrings[randIndex] + f"{reminderList[index][0]} at {datetime.fromtimestamp(reminderList[index][1]).strftime('%H %M')} "
+            returnString = returnString + f"finally remember to {reminderList[-1][0]} at {datetime.fromtimestamp(reminderList[-1][1]).strftime('%H %M')}"
+        return returnString
+    
     def reminder_concurrency(self, reminder_old):
         """
         Make a new reminder with a concurrent reminder.
@@ -88,6 +122,7 @@ class CurrentReminders:
                 valueHeader = value[:1]
 
                 if valueHeader in alarmHeaders:
+                    #TODO: instead of this just multiply the value by the headerValue to get the time sum
                     newAlarm[alarmHeaders.index(valueHeader)] += int(value[1:])
 
                 #Remove a repetition since this is finite
@@ -118,7 +153,8 @@ class CurrentReminders:
  
                 repetition_str += '/' + value
 
-        newReminder = self.set_reminder(reminder_old[0], newAlarm, False, repeatFrequency=repetition_str)
+        #TODO: improve array system for simple math base
+        newReminder = self.set_reminder(reminder_old[0], newAlarm, repeatFrequency=repetition_str)
         return newReminder
 
     def check_alarm(self):
@@ -158,7 +194,7 @@ class CurrentReminders:
         Returns:
             self.reminders witt the populated reminders.
         """
-        timeUTC_epoch = datetime.now(timezone.utc).timestamp()
+        #timeUTC_epoch = datetime.now(timezone.utc).timestamp()
         db = self.conn.cursor()
         db.execute("""
         SELECT reminderStr, alarm, status, concurrency FROM remindersTbl r
@@ -175,13 +211,13 @@ class CurrentReminders:
 
 if __name__ == "__main__":
     reminder = CurrentReminders()
-    #UPDATE TO NEW LIBRARY
-    print(reminder.set_reminder("2 minute reminder", [0, 0, 0, 0, 2, 0], False))
-    print(reminder.set_reminder("4 minute reminder", [0, 0, 0, 0, 4, 0], False))
-    print(reminder.set_reminder("8 minute reminder", [0, 0, 0, 0, 8, 0], False))
-    print(reminder.set_reminder("At 2:35PM", [None, None, None, 14, 35, 0], True))
-    print(reminder.set_reminder("Repeat reminder", [0, 0, 0, 0, 2, 0], False, "m2/T2"))
+    #TODO: update concurrency into a dictionary system
+    print(reminder.set_reminder("2 minute reminder", 1565103208))
+    print(reminder.set_reminder("4 minute reminder", 1565103328))
+    print(reminder.set_reminder("8 minute reminder", 1565103568))
+    print(reminder.set_reminder("Repeat reminder", 1565103568, "m2/T2"))
     print(reminder.reminders)
+    print(reminder.list_reminder(1565103568))
 
     UTCSec = datetime.now(timezone.utc).replace(tzinfo=timezone.utc).timestamp()
     curTime = datetime.now()
