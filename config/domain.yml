@@ -40,12 +40,18 @@ templates:
   utter_reminder_set:
   - text: Reminder set. Anything else?
   - text: Reminder has been set.
-  utter_reminder_noReminder:
+  utter_reminder_set_noReminder:
   - text: What would your reminder be?
   - text: Ok, whats the reminder about?
-  utter_reminder_noTime:
+  utter_reminder_delete_noReminder:
+  - text: Which reminder would you like to delete?
+  - text: What reminder will I be deleting?
+  utter_reminder_set_noTime:
   - text: When will your reminder be?
   - text: When?
+  utter_reminder_list_noTime:
+  - text: Pick a date to check your reminders for that day.
+  - text: For when?
   utter_greet:
   - text: Hey, how are you?
   - text: Hello, How are you doing?
@@ -72,9 +78,13 @@ actions:
 - action_restart
 - action_weather_return
 - action_reminder_set
+- action_reminder_delete
+- action_reminder_list
 - utter_reminder_set
-- utter_reminder_noReminder
-- utter_reminder_noTime
+- utter_reminder_set_noReminder
+- utter_reminder_delete_noReminder
+- utter_reminder_set_noTime
+- utter_reminder_list_noTime
 - utter_greet
 - utter_reply
 - utter_help
