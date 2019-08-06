@@ -1,6 +1,6 @@
 |weather_request.chatito
 |common.chatito
-|reminder_set.chatito
+|reminder.chatito
 
 //weather_request
 %[weather_request]('training': '100', 'testing': '100')
@@ -10,8 +10,18 @@
 
 //reminder_set
 %[reminder_set]('training': '100', 'testing': '100')
-    ~[please?] ~[reminder action] [for?] ~[reminder time]
-    ~[please?] ~[reminder action] ~[reminder time?way1] to @[reminder] ~[reminder time?way2]
+    ~[please?] ~[reminder_set action] [for?] ~[reminder time]
+    ~[please?] ~[reminder_set action] ~[reminder time?way1] to @[reminder] ~[reminder time?way2]
+
+//reminder_delete
+%[reminder_delete]('training': '100', 'testing': '100')
+    ~[please?] ~[reminder_delete action] [for?] ~[reminder time]
+    ~[please?] ~[reminder_delete action] ~[reminder time?way1] to @[reminder] ~[reminder time?way2]
+
+//reminder_list
+%[reminder_list]('training': '100', 'testing': '100')
+    ~[please?] ~[reminder_list action] [for?] ~[reminder time]
+    ~[please?] ~[reminder_list action] ~[reminder time?way1] to @[reminder] ~[reminder time?way2]
 
 //greet - ways to say hello
 %[greet]('training': '50', 'testing': '50')

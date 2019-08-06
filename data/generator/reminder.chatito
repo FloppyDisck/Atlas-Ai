@@ -4,10 +4,16 @@
     ~[verb singular] ~[adverb?] ~[determiner] ~[noun singular]
     ~[verb singular] ~[adverb?]
 
-~[reminder action]
+~[reminder_set action]
     remind me
     set a reminder
     notify me
+
+~[reminder_delete action]
+    {delete/erase} {this reminder/notification/reminder}
+
+~[reminder_list action]
+    {show me/list/what are the/tell me the} {notification/notifications/reminder/reminders}
 
 ~[reminder time]
     in ~[time day] days
