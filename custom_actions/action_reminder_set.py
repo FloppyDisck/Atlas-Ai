@@ -1,6 +1,7 @@
 import pytz
 import sqlite3
 from datetime import datetime, timezone, timedelta
+from dateutil.relativedelta import *
 from operator import itemgetter
 
 class CurrentReminders:
@@ -113,17 +114,29 @@ class CurrentReminders:
         """
         #second, minute, hour, Day, Month, Year, Times, Weeks, week (week day 1-7) (days divided by -)
         repetition = reminder_old[3].split('/')
-        newAlarm = [0, 0, 0, 0, 0, 0]
-        alarmHeaders = ['Y', 'M', 'D', 'h', 'm', 's'] #used to find newAlarm index
+        newAlarm = datetime.fromtimestamp(reminder_old[1])
+
         repetition_str = ""
         for value in repetition:
             if value != "":
                 #Set the header Char
                 valueHeader = value[:1]
 
-                if valueHeader in alarmHeaders:
-                    #TODO: instead of this just multiply the value by the headerValue to get the time sum
-                    newAlarm[alarmHeaders.index(valueHeader)] += int(value[1:])
+                #Relative delta handles leapyears and month disbalances
+                if valueHeader == 'Y':
+                    newAlarm += relativedelta(years=int(value[1:]))
+                if valueHeader == 'M':
+                    newAlarm += relativedelta(months=int(value[1:]))
+                if valueHeader == 'D':
+                    newAlarm += relativedelta(days=int(value[1:]))
+                if valueHeader == 'h':
+                    newAlarm += relativedelta(hours=int(value[1:]))
+                if valueHeader == 'm':
+                    newAlarm += relativedelta(minutes=int(value[1:]))
+                if valueHeader == 's':
+                    newAlarm += relativedelta(seconds=int(value[1:]))
+                if valueHeader == 's':
+                    newAlarm += relativedelta(weeks=int(value[1:]))
 
                 #Remove a repetition since this is finite
                 if valueHeader == 'T':
@@ -132,28 +145,29 @@ class CurrentReminders:
                         return None
                     value = 'T' + str(times-1)
 
-                if valueHeader == 'W':
-                    #Add that many days
-                    newAlarm[alarmHeaders.index('D')] += (int(value[1:]) * 7)
-
                 if valueHeader == 'w':
                     #Assuming in this string weeks start with 1
+                    nextDay = 0
                     weekDay_now = datetime.now(timezone.utc).weekday() + 1
-                    weekDays = value[1:].split('-')
+                    weekDays = sorted(value[1:].split('-'))
 
-                    #Calculate nearest weekday
-                    for index in range(0, len(weekDays)):
-                        if weekDay_now > weekDays[index]:
-                            weekDay_near = index - 1
-                        weekDay_near = weekDays[index]
-                    if weekDay_near < 0:
-                        weekDay_near = 0
+                    #Check which weekDay is the next one
+                    for weekDay in weekDays:
+                        if weekDay_now <= weekDay:
+                            nextDay = weekDay
+                    if nextDay == 0:
+                        nextDay = weekDays[0]
 
-                    newAlarm[alarmHeaders.index('D')] += abs(weekDay_now - weekDays[weekDay_near])
+                    #Calculate how many days to skip
+                    if weekDay_now == nextDay:
+                        newAlarm += relativedelta(days=7)
+                    elif weekDay_now > nextDay:
+                        newAlarm += relativedelta(days=(7 - weekDay_now + nextDay))
+                    else:
+                        newAlarm += relativedelta(days=(nextDay - weekDay_now))
  
                 repetition_str += '/' + value
 
-        #TODO: improve array system for simple math base
         newReminder = self.set_reminder(reminder_old[0], newAlarm, repeatFrequency=repetition_str)
         return newReminder
 
