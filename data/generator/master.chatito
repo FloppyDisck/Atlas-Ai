@@ -1,0 +1,70 @@
+|weather_request.chatito
+|common.chatito
+|reminder.chatito
+
+//weather_request
+%[weather_request]('training': '100', 'testing': '100')
+    ~[full sentence]  ~[short time?]
+    ~[sentence prefix] @[weather_arg] ~[short time?]
+    ~[sentence prefix] @[weather_arg] ~[short time?]  ~[conjunction] @[location]
+
+//reminder_set
+%[reminder_set]('training': '100', 'testing': '100')
+    ~[please?] ~[reminder_set action] [for?] ~[reminder time]
+    ~[please?] ~[reminder_set action] ~[reminder time?way1] to @[reminder] ~[reminder time?way2]
+
+//reminder_delete
+%[reminder_delete]('training': '100', 'testing': '100')
+    ~[please?] ~[reminder_delete action] [for?] ~[reminder time]
+    ~[please?] ~[reminder_delete action] ~[reminder time?way1] to @[reminder] ~[reminder time?way2]
+
+//reminder_list
+%[reminder_list]('training': '100', 'testing': '100')
+    ~[please?] ~[reminder_list action] [for?] ~[reminder time]
+    ~[please?] ~[reminder_list action] ~[reminder time?way1] to @[reminder] ~[reminder time?way2]
+
+//greet - ways to say hello
+%[greet]('training': '50', 'testing': '50')
+    *[20%] ~[hi]
+    ~[greetings]
+    ~[hi] ~[greetings?]
+    ~[hi] ~[whats up]
+    ~[greetings] ~[whats up]
+    ~[hi] ~[greetings] ~[whats up]
+
+//bye - ways to say goodbye
+%[bye]('training': '50', 'testing': '50')
+    *[20%] ~[bye]
+    ~[thanks?] ~[bye]
+    ~[bye] ~[thanks?]
+    ~[leaving]
+    ~[leaving] ~[bye]
+
+//affirmative - ways to say yes
+%[affirmative]('training': '75', 'testing': '25')
+    *[20%] ~[yes]
+    ~[yes] ~[please?]
+    ~[yes] ~[yes?] ~[thanks?]
+    ~[yes?] ~[that is good] ~[yes?]
+
+//negative - ways to say no
+%[negative]('training': '50', 'testing': '50')
+    *[20%] ~[no]
+    ~[no] ~[please?] ~[its not ok?]
+    ~[please?] ~[no] ~[its not ok?]
+    *[20%] ~[its not ok]
+
+//fine_ask - reply to "how are you"
+%[fine_ask_positive]('training': '50', 'testing': '50')
+    ~[mood prefix personal] ~[mood prefix?] ~[good mood] ~[courtesy]
+    ~[mood prefix personal] ~[mood prefix?] ~[good mood] ~[whats up]
+
+%[fine_normal_positive]('training': '50', 'testing': '50')
+    ~[mood prefix personal] ~[mood prefix?] ~[good mood]
+
+%[fine_ask_negative]('training': '50', 'testing': '50')
+    ~[mood prefix personal] ~[mood prefix?] ~[bad mood] ~[courtesy]
+    ~[mood prefix personal] ~[mood prefix?] ~[bad mood] ~[whats up]
+
+%[fine_normal_negative]('training': '50', 'testing': '50')
+    ~[mood prefix personal] ~[mood prefix?] ~[bad mood]

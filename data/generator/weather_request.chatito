@@ -1,0 +1,116 @@
+~[full sentence]
+    How is the weather
+    Show me the weather
+    Give me the weather
+    Whats the current atmospheric condition
+    whats the weather for today
+
+~[conjunction]
+    in
+    at
+    around
+    here in
+
+~[short time]
+    tomorrow
+    today
+    in five hours
+    in the next day
+    at ten thirty
+    at twenty eleven
+    in two days
+
+~[sentence prefix]
+    Will it be
+    How
+    What is the current
+    Is it
+    Is it going to be
+    How is the
+
+@[location]
+    new york
+    san francisco
+    atlanta
+    puerto rico
+    united states
+    africa
+    san juan
+    arizona
+    spain
+    russia
+    europe
+    england
+    united kingdom
+
+@[weather_arg]
+    ~[rain] = rain
+    ~[temp] = temp
+    ~[quantity] = quantity
+    ~[humidity] = humidity
+    ~[clowdy] = clowdy
+    ~[snowing] = snowing
+    ~[wind] = wind
+    ~[metric] = metric
+    ~[imperial] = imperial
+
+~[wind]('synonym': 'true')
+    windy
+    wind
+
+~[metric]('synonym': 'true')
+    metric
+    celcius
+    c
+
+~[imperial]('synonym': 'true')
+    imperial
+    fahrenheit
+    f
+
+~[snowing]('synonym': 'true')
+    snow
+    snowing
+    snowy
+
+
+~[quantity]('synonym': 'true')
+    much
+
+~[clowdy]('synonym': 'true')
+    clowdy
+    clouds
+
+~[rain]('synonym': 'true')
+    rain
+    raining
+    precipitation
+    condensation
+    pour
+    rain fall
+    rainfall
+    pouring
+
+~[temp]('synonym': 'true')
+    temp
+    temperature
+    hot
+    cold
+    warm
+    chilly
+    burning
+    toasty
+    freezing
+    melting
+    condition
+    calefaction
+
+~[humidity]('synonym': 'true')
+    moist
+    moisture
+    damp
+    dampness
+    evaporation
+    vapor
+    humid
+    humidity
