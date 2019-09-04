@@ -168,7 +168,7 @@ class CurrentReminders:
  
                 repetition_str += '/' + value
 
-        newReminder = self.set_reminder(reminder_old[0], newAlarm, repeatFrequency=repetition_str)
+        newReminder = self.set_reminder(reminder_old[0], newAlarm.timestamp(), repeatFrequency=repetition_str)
         return newReminder
 
     def check_alarm(self):
@@ -225,13 +225,13 @@ class CurrentReminders:
 
 if __name__ == "__main__":
     reminder = CurrentReminders()
-    #TODO: update concurrency into a dictionary system
-    print(reminder.set_reminder("2 minute reminder", 1565103208))
-    print(reminder.set_reminder("4 minute reminder", 1565103328))
-    print(reminder.set_reminder("8 minute reminder", 1565103568))
-    print(reminder.set_reminder("Repeat reminder", 1565103568, "m2/T2"))
-    print(reminder.reminders)
-    print(reminder.list_reminder(1565103568))
+    #TODO: Test all concurrency features, make a fake spedup timer to test them all; test the delete function; delete done reminders from database
+    #print(reminder.set_reminder("2 minute reminder", 1565103208))
+    #print(reminder.set_reminder("4 minute reminder", 1565103328))
+    #print(reminder.set_reminder("8 minute reminder", 1565103568))
+    print(reminder.set_reminder("Repeat reminder", 1565413354, "m2/T2"))
+    print(f"Listing reminders: {reminder.reminders}")
+    print(reminder.list_reminder(1565413354))
 
     UTCSec = datetime.now(timezone.utc).replace(tzinfo=timezone.utc).timestamp()
     curTime = datetime.now()
