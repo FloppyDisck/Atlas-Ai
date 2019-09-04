@@ -21,8 +21,12 @@ Then to start using your vm.
 conda activate env-name
 ```
 Finally install the required python packages.
+
+Before starting you'll need to have a few libraries installed.
+NOTE: If youre using a virtualenv make sure to activate it beforehand.
 ```
-pip install -r requirements.txt
+cd bin/
+bash requirements.sh
 ```
 
 NOTE: Some actions require enviroment variables to be setup (for the APIs)
