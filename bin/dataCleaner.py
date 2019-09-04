@@ -5,22 +5,22 @@ import json
 def pprint(comment):
     print(f"[dataCleaner] {comment}")
 
-rawNLU = "data/nlu/train/output.json"
-outNLU = "data/nlu.json"
-lookupTables = [["location", "data/locations/countriesLookupNOCAPS.txt"]]
+raw_nlu = "data/nlu/train/output.json"
+out_nlu = "data/nlu.json"
+lookup_tables = [["location", "data/locations/countriesLookupNOCAPS.txt"]]
 
-pprint(f"Opening {rawNLU}")
+pprint(f"Opening {raw_nlu}")
 
-openFile = open("data/nlu/train/output.json", "r")
-trainData = json.load(openFile)
-openFile.close()
+open_file = open("data/nlu/train/output.json", "r")
+train_data = json.load(open_file)
+open_file.close()
 
 lookup_tables = []
-for value in lookupTables:
+for value in lookup_tables:
     lookup_tables.append({"name": value[0], "elements": value[1]})
 
-trainData['rasa_nlu_data']['lookup_tables'] = lookup_tables
+train_data['rasa_nlu_data']['lookup_tables'] = lookup_tables
 
-pprint(f"Writing to {outNLU}")
-with open(outNLU, "w") as openFile:
-    json.dump(trainData, openFile)
+pprint(f"Writing to {out_nlu}")
+with open(out_nlu, "w") as open_file:
+    json.dump(train_data, open_file)

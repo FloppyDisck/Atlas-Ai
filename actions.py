@@ -14,8 +14,8 @@ def get_var(variable):
 class ActionWeatherReturn(Action):
 
     def name(self):
-        self.actionName = "action_weather_return"
-        return self.actionName
+        self.action_name = "action_weather_return"
+        return self.action_name
 
     def run(self, dispatcher, tracker, domain):
         import json, requests
@@ -29,14 +29,14 @@ class ActionWeatherReturn(Action):
         
         #Keep enclosed to reduce random errors
         try:
-            apiKey = get_var("OPEN_WEATHER_MAP_API_KEY")
-            tempUnit = "Celcius" #Temp unit might change depending request
+            api_key = get_var("OPEN_WEATHER_MAP_API_KEY")
+            temp_unit = "Celcius" #Temp unit might change depending request
 
             
-            requestType = "forecast"
+            request_type = "forecast"
 
             #Ugly try catch for checking which format added
-            timeString = "today"
+            time_string = "today"
             try:
                 time_command = tracker.get_slot('time')[0][:-6]
                 threshold = 0
@@ -60,72 +60,72 @@ class ActionWeatherReturn(Action):
                 time_difference = time_command - time_current
                 if (time_current <= time_command) and (time_difference <= 5):
                     if time_difference == 1:
-                        timeString = "tomorrow"
+                        time_string = "tomorrow"
                     elif (time_difference > 1) and (time_difference <= 5):
-                        timeString = f"in {time_difference} days"
+                        time_string = f"in {time_difference} days"
                 else:
-                    requestType = "error"
+                    request_type = "error"
                 
             except Exception as e:
                 time_difference = 0
                 print(e)
 
-            if requestType == "error":
+            if request_type == "error":
                 #If requesting wrong date
                 print("User input time not allowed in api")
                 dispatcher.utter_message("The A P I allowed forecast time is from today to the next 5 days.")
 
             else:
                 #Build string and get the slot values
-                requestSting = f"https://api.openweathermap.org/data/2.5/{requestType}?q={location}&units={tempUnit}&appid={apiKey}"
-                weatherData = requests.get(requestSting)
+                request_string = f"https://api.openweathermap.org/data/2.5/{request_type}?q={location}&units={temp_unit}&appid={api_key}"
+                weather_data = requests.get(request_string)
                 weather_arg = tracker.get_slot('weather_arg') #gets the slot value
                 trackers = tracker.current_slot_values()
                 print("Weather Args: ", weather_arg)
                 print("trackers ", trackers)
 
-                if (weatherData.status_code == requests.codes.ok):#If the request is good
-                    weatherData = json.loads(weatherData.text)
+                if (weather_data.status_code == requests.codes.ok):#If the request is good
+                    weather_data = json.loads(weather_data.text)
                     
                     #Response dictionary build
-                    returnDic = {"default":"", "rain":"", "quantity":"", "temp":"", "humidity":"", "clowdy":""}
-                    if requestType == "forecast":
-                        weatherData = weatherData['list'][time_difference]
-                    returnDic['default'] = f"You will be experiencing {weatherData['weather'][0]['description'].lower()}"
+                    return_dic = {"default":"", "rain":"", "quantity":"", "temp":"", "humidity":"", "clowdy":""}
+                    if request_type == "forecast":
+                        weather_data = weather_data['list'][time_difference]
+                    return_dic['default'] = f"You will be experiencing {weather_data['weather'][0]['description'].lower()}"
                     if weather_arg is not None:
                         for arg in weather_arg:
                             if arg == "rain":
                                 try:
-                                    returnDic[arg] = f"up to {weatherData['rain']['1h']} milileters of rain"
+                                    return_dic[arg] = f"up to {weather_data['rain']['1h']} milileters of rain"
                                     if "quantity" not in weather_arg:
-                                        returnDic[arg] = "rain"
+                                        return_dic[arg] = "rain"
                                 except:
-                                    returnDic[arg] = "no rain"
+                                    return_dic[arg] = "no rain"
                             if arg == "temp":
                                 if "metric" in weather_arg:
-                                    tempUnit = "Celcius"
+                                    temp_unit = "Celcius"
                                 elif "imperial" in weather_arg:
-                                    tempUnit = "Fahrenheit"
-                                returnDic[arg] = f"temperatures of {weatherData['main']['temp']} {tempUnit}"
+                                    temp_unit = "Fahrenheit"
+                                return_dic[arg] = f"temperatures of {weather_data['main']['temp']} {temp_unit}"
                             if arg == "wind":
-                                returnDic[arg] = f"a wind speed of {weatherData['wind']['speed']} miles per hour"
+                                return_dic[arg] = f"a wind speed of {weather_data['wind']['speed']} miles per hour"
                             if arg == "humidity":
-                                returnDic[arg] = f"a humidity of {weatherData['main']['humidity']} percent" #TODO: humidity verbal descriptors
+                                return_dic[arg] = f"a humidity of {weather_data['main']['humidity']} percent" #TODO: humidity verbal descriptors
                             if arg == "clowdy":
-                                returnDic[arg] = f"a clowdiness of {weatherData['clouds']['all']} percent" #TODO: humidity verbal descriptors111
+                                return_dic[arg] = f"a clowdiness of {weather_data['clouds']['all']} percent" #TODO: humidity verbal descriptors111
                             if arg == "snowing":
                                 try:
-                                    returnDic[arg] = f"up to {weatherData['snow']['1h']} milileters of rain"
+                                    return_dic[arg] = f"up to {weather_data['snow']['1h']} milileters of rain"
                                     if "quantity" not in weather_arg:
-                                        returnDic[arg] = "snow"
+                                        return_dic[arg] = "snow"
                                 except:
-                                    returnDic[arg] = "no snow"
+                                    return_dic[arg] = "no snow"
                             
 
 
-                    returnString = f"{returnDic['default']} with {returnDic['rain']} {returnDic['quantity']} {returnDic['temp']} {returnDic['humidity']} {returnDic['clowdy']} {timeString} in {location}"
+                    return_string = f"{return_dic['default']} with {return_dic['rain']} {return_dic['quantity']} {return_dic['temp']} {return_dic['humidity']} {return_dic['clowdy']} {time_string} in {location}"
                 
-                dispatcher.utter_message(f"{returnString}")
+                dispatcher.utter_message(f"{return_string}")
 
         except Exception as e:
             print(e)
@@ -134,8 +134,8 @@ class ActionWeatherReturn(Action):
 class ActionReminderSet(Action):
 
     def name(self):
-        self.actionName = "action_reminder_set"
-        return self.actionName
+        self.action_name = "action_reminder_set"
+        return self.action_name
 
     def run(self, dispatcher, tracker, domain):
         from custom_actions.action_reminder_set import CurrentReminders
@@ -149,29 +149,29 @@ class ActionReminderSet(Action):
         from datetime import datetime, timezone
         reminder_date = int(datetime.strptime(reminder_date,"%Y-%m-%dT%H:%M:%S.%f").timestamp())
         
-        returnString = reminder.set_reminder(reminder_string, reminder_date)
-        dispatcher.utter_message(f"{returnString}")
+        return_string = reminder.set_reminder(reminder_string, reminder_date)
+        dispatcher.utter_message(f"{return_string}")
 
 
 class ActionReminderDelete(Action):
 
     def name(self):
-        self.actionName = "action_reminder_delete"
-        return self.actionName
+        self.action_name = "action_reminder_delete"
+        return self.action_name
 
     def run(self, dispatcher, tracker, domain):
         from custom_actions.action_reminder_set import CurrentReminders
         reminder = CurrentReminders()
         reminder_string = tracker.get_slot("reminder")
 
-        returnString = reminder.delete_reminder(reminder_string)
-        dispatcher.utter_message(f"{returnString}")
+        return_string = reminder.delete_reminder(reminder_string)
+        dispatcher.utter_message(f"{return_string}")
 
 class ActionReminderList(Action):
 
     def name(self):
-        self.actionName = "action_reminder_list"
-        return self.actionName
+        self.action_name = "action_reminder_list"
+        return self.action_name
 
     def run(self, dispatcher, tracker, domain):
         from custom_actions.action_reminder_set import CurrentReminders
@@ -180,5 +180,5 @@ class ActionReminderList(Action):
         from datetime import datetime, timezone
         reminder_date = int(datetime.strptime(reminder_date,"%Y-%m-%dT%H:%M:%S.%f").timestamp())
         
-        returnString = reminder.list_reminder(reminder_date)
-        dispatcher.utter_message(f"{returnString}")
+        return_string = reminder.list_reminder(reminder_date)
+        dispatcher.utter_message(f"{return_string}")
