@@ -171,12 +171,13 @@ class CurrentReminders:
         new_reminder = self.set_reminder(reminder_old[0], new_alarm.timestamp(), repeat_frequency=repetition_str)
         return new_reminder
 
-    def check_alarm(self):
+    def check_alarm(self, custom_time = None):
         """
         Go through self.reminders and check what alarm is ready.
 
         Args:
-            self.reminders: List of all the reminders in a threshold.
+            self.reminders: List of all the reminders.
+            custom_time: Replaces curren_time_epoch which is current seconds since epoch
 
         Returns:
             Return list of alarms that are due.
@@ -193,10 +194,10 @@ class CurrentReminders:
             if reminder[2] == 2: #Standard
                 self.reminder_concurrency(reminder)
  
-            db = self.conn.cursor()
-            db.execute('UPDATE remindersTbl SET status = ? WHERE reminderStr = ? AND alarm = ?', (0, reminder[0], reminder[1]))
-            self.reminders.remove(reminder)
-            self.conn.commit()
+                db = self.conn.cursor()
+                db.execute('UPDATE remindersTbl SET status = ? WHERE reminderStr = ? AND alarm = ?', (0, reminder[0], reminder[1]))
+                self.reminders.remove(reminder)
+                self.conn.commit()
 
         #TODO: create a string for each value that the ai can read
         return due_alarm
@@ -206,7 +207,7 @@ class CurrentReminders:
         Update the self.reminders from the database.
 
         Returns:
-            self.reminders witt the populated reminders.
+            self.reminders with the populated reminders.
         """
         #timeUTC_epoch = datetime.now(timezone.utc).timestamp()
         db = self.conn.cursor()
@@ -222,6 +223,19 @@ class CurrentReminders:
 
         #sort by epoch
         self.reminders.sort(key = itemgetter(1))
+    
+    def clear_list(self):
+        """
+        Erase all database contents.
+
+        Returns: 
+            nothing
+        """
+
+        db = self.conn.cursor()
+        db.execute("DELETE FROM remindersTbl")
+        self.conn.commit()
+        self.update_list()
 
 if __name__ == "__main__":
     reminder = CurrentReminders()

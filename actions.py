@@ -1,15 +1,20 @@
 # in duckling files stack exec duckling-example-exe
-
-#Enviroment vars are setup in ~/.profile, export varName=varValue
+# Enviroment vars are setup in ~/.profile, export varName=varValue
 
 from rasa_sdk import Action
 from rasa_sdk.events import SlotSet
 import os
 
 def get_var(variable):
-    #Check if the enviroment variable exists
-    var = os.environ[variable]
-    return var
+    '''Procedure to find enviroment variables.
+
+    API keys must be stored as enviroment variables.
+    '''
+    try:
+        var = os.environ[variable]
+        return var
+    except:
+        return None
 
 class ActionWeatherReturn(Action):
 
@@ -18,8 +23,8 @@ class ActionWeatherReturn(Action):
         return self.action_name
 
     def run(self, dispatcher, tracker, domain):
-        import json, requests
-        #Make module that generates a log file with error
+        from custom_actions.action_weather_get import Weather 
+        #TODO: Make module that generates a log file with error
 
         trackers = tracker.current_slot_values()
         if tracker.get_slot('location') == None:
@@ -32,6 +37,9 @@ class ActionWeatherReturn(Action):
             api_key = get_var("OPEN_WEATHER_MAP_API_KEY")
             temp_unit = "Celcius" #Temp unit might change depending request
 
+        # Get location
+        if tracker.get_slot('location') != None:
+            weatherReport.location = tracker.get_slot('location')
             
             request_type = "forecast"
 
@@ -40,21 +48,19 @@ class ActionWeatherReturn(Action):
             try:
                 time_command = tracker.get_slot('time')[0][:-6]
                 threshold = 0
-            except:
-                pass
-            try:
-                time_command = tracker.get_slot('time')[0]['to'][:-6]
-                threshold = -1
-            except:
-                pass
-            try: #enclose time request, if it failt it doesnt fail the whole request
-                print(time_command)
+            except TypeError:
+                try:  #Different sentence structures lead to different time slots
+                    time_command = tracker.get_slot('time')[0]['to'][:-6]
+                    threshold = -1
+                except TypeError:
+                    time_command = None
+
+            time_difference = 0
+            if time_command is not None:  # If last part ran successfully
                 from datetime import datetime, timezone
                 #Compare current time with requested time
                 time_command = int(datetime.strptime(time_command,"%Y-%m-%dT%H:%M:%S.%f").timestamp() / 86400) + threshold
                 time_current = int(datetime.now(timezone.utc).timestamp() / 86400)
-                print(f"Asked time in days {time_command}")
-                print(f"Today's time in days {time_current}")
 
                 #Time related concistency for return sentence
                 time_difference = time_command - time_current
