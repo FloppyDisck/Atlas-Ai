@@ -51,14 +51,14 @@ Information on [stories](https://rasa.com/docs/rasa/core/stories/) and [domain](
 
 Later if you have any custom actions defined they'll be edited on the actions.py file. Information on actions can be found [here](https://rasa.com/docs/rasa/core/actions/).
 
-Once all of this is set and youre ready to begin training just run train.sh file and it should train everything.
+Once all of this is set and youre ready to begin training just run the main script with the --train command.
 ```
-bash /bin/train.py
+bash bin/run.py --train
 ```
 
 If you just want to test the latest NLU training data with some written examples found in /bin/modelTrain.py
 ```
-bash /bin/train.py model
+bash bin/run.py --train --use-python
 ```
 
 ## Testing Atlas
@@ -72,12 +72,12 @@ stack exec duckling-example-exe
 
 Now run the actions local server and dialogue program
 ```
-bash /bin/run.sh /models/--latest--.tar.gz
+bash bin/run.sh
 ```
 
 If you want to train while you test run is like this.
 ```
-bash /bin/run.sh /models/--latest--.tar.gz learn
+bash bin/run.sh --interactive
 ```
 
 ## Authors
