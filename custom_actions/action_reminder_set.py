@@ -1,5 +1,6 @@
 import pytz
 import sqlite3
+import random
 from datetime import datetime, timezone, timedelta
 from dateutil.relativedelta import *
 from operator import itemgetter
@@ -66,13 +67,16 @@ class CurrentReminders:
 
     def list_reminder(self, alarm_epoch):
         #Get all reminders that match that day
-        epoch_day = int(alarm_epoch / 86400) * 86400 #This will cleanup epoch
+
+        if (len(alarm_epoch) == 1):
+            epoch_day = (int(alarm_epoch / 86400) * 86400) + 86400 #Set the next day
+            alarm_epoch = (alarm_epoch[0], epoch_day)
 
         #check that dates between epoch_today and epoch_tomorrow
         db = self.conn.cursor()
         db.execute("""
         SELECT reminderStr, alarm, status FROM remindersTbl r
-        WHERE r.status > 0 AND r.alarm >= ? AND r.alarm < ?""", (epoch_day, epoch_day + 86400))
+        WHERE r.status > 0 AND r.alarm >= ? AND r.alarm < ?""", (alarm_epoch[0], alarm_epoch[1]))
         self.conn.commit()
         #If status is greater than 0 then it is still available
         reminder_list = []
@@ -93,7 +97,6 @@ class CurrentReminders:
         elif len(reminder_list) == 2:
             return_string = f"You have to {reminder_list[0][0]} at {datetime.fromtimestamp(reminder_list[0][1]).strftime('%H %M')} and then {reminder_list[1][0]} at {datetime.fromtimestamp(reminder_list[1][1]).strftime('%H %M')}"
         elif len(reminder_list) > 2:
-            import random
             flavor_string = ["then ", "later ", "after ", "and ", "also "]
             return_string = f"You have to {reminder_list[0][0]} at {datetime.fromtimestamp(reminder_list[0][1]).strftime('%H %M')} "
             for index in range(1, len(reminder_list) - 1):
