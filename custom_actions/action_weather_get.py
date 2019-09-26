@@ -1,8 +1,9 @@
 class Weather():
-    #Default variables
+    # Default values
     temp_unit = "Celcius"
     request_type = "forecast"
     location = "Puerto Rico"
+
     def __init__(self, api_key):
         self.api_key = api_key
     def get_weather(self):

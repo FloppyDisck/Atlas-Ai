@@ -18,6 +18,9 @@ def get_var(variable):
     except:
         return None
 
+def pprint(alert, action_name, message): # Standard for error messages
+    print(f"({alert}) - ({action_name}) - {message}")
+
 class ActionWeatherReturn(Action):
 
     def name(self):
@@ -57,34 +60,39 @@ class ActionWeatherReturn(Action):
                 except TypeError:
                     time_command = None
 
-            # Check what day were refering too
+            # Check what day we're refering too
             time_difference = 0
             time_string = "today"
             if time_command is not None:  # If last part ran successfully
                 from datetime import datetime, timezone
                 #Compare current time with requested time
                 time_command = int(datetime.strptime(time_command,"%Y-%m-%dT%H:%M:%S.%f").timestamp() / 86400) + threshold
-                time_current = int(datetime.now(timezone.utc).timestamp() / 86400)
+                current_time = int(datetime.now(timezone.utc).timestamp() / 86400)
 
                 #Time related concistency for return sentence
-                time_difference = time_command - time_current
-                if (time_current <= time_command) and (time_difference <= 5):
-                    if time_difference == 1:
-                        time_string = "tomorrow"
-                    elif (time_difference > 1) and (time_difference <= 5):
-                        time_string = f"in {time_difference} days"
-                else:
-                    print(f"time_command is {time_command}; greater/lower than the allowed parameters")
-                    if time_command > 5:
-                        time_command = 5
-                    elif time_command < 0:
-                        time_command = 0
+                if time_command > 5:
+                    pprint("warning", self.action_name, f"time_command, {time_command}, is greater than allowed params")
+                    time_command = 5
+                elif time_command < 0:
+                    pprint("warning", self.action_name, f"time_command, {time_command}, is smaller than allowed params")
+                    time_command = 0
+
+                time_difference = time_command - current_time
+
+                if time_difference == 1:
+                    time_string = "tomorrow"
+                elif (time_difference > 1) and (time_difference <= 5):
+                    time_string = f"in {time_difference} days"
+                    
             else:
-                print("time_command is None; defaulting to today's weather")
+                pprint("note", self.action_name, "time_command is None; defaulting to today's weather")
                 time_difference = 0
 
             # Get weather
             weather_data = weatherReport.get_weather()
+            if weather_data == None:
+                raise Exception("action_weather_get request error")
+
             weather_data = weather_data['list'][time_difference]
                     
             # Response dictionary build
@@ -103,7 +111,7 @@ class ActionWeatherReturn(Action):
                         except:
                             return_dic[arg] = "no rain"
                     if arg == "temp":
-                        return_dic[arg] = f"temperatures of {weather_data['main']['temp']} {temp_unit}"
+                        return_dic[arg] = f"temperatures of {weather_data['main']['temp']} {weatherReport.temp_unit}"
                     if arg == "wind":
                         return_dic[arg] = f"a wind speed of {weather_data['wind']['speed']} miles per hour"
                     if arg == "humidity":
@@ -125,9 +133,10 @@ class ActionWeatherReturn(Action):
             dispatcher.utter_message(f"{return_string}")
         except KeyError:
             dispatcher.utter_message("OPEN_WEATHER_MAP_API_KEY enviroment variable not set!")
+            pprint("error", self.action_name, "OPEN_WEATHER_MAP_API_KEY enviroment variable not set!")
 
         except Exception as e:
-            dispatcher.utter_message(f"New Error\n{e}")
+            pprint("error", self.action_name, e)
 
 class ActionReminderSet(Action):
     from datetime import datetime, timezone
